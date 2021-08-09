@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <title>Raging Destiny</title>
-    @livewireStyles
-</head>
-<body class="bg-gray-900 bg-fixed bg-no-repeat h-screen bg-contain bg-center items-center flex justify-center">
+<div class="h-screen items-center flex justify-center">
     <div class="menu w-2/5">
         <button class="w-1/6 p-1 m-2 min-w-1/4">
             <a href="/news">
@@ -45,6 +34,4 @@
     <div class="flex flex-col justify-center items-center w-2/6 content-style content" data-scroll-speed="9">
         @yield('content')
     </div>
-@livewireScripts
-</body>
-</html>
+</div>

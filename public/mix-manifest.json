@@ -1,4 +1,8 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=92730477c3b03dba3675",
+    "/css/app.css": "/css/app.css?id=36050c0fca95cb7c76cd",
+    "/img/header.jpg": "/img/header.jpg?id=e03ef4d2190b04be1e66",
+    "/img/main-background-border.png": "/img/main-background-border.png?id=c2e15b9678d585c46012",
+    "/img/main-background-old.jpg": "/img/main-background-old.jpg?id=1cf325c056a0bb2d2967",
+    "/img/main-background.jpg": "/img/main-background.jpg?id=c91ba1bc74ee7bda28f5"
 }

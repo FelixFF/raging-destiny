@@ -1,0 +1,205 @@
+// @import url('https://fonts.googleapis.com/css?family=Orbitron');
+// @import url('//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
+@import url('//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Sans');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: blanchedalmond;
+    text-align: center;
+    font-family: "DejaVu Sans";
+    background-image: url('/img/main-background-border.png'), url('/img/main-background.jpg');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-left-text {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+}
+
+.top-left-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-style {
+    max-height: 80vh;
+    position: relative;
+    overflow-y: scroll;
+    background-position: center;
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.8s;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.content-section-style.in-view {
+    animation: fadeInCustom 0.2s ease-in;
+}
+
+.content-section-style.out-view {
+    animation: fadeOutCustom 0.1s ease-out;
+}
+
+.content-style::-webkit-scrollbar {
+    display: none;
+}
+
+.content-section-style {
+    min-height: 85vh;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition-timing-function: linear;
+    overflow-y: auto;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+
+    .news-content {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.books {
+    max-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+        max-width: 40%;
+    }
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // flex-direction: row;
+
+    left: 0;
+    flex-direction: column;
+    margin-left: 1em;
+    opacity: 0.5;
+    width: 10%;
+    align-content: center;
+    background-image: url('/img/menu/side-menu-container.png');
+    background-size: 100% 99%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    button {
+        width: 90%;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.menu-left {
+    // left: 0;
+    // flex-direction: column;
+    // margin-left: 1em;
+    // opacity: 0.5;
+    // width: 10%;
+    // align-content: center;
+    // background-image: url('/img/menu/side-menu-container.png');
+    // background-size: 100% 99%;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // padding-top: 3em;
+    // padding-bottom: 3em;
+
+    // &:hover {
+    //     opacity: 1;
+    // }
+
+    // button {
+    //     width: 90%;
+    //     opacity: 0.5;
+
+    //     &:hover {
+    //         opacity: 1;
+    //     }
+    // }
+}
+
+.menu-centre {
+//     position: relative;
+//     display: flex;
+//     z-index: 999;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+}
+
+@keyframes fadeInCustom {
+    0% { opacity: 0; }
+    20% { opacity: 0.1; }
+    20% { opacity: 0.2; }
+    20% { opacity: 0.3; }
+    20% { opacity: 0.4; }
+    20% { opacity: 0.5; }
+    20% { opacity: 0.2; }
+    20% { opacity: 0.2; }
+    40% { opacity: 0.4; }
+    60% { opacity: 0.6; }
+    80% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOutCustom {
+    0% { opacity: 1; }
+    10% { opacity: 0.9; }
+    20% { opacity: 0.8; }
+    30% { opacity: 0.7; }
+    40% { opacity: 0.6; }
+    50% { opacity: 0.5; }
+    60% { opacity: 0.4; }
+    70% { opacity: 0.3; }
+    80% { opacity: 0.2; }
+    90% { opacity: 0.1; }
+    100% { opacity: 0; }
+}
