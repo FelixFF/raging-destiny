@@ -9,7 +9,7 @@
     <title>Raging Destiny</title>
     @livewireStyles
 </head>
-<body class="bg-gray-900 bg-fixed bg-no-repeat h-screen bg-contain bg-center items-center flex justify-center">
+<body class="bg-gray-900 bg-fixed bg-no-repeat h-screen bg-contain bg-center items-center flex justify-center body-class">
     <div class="menu w-2/5">
         <button class="w-1/6 p-1 m-2 min-w-1/4">
             <a href="/news">
@@ -42,7 +42,7 @@
             </a>
         </button>
     </div>
-    <div class="flex flex-col justify-center items-center w-2/6 content-style content" data-scroll-speed="9">
+    <div class="flex flex-col justify-center items-center w-2/4 content-style content" data-scroll-speed="9">
         @yield('content')
     </div>
 @livewireScripts

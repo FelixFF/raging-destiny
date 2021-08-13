@@ -1,11 +1,5 @@
 <?php
 
-use App\Http\Livewire\Contact;
-use App\Http\Livewire\History;
-use App\Http\Livewire\News;
-use App\Http\Livewire\PopCulturePauseScreen;
-use App\Http\Livewire\Store;
-use App\Http\Livewire\Library;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
@@ -19,7 +13,9 @@ Route::get('{view}', function ($view) {
 
 })->where('view', '[A-z_\-]+');
 
-// Route::get('/', News::class);
+Route::get('/', function () {
+    return view('content.news');
+});
 
 // Route::get('news', News::class);
 

@@ -8,15 +8,13 @@
                 News
             </h1>
         </div>
-        <section class="border-2 border-solid bg-gray-700">
-            <p class="news-section">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Urna porttitor rhoncus
-                dolor purus non enim. Urna nec tincidunt praesent semper feugiat. Tellus integer feugiat scelerisque
-                varius. Adipiscing elit pellentesque habitant morbi. Amet mattis vulputate enim nulla aliquet. Ut tortor
-                pretium viverra suspendisse. Orci ac auctor augue mauris augue neque gravida in fermentum. In aliquam
-                sem fringilla ut morbi tincidunt augue.
-            </p>
+        <section class="border-2 border-solid bg-gray-700 news-section">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Urna porttitor rhoncus
+            dolor purus non enim. Urna nec tincidunt praesent semper feugiat. Tellus integer feugiat scelerisque
+            varius. Adipiscing elit pellentesque habitant morbi. Amet mattis vulputate enim nulla aliquet. Ut tortor
+            pretium viverra suspendisse. Orci ac auctor augue mauris augue neque gravida in fermentum. In aliquam
+            sem fringilla ut morbi tincidunt augue.
         </section>
     </div>
 @endsection

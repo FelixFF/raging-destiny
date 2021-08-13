@@ -3,9 +3,9 @@
 @section('content')
 <div id="books" class="content-section-style books">
     @foreach (File::glob(public_path('img/books').'/*') as $path)
-        <a href="#">
-            <img class="books-image" src="{{ str_replace(public_path(), '', $path) }}" alt="">
-        </a>
+        <div class="books-image" onclick="#">
+            <img src="{{ str_replace(public_path(), '', $path) }}" alt="">
+        </div>
     @endforeach
 </div>
 @endsection
