@@ -31921,6 +31921,8 @@ body {
   color: blanchedalmond;
   text-align: center;
   font-family: "DejaVu Sans";
+  overflow-y: auto;
+  display: block;
 }
 
 body::after {
@@ -31942,6 +31944,7 @@ body::after {
   flex-direction: column;
   justify-content: space-around;
   transition: all 0.8s;
+  height: 80%;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -31963,6 +31966,7 @@ body::after {
 }
 
 .content-section-style {
+  margin: auto;
   display: flex;
   opacity: 0;
   justify-content: center;
@@ -32021,38 +32025,6 @@ body::after {
   max-width: 35%;
   border-radius: 50% !important;
   cursor: pointer;
-}
-
-.menu {
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  left: 0;
-  top: 0;
-  flex-direction: column;
-  margin-left: 5rem;
-  opacity: 0.5;
-  width: 14%;
-  align-content: center;
-  background-image: url("/img/menu/side-menu-container.png");
-  background-size: 100% 99%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
-.menu:hover {
-  opacity: 1;
-}
-
-.menu button {
-  width: 90%;
-  opacity: 0.5;
-}
-
-.menu button:hover {
-  opacity: 1;
 }
 
 @-webkit-keyframes fadeInCustom {

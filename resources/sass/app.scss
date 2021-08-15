@@ -19,11 +19,15 @@ body {
     color: blanchedalmond;
     text-align: center;
     font-family: "DejaVu Sans";
+    overflow-y: auto;
+    display: block;
 }
 
 body::after {
     content: "";
     background: url('/img/main-background.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
     // background-size: cover;
     opacity: 0.2;
     top: 0;
@@ -41,6 +45,7 @@ body::after {
     flex-direction: column;
     justify-content: space-around;
     transition: all 0.8s;
+    height: 80%;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -59,6 +64,7 @@ body::after {
 }
 
 .content-section-style {
+    margin: auto;
     display: flex;
     opacity: 0;
     justify-content: center;
@@ -117,78 +123,6 @@ body::after {
         border-radius: 50% !important;
         cursor: pointer;
     }
-}
-
-.menu {
-    position: fixed;
-    display: flex;
-    // justify-content: center;
-    flex-wrap: wrap;
-    // flex-direction: row;
-
-    left: 0;
-    top: 0;
-    flex-direction: column;
-    margin-left: 5rem;
-    opacity: 0.5;
-    width: 14%;
-    align-content: center;
-    background-image: url('/img/menu/side-menu-container.png');
-    background-size: 100% 99%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-top: 3em;
-    padding-bottom: 3em;
-
-    &:hover {
-        opacity: 1;
-    }
-
-    button {
-        width: 90%;
-        opacity: 0.5;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-}
-
-.menu-left {
-    // left: 0;
-    // flex-direction: column;
-    // margin-left: 1em;
-    // opacity: 0.5;
-    // width: 10%;
-    // align-content: center;
-    // background-image: url('/img/menu/side-menu-container.png');
-    // background-size: 100% 99%;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // padding-top: 3em;
-    // padding-bottom: 3em;
-
-    // &:hover {
-    //     opacity: 1;
-    // }
-
-    // button {
-    //     width: 90%;
-    //     opacity: 0.5;
-
-    //     &:hover {
-    //         opacity: 1;
-    //     }
-    // }
-}
-
-.menu-centre {
-//     position: relative;
-//     display: flex;
-//     z-index: 999;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     flex-direction: row;
 }
 
 @keyframes fadeInCustom {
