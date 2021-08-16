@@ -33,6 +33,7 @@
 <style>
     .style-history {
         width: 80%
+        height: 80%;
     }
 
     .history {
