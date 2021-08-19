@@ -31927,7 +31927,7 @@ body {
 
 body::after {
   content: "";
-  background: url("/img/main-background.jpg");
+  background: linear-gradient(210deg, black 0%, rgba(0, 212, 255, 0) 50%, black 100%), linear-gradient(30deg, black 0%, rgba(0, 212, 255, 0) 50%, black 100%), url("/img/perm-background.jpg");
   opacity: 0.2;
   top: 0;
   left: 0;

@@ -43,11 +43,12 @@
         width: 80%;
         align-content: center;
         justify-content: space-around;
-        background-image: url('/img/main-background-border-top.png');
+        background-image: url('/img/top-border-v2.png');
         max-height: 5.5em;
         background-size: 100% 99%;
         background-repeat: no-repeat;
         background-position: center center;
+
         padding-top: 1em;
         padding-bottom: 3em;
         padding-left: 3em;

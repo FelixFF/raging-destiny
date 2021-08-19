@@ -10,8 +10,8 @@
     @livewireStyles
 </head>
 <body class="bg-gray-900 bg-fixed bg-no-repeat h-screen bg-contain bg-center">
-    <img src="{{ asset('/img/main-background-border-left.png') }}" alt="Border Left" style="position: fixed; left:0; height: 100vh; max-width: 3rem"/>
-    <img src="{{ asset('/img/main-background-border-right.png') }}" alt="Border Right" style="position: fixed; right: 0; height: 100vh; max-width: 3rem"/>
+    <img src="{{ asset('/img/left-border.png') }}" alt="Border Left" style="position: fixed; left:0; height: 100vh; max-width: 3rem"/>
+    <img src="{{ asset('/img/right-border.png') }}" alt="Border Right" style="position: fixed; right: 0; height: 100vh; max-width: 3rem"/>
 
     @include('partials.menu')
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">

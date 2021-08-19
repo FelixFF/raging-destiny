@@ -1,12 +1,18 @@
 {
     "/js/app.js": "/js/app.js?id=9265f783b41f057cb1c8",
-    "/css/app.css": "/css/app.css?id=7e32b9dd1143dfecadea",
+    "/css/app.css": "/css/app.css?id=45ff56dbf28424df13dd",
     "/img/header.jpg": "/img/header.jpg?id=e03ef4d2190b04be1e66",
+    "/img/left-border.png": "/img/left-border.png?id=0ea7eda2bf0f92474d94",
     "/img/main-background-border-bottom.png": "/img/main-background-border-bottom.png?id=8f8e777b311b4fd1c454",
     "/img/main-background-border-left.png": "/img/main-background-border-left.png?id=4607d5e3b57ca5eb9d5d",
     "/img/main-background-border-right.png": "/img/main-background-border-right.png?id=ddc6613534bd9c5726b7",
     "/img/main-background-border-top.png": "/img/main-background-border-top.png?id=bed447272011672a745a",
     "/img/main-background-border.png": "/img/main-background-border.png?id=c2e15b9678d585c46012",
     "/img/main-background-old.jpg": "/img/main-background-old.jpg?id=1cf325c056a0bb2d2967",
-    "/img/main-background.jpg": "/img/main-background.jpg?id=c91ba1bc74ee7bda28f5"
+    "/img/main-background.jpg": "/img/main-background.jpg?id=c91ba1bc74ee7bda28f5",
+    "/img/perm-background.jpg": "/img/perm-background.jpg?id=530dc163e2fc288df9cd",
+    "/img/right-border.png": "/img/right-border.png?id=35b308090d991b63ddbd",
+    "/img/temp-background.jpg": "/img/temp-background.jpg?id=6ad402f1ac22593f1b12",
+    "/img/top-border-v1.png": "/img/top-border-v1.png?id=6f5afc735c540d8b91fa",
+    "/img/top-border-v2.png": "/img/top-border-v2.png?id=ad6c5c9bbd3e4fb07c6c"
 }
