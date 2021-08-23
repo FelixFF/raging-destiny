@@ -1,6 +1,6 @@
 {
     "/js/app.js": "/js/app.js?id=9265f783b41f057cb1c8",
-    "/css/app.css": "/css/app.css?id=45ff56dbf28424df13dd",
+    "/css/app.css": "/css/app.css?id=9e5030db04cb919a813e",
     "/img/header.jpg": "/img/header.jpg?id=e03ef4d2190b04be1e66",
     "/img/left-border.png": "/img/left-border.png?id=0ea7eda2bf0f92474d94",
     "/img/main-background-border-bottom.png": "/img/main-background-border-bottom.png?id=8f8e777b311b4fd1c454",
@@ -14,5 +14,7 @@
     "/img/right-border.png": "/img/right-border.png?id=35b308090d991b63ddbd",
     "/img/temp-background.jpg": "/img/temp-background.jpg?id=6ad402f1ac22593f1b12",
     "/img/top-border-v1.png": "/img/top-border-v1.png?id=6f5afc735c540d8b91fa",
-    "/img/top-border-v2.png": "/img/top-border-v2.png?id=ad6c5c9bbd3e4fb07c6c"
+    "/img/top-border-v2.png": "/img/top-border-v2.png?id=ad6c5c9bbd3e4fb07c6c",
+    "/img/top-border-with-title-v1.png": "/img/top-border-with-title-v1.png?id=fff50eaf0ece3eebc607",
+    "/img/top-border-with-title-v2.png": "/img/top-border-with-title-v2.png?id=788b842fc9588dab881e"
 }

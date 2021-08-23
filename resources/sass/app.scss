@@ -1,5 +1,5 @@
 // @import url('https://fonts.googleapis.com/css?family=Orbitron');
-// @import url('//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
+@import url('//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
 @import url('//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Sans');
 
 @tailwind base;
@@ -12,31 +12,28 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
+    // height: 100%;
 }
 
 body {
     color: blanchedalmond;
     text-align: center;
     font-family: "DejaVu Sans";
-    overflow-y: auto;
+    // font-family: "EXCELSIOR SANS";
+    // overflow-y: auto;
     display: block;
 }
 
 body::after {
     content: "";
-    // background: url('/img/main-background.jpg');
     background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-size: cover;
     opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;
+    z-index: -9999;
 }
 
 .content-style {
@@ -46,7 +43,6 @@ body::after {
     flex-direction: column;
     justify-content: space-around;
     transition: all 0.8s;
-    height: 80%;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -74,55 +70,16 @@ body::after {
     transition-timing-function: linear;
 }
 
-.news {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-
-    .news-section {
-        width: 90%;
-    }
-
-    .container {
-        position: relative;
-        text-align: center;
-        color: white;
-        padding: 0 30px;
-        transform: translate(-70px, -68px);
-
-        .top-left-text {
-            position: fixed;
-            color: darkblue;
-            font-size: 2em;
-            font-weight: bold;
-            position: absolute;
-            top: 4px;
-            left: 6px;
-            padding:25px;
-        }
-
-        .top-left-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    }
+.border-image {
+    position: fixed;
+    height: 100vh;
+    max-width: 2rem;
 }
 
-.books {
-    max-height: 80vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .books-image {
-        max-width: 35%;
-        border-radius: 50% !important;
-        cursor: pointer;
+@media only screen and (min-width: 54em)
+{
+    .border-image {
+        max-width: 3rem;
     }
 }
 

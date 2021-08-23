@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\SubHeading;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
@@ -9,7 +10,7 @@ Route::get('{view}', function ($view) {
         redirect('/');
     }
 
-    return view("content.{$view}");
+    return view("content.{$view}", ['subHeading' => SubHeading::getViewSubHeading($view)]);
 
 })->where('view', '[A-z_\-]+');
 

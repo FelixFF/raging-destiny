@@ -2,6 +2,7 @@
 
 @section('content')
     <div id="history" class="content-section-style style-history">
+        <img class="header-image" src="\img/content/box-banner.png" alt="News Banner">
         <div class="history">
             Part 1: Sonic the Comic
             At the age of eleven I already knew what I wanted to be when I grew up, a Video Game Designer. Being a huge fan of games since the age of four I had been sketching level designs and instruction manuals for years and at that age the game I thought that would be cooler than any other was a Streets of Rage game with characters and worlds from Sonic the Hedgehog. I was a huge fan of the UK publication of Sonic The Comic, it’s amazing art by Richard Elson and Nigel Dobbyn, along with it’s
@@ -10,7 +11,7 @@
             it would play and what would make it the coolest game ever!
             Then one day my Mum said something that made me think very hard about my project, she said, “Wouldn’t it be cooler if you made a game with your own characters?”
         </div>
-        <div class="history">
+        {{-- <div class="history">
             Part 2: Beyond the Bookcase.
             “Wouldn’t it be cooler if you made a game with your own characters?”
             This really hit home, only problem is at the age of eleven I just couldn’t imagine cooler characters then the ones on my video games. Until, my teacher at the time, Mr. Smith, gave us an English project to complete, it involved a beginning to a story that was pre-written and a title, Beyond the Bookcase. The task was to use this short beginning to the story and finish it off, it outlined no main characters or plot besides the mysterious book case.
@@ -26,22 +27,29 @@
             Without creating a character like Dedo I wouldn't have been able to envision action scenes, fight sequences, funny moments, backgrounds. When making something of the scale of RD, Dedo was a big help. You need a starting point, even if you will never use that point in the final product, it is vital to get you going in the right direction.
             Dedo will be making his first appearance in the upcoming release of Raging Destiny 2: Undying Pain, in a cameo role and I look to make him pop up from time to time.
 
-        </div>
+        </div> --}}
     </div>
 
 
 <style>
     .style-history {
-        width: 80%
-        height: 80%;
+        display: flex;
+        flex-direction: column;
+        max-width: 80%
+    }
+
+    .header-image {
+        max-width: 40%;
+        float: left;
     }
 
     .history {
         border: 2px whitesmoke solid;
         padding: 10px;
-        overflow-y: scroll;
-        background-color: rgba(17, 24, 39, 1);
-        height: 80%;
+        /* overflow-y: scroll; */
+        background-color: rgba(55, 65, 81, 1);
+        font-size: 20px;
+
     }
 </style>
 @endsection
