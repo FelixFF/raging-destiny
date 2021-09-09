@@ -9,7 +9,7 @@
     <title>Raging Destiny</title>
     @livewireStyles
 </head>
-<body class="bg-gray-900 bg-fixed bg-no-repeat bg-center">
+<body class="bg-gray-900 bg-fixed">
     <img src="{{ asset('/img/left-border.png') }}" class="border-image" alt="Border Left" style="left: 0"/>
     <img src="{{ asset('/img/right-border.png') }}" class="border-image" alt="Border Right" style="right: 0"/>
 

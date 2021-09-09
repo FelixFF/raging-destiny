@@ -39,6 +39,7 @@
 </div>
 <style>
     .menu {
+        z-index: 99;
         position: -webkit-sticky;
         position: sticky;
 
@@ -54,11 +55,12 @@
         justify-content: center;
         background-image: url('/img/top-border-with-title-v2.png');
         /* max-height: 5.5em; */
-        background-size: 100% 99%;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: top center;
 
-        padding-bottom: 10em;
+        padding-bottom: 11em;
+        transform: translateY(-45%);
     }
 
     .button-container {
@@ -70,11 +72,11 @@
     }
 
     button {
-        margin: 0 0.6em;
+        margin: 0.6em 0.7em;
         width: 14%;
     }
 
-    @media only screen and (max-width: 54em)
+    @media only screen and (max-width: 58em)
     {
         .button-container {
             max-width: 85%;
@@ -92,7 +94,7 @@
         }
     }
 
-    @media  only screen and (min-width: 55em) and (max-width: 90em)
+    @media  only screen and (min-width: 58em) and (max-width: 95em)
     {
         .button-container {
             max-width: 70%;

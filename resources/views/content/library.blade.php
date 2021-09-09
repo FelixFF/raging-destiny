@@ -9,9 +9,6 @@
         </div>
     @endforeach
 </div>
-<div style="border: 2px red solid; min-height: 100%; min-width: 60%; margin-right: 3em">
-    dasdsa
-</div>
 </div>
 <style>
     .books {
@@ -26,6 +23,7 @@
     }
 
     .books-image {
+        z-index: -99;
         /* max-width: 35%; */
         max-width: 60%;
         border-radius: 50% !important;

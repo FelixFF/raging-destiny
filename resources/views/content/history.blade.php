@@ -2,9 +2,13 @@
 
 @section('content')
     <div id="history" class="content-section-style style-history">
-        <img class="header-image" src="\img/content/box-banner.png" alt="News Banner">
+        <div class="header-image-container">
+            <img class="header-image" src="\img/content/box-banner.png" alt="News Banner">
+            <div class="header-image-text">
+                Part 1: Sonic the Comic
+            </div>
+        </div>
         <div class="history">
-            Part 1: Sonic the Comic
             At the age of eleven I already knew what I wanted to be when I grew up, a Video Game Designer. Being a huge fan of games since the age of four I had been sketching level designs and instruction manuals for years and at that age the game I thought that would be cooler than any other was a Streets of Rage game with characters and worlds from Sonic the Hedgehog. I was a huge fan of the UK publication of Sonic The Comic, it’s amazing art by Richard Elson and Nigel Dobbyn, along with it’s
             In depth story lines, surprisingly adult for its target audience filled my childhood with excitement and adventure as I rushed to the shop each and every fortnight for the next issue. Using these characters from the comic I loved, I began a project to turn Sonic into an Arcade beat’em up.
             With the help of my best friend Matthew, we had it all planned, levels, moves, special attacks, story. Many weekends, for months we spent drawing out our designs for this game, talking over how
@@ -35,12 +39,30 @@
     .style-history {
         display: flex;
         flex-direction: column;
-        max-width: 80%
+        max-width: 60%;
     }
 
     .header-image {
-        max-width: 40%;
-        float: left;
+        /* position: relative; */
+    }
+
+    .header-image-container {
+        max-width: 88.7%;
+        /* transform: translate(-37.8%, 28%); */
+        transform: translate(-2.8%, 30%);
+        position: relative;
+        text-align: center;
+        color: blue;
+        font-size: 3vw;
+        font-weight: bold;
+        font-family: "EXCELSIOR SANS";
+        font-style: italic;
+    }
+
+    .header-image-text {
+        position: absolute;
+        top: 32%;
+        left: 14%;
     }
 
     .history {
@@ -48,8 +70,8 @@
         padding: 10px;
         /* overflow-y: scroll; */
         background-color: rgba(55, 65, 81, 1);
-        font-size: 20px;
-
+        font-size: 1vw;
+        max-width: 80%
     }
 </style>
 @endsection

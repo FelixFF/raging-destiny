@@ -15,7 +15,7 @@ Route::get('{view}', function ($view) {
 })->where('view', '[A-z_\-]+');
 
 Route::get('/', function () {
-    return view('content.news');
+    return view('content.news', ['subHeading' => SubHeading::getViewSubHeading('news')]);
 });
 
 // Route::get('news', News::class);

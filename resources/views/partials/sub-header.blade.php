@@ -11,7 +11,7 @@
         vertical-align: center;
         width: 100%;
         background-color: rgb(0,0,255, 0.2);
-        margin-bottom: 3em;
+        margin-bottom: 1em;
         padding-top: 5px;
     }
 </style>

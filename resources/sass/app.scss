@@ -22,18 +22,25 @@ body {
     // font-family: "EXCELSIOR SANS";
     // overflow-y: auto;
     display: block;
-}
-
-body::after {
-    content: "";
     background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
-    opacity: 0.2;
+    // opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
-    z-index: -9999;
+    // position: absolute;
+}
+
+body::after {
+    content: "";
+//     background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
+    opacity: 0.2;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     position: absolute;
+//     z-index: -9999;
 }
 
 .content-style {
