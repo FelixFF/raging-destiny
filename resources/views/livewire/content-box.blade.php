@@ -24,31 +24,33 @@
     }
 
     .header-image-container {
-        max-width: 88.7%;
+        max-width: 88.6%;
         /* transform: translate(-37.8%, 28%); */
-        transform: translate(-2.8%, 30%);
+        transform: translate(-2.9%, 30%);
         position: relative;
         text-align: center;
-        color: darkblue;
+        color: #00bcfe;
         font-size: 3vw;
         font-weight: bold;
-        font-family: "EXCELSIOR SANS";
+        font-family: "EXCELSIOR SANS", serif;
         font-style: italic;
     }
 
     .header-image-text {
         position: absolute;
-        top: 32%;
+        top: 29%;
         left: 14%;
     }
 
     .content {
-        border: 2px whitesmoke solid;
+        border: 2px #050966 solid;
         padding: 10px;
         /* overflow-y: scroll; */
-        background-color: rgba(55, 65, 81, 1);
+        background: #7a8795;
         font-size: 1vw;
-        max-width: 80%
+        max-width: 80%;
+        text-shadow: 0 0 4px #020434;
+        border-radius: 0 0 15px 15px;
     }
 </style>
 

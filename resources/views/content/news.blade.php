@@ -2,12 +2,7 @@
 
 @section('content')
     <div id="news" class="content-section-style news">
-        {{-- <div class="container">
-            <img class="top-left-image" src="\img/content/box-banner.png" alt="News Banner">
-            <h1 class="top-left-text">
-                News
-            </h1>
-        </div> --}}
+        @livewire('content-box', ['title' => $contentBoxTitle, 'content' => $contentBoxContent], key($user->id))
     </div>
     <style>
         .news {
