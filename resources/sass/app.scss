@@ -18,29 +18,29 @@ html {
 body {
     color: blanchedalmond;
     text-align: center;
-    font-family: "DejaVu Sans";
+    font-family: "DejaVu Sans", serif;
     // font-family: "EXCELSIOR SANS";
     // overflow-y: auto;
     display: block;
-    background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
+    background: linear-gradient(210deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(30deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), url('/img/perm-background.jpg');
     // opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    // position: absolute;
+    position: absolute;
 }
 
 body::after {
-    content: "";
-//     background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
-    opacity: 0.2;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     position: absolute;
-//     z-index: -9999;
+    content: '';
+    background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    z-index: -9999;
 }
 
 .content-style {
@@ -51,8 +51,8 @@ body::after {
     justify-content: space-around;
     transition: all 0.8s;
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .content-section-style.in-view {
@@ -83,38 +83,83 @@ body::after {
     max-width: 2rem;
 }
 
-@media only screen and (min-width: 54em)
-{
+@media only screen and (min-width: 54em) {
     .border-image {
         max-width: 3rem;
     }
 }
 
 @keyframes fadeInCustom {
-    0% { opacity: 0; }
-    20% { opacity: 0.1; }
-    20% { opacity: 0.2; }
-    20% { opacity: 0.3; }
-    20% { opacity: 0.4; }
-    20% { opacity: 0.5; }
-    20% { opacity: 0.2; }
-    20% { opacity: 0.2; }
-    40% { opacity: 0.4; }
-    60% { opacity: 0.6; }
-    80% { opacity: 0.8; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOutCustom {
-    0% { opacity: 1; }
-    10% { opacity: 0.9; }
-    20% { opacity: 0.8; }
-    30% { opacity: 0.7; }
-    40% { opacity: 0.6; }
-    50% { opacity: 0.5; }
-    60% { opacity: 0.4; }
-    70% { opacity: 0.3; }
-    80% { opacity: 0.2; }
-    90% { opacity: 0.1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

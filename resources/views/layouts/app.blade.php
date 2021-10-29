@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Raging Destiny</title>
     @livewireStyles
 </head>
@@ -18,6 +19,7 @@
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">
         @yield('content')
     </div>
-@livewireScripts
+    @livewireScripts
+    @livewire('livewire-ui-modal')
 </body>
 </html>

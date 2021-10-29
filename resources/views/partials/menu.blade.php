@@ -39,7 +39,7 @@
 </div>
 <style>
     .menu {
-        z-index: 99;
+        /*z-index: 50;*/
         position: -webkit-sticky;
         position: sticky;
 
@@ -49,7 +49,6 @@
 
         top: 0;
         flex-direction: row;
-        flex-wrap: wrap;
         width: 80%;
         align-content: center;
         justify-content: center;
@@ -60,7 +59,7 @@
         background-position: top center;
 
         padding-bottom: 11em;
-        transform: translateY(-45%);
+        /*transform: translateY(-45%);*/
     }
 
     .button-container {

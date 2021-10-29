@@ -1,33 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="display:flex; justify-content: space-between; flex-direction: row;">
-<div id="books" class="content-section-style books">
-    @foreach (File::glob(public_path('img/books').'/*') as $path)
-        <div class="books-image" onclick="#">
-            <img src="{{ str_replace(public_path(), '', $path) }}" alt="">
+    <div style="display:flex; justify-content: space-between; flex-direction: row;">
+        <div id="books" class="content-section-style books">
+            @foreach (File::glob(public_path('img/books').'/*') as $path)
+                <div class="books-image" onclick="#">
+                    <img src="{{ str_replace(public_path(), '', $path) }}" alt="">
+                    {{-- @livewire('content-box', ['title' => 'Book Preview', 'content' => ' '], key($user->id)) --}}
+                </div>
+            @endforeach
         </div>
-    @endforeach
-</div>
-</div>
-<style>
-    .books {
-        display: flex;
-        flex-direction: row;
-        flex-direction: column;
-        /* justify-content: space-evenly; */
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        margin-left: 4em;
-    }
+    </div>
+    <style>
+        .books {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-evenly; */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 5%;
+        }
 
-    .books-image {
-        z-index: -99;
-        /* max-width: 35%; */
-        max-width: 60%;
-        border-radius: 50% !important;
-        cursor: pointer;
-    }
-</style>
+        .books-image {
+            z-index: -99;
+            /* max-width: 35%; */
+            max-width: 25%;
+            border-radius: 50% !important;
+            cursor: pointer;
+        }
+    </style>
 @endsection

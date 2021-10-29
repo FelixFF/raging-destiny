@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Model;
+use App\Models\Library;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LibraryFactory extends Factory
@@ -12,7 +12,7 @@ class LibraryFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Library::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,9 @@ class LibraryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence,
+            'content_preview' => $this->faker->sentence,
+            'released' => now(),
         ];
     }
 }
