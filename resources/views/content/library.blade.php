@@ -23,7 +23,7 @@
         }
 
         .books-image {
-            z-index: -99;
+            z-index: 0;
             /* max-width: 35%; */
             max-width: 25%;
             border-radius: 50% !important;

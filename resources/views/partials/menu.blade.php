@@ -39,7 +39,7 @@
 </div>
 <style>
     .menu {
-        /*z-index: 50;*/
+        z-index: 9;
         position: -webkit-sticky;
         position: sticky;
 

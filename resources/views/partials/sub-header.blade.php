@@ -10,8 +10,8 @@
         text-align: center;
         vertical-align: center;
         width: 100%;
-        background-color: rgb(0,0,255, 0.2);
-        margin-bottom: 1em;
+        background-color: rgb( 0, 0, 255, 0.2);
+        margin-bottom: 0.5em;
         padding-top: 5px;
     }
 </style>

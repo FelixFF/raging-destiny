@@ -1,5 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS);
-@import url(//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Sans);
+@import url(//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Mono);
 /*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -31918,9 +31918,9 @@ html {
 }
 
 body {
-  color: blanchedalmond;
+  color: white;
   text-align: center;
-  font-family: "DejaVu Sans", serif;
+  font-family: "DejaVu Mono", serif;
   display: block;
   top: 0;
   left: 0;
@@ -31977,12 +31977,53 @@ body::after {
   align-items: center;
   top: 0;
   transition-timing-function: linear;
+  z-index: 1;
 }
 
 .border-image {
   position: fixed;
   height: 100vh;
   max-width: 2rem;
+}
+
+/* Style all font awesome icons */
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30%;
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Youtube */
+
+.fa-youtube-play {
+  background: red;
+  color: white;
 }
 
 @media only screen and (min-width: 54em) {

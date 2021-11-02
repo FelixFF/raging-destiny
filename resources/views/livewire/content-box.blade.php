@@ -1,14 +1,17 @@
-<div>
-    <div id="history" class="content-section-style style-content-box">
-        <div class="header-image-container">
-            <img class="header-image" src="\img/content/box-banner.png" alt="News Banner">
-            <div class="header-image-text">
-                {{ $title }}
-            </div>
+<div id="content-box" class="content-section-style style-content-box">
+    <div class="header-image-container">
+        <img class="header-image" src="\img/content/box-banner.png" alt="News Banner">
+        <div class="header-image-text">
+            {{ $title }}
         </div>
-        <div class="content">
-            {{ $content }}
+    </div>
+    @if (isset($innerHeading))
+        <div class="inner-heading">
+            {{ $innerHeading }}
         </div>
+    @endif
+    <div class="content">
+        {{ $content }}
     </div>
 </div>
 
@@ -29,7 +32,7 @@
         transform: translate(-2.9%, 30%);
         position: relative;
         text-align: center;
-        color: #00bcfe;
+        color: #0137ca;
         font-size: 3vw;
         font-weight: bold;
         font-family: "EXCELSIOR SANS", serif;
@@ -45,12 +48,29 @@
     .content {
         border: 2px #050966 solid;
         padding: 10px;
-        /* overflow-y: scroll; */
-        background: #7a8795;
+        background: #cbdbef;
         font-size: 1vw;
         max-width: 80%;
-        text-shadow: 0 0 4px #020434;
+        color: #0137ca;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.4),
+        1px 2px 2px rgba(16, 16, 16, 0.2);
         border-radius: 0 0 15px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .inner-heading {
+        font-size: 1.6vw;
+        font-weight: bold;
+    }
+
+    @supports (-webkit-text-stroke: 1px black) {
+        .inner-heading {
+            -webkit-text-stroke: 1px #0137ca;
+            -webkit-text-fill-color: white;
+        }
     }
 </style>
 

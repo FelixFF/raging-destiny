@@ -6,8 +6,6 @@
             <div class="character" onclick='Livewire.emit("openModal", "character-bio-modal")'>
                 @if (strpos($path, 'bio') === false)
                     <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Image">
-                @else
-                    <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Bio" hidden>
                 @endif
             </div>
         @endforeach
