@@ -3,118 +3,122 @@
 @section('content')
     <div id="news" class="content-section-style news">
         {{--        @livewire('content-box', ['title' => $contentBoxTitle, 'content' => $contentBoxContent], key($user->id))--}}
-        <div class="carousel">
-            <button class="carousel__button carousel__button--left is-hidden">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div class="carousel__track-container">
-                <ul class="carousel__track">
-                    @foreach($allNews as $key => $news)
-                        <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
-                            <div class="carousel__slide--content">
-                                <div class="header-image-container">
-                                    <img class="header-image" src="\img/content/box-banner.png"
-                                         alt="Content Box Banner">
-                                    <div class="header-image-text">
-                                        {{ $news->main_title }}
-                                    </div>
-                                </div>
-                                <div class="news-content">
-                                    <div class="image-content">
-                                        <img src="\img/content/book-cover-1.jpg">
-                                    </div>
-                                    <div class="text-content">
-                                        <div
-                                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">
-                                            {{ $news->sub_title }}
+        <div class="content-section-style style-content-box">
+            <div class="header-image-container">
+                <img class="header-image" src="\img/content/box-banner.png"
+                     alt="Content Box Banner">
+                <div class="header-image-text">
+                    Available Now
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left is-hidden">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div class="carousel__track-container">
+                        <ul class="carousel__track">
+                            @foreach($allNews as $key => $news)
+                                <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
+                                    <div class="carousel__slide--content">
+                                        <div class="image-content">
+                                            <img src="\img/content/book-cover-1.jpg">
                                         </div>
-                                        <p class="scrollable-content">
-                                            {{ $news->content }}
-                                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
-                                        </p>
-                                        @if (str_contains($news->main_title, 'Available'))
-                                            <div class="buttons-content">
-                                                <button class="pushable">
+                                        <div class="text-content">
+                                            <div
+                                                style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                                                {{ $news->sub_title }}
+                                            </div>
+                                            <p class="scrollable-content">
+                                                {{ $news->content }}
+                                                <span id="book-preview" style="font-weight: bold"
+                                                      onclick="#">More...</span>
+                                            </p>
+                                            @if (str_contains($news->main_title, 'Available'))
+                                                <div class="buttons-content">
+                                                    <button class="pushable">
                                                   <span class="front">
                                                     Buy Now
                                                   </span>
-                                                </button>
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-
-            <button class="carousel__button carousel__button--right">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
-
-            <div class="carousel__nav">
-                <button class="carousel__indicator current-slide"></button>
-                <button class="carousel__indicator"></button>
-                <button class="carousel__indicator"></button>
-            </div>
-        </div>
-        <div class="carousel">
-            <button class="carousel__button carousel__button--left is-hidden">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div class="carousel__track-container">
-                <ul class="carousel__track">
-                    @foreach($allNews as $key => $news)
-                        <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
-                            <div class="carousel__slide--content">
-                                <div class="header-image-container">
-                                    <img class="header-image" src="\img/content/box-banner.png"
-                                         alt="Content Box Banner">
-                                    <div class="header-image-text">
-                                        {{ $news->main_title }}
-                                    </div>
-                                </div>
-                                <div class="news-content">
-                                    <div class="image-content">
-                                        <img src="\img/content/book-cover-1.jpg">
-                                    </div>
-                                    <div class="text-content">
-                                        <div
-                                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">
-                                            {{ $news->sub_title }}
+                                                    </button>
+                                                </div>
+                                            @endif
                                         </div>
-                                        <p class="scrollable-content">
-                                            {{ $news->content }}
-                                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
-                                        </p>
-                                        @if (str_contains($news->main_title, 'Available'))
-                                            <div class="buttons-content">
-                                                <button class="pushable">
-                                                  <span class="front">
-                                                    Buy Now
-                                                  </span>
-                                                </button>
-                                            </div>
-                                        @endif
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
 
-            <button class="carousel__button carousel__button--right">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
+                    <button class="carousel__button carousel__button--right">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
 
-            <div class="carousel__nav">
-                <button class="carousel__indicator current-slide"></button>
-                <button class="carousel__indicator"></button>
-                <button class="carousel__indicator"></button>
+                    <div class="carousel__nav">
+                        <button class="carousel__indicator current-slide"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                    </div>
+                </div>
             </div>
         </div>
+
+{{--        <div class="carousel">--}}
+{{--            <button class="carousel__button carousel__button--left is-hidden">--}}
+{{--                <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
+{{--            </button>--}}
+{{--            <div class="carousel__track-container">--}}
+{{--                <ul class="carousel__track">--}}
+{{--                    @foreach($allNews as $key => $news)--}}
+{{--                        <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">--}}
+{{--                            <div class="carousel__slide--content">--}}
+{{--                                <div class="header-image-container">--}}
+{{--                                    <img class="header-image" src="\img/content/box-banner.png"--}}
+{{--                                         alt="Content Box Banner">--}}
+{{--                                    <div class="header-image-text">--}}
+{{--                                        {{ $news->main_title }}--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="news-content">--}}
+{{--                                    <div class="image-content">--}}
+{{--                                        <img src="\img/content/book-cover-1.jpg">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="text-content">--}}
+{{--                                        <div--}}
+{{--                                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">--}}
+{{--                                            {{ $news->sub_title }}--}}
+{{--                                        </div>--}}
+{{--                                        <p class="scrollable-content">--}}
+{{--                                            {{ $news->content }}--}}
+{{--                                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>--}}
+{{--                                        </p>--}}
+{{--                                        @if (str_contains($news->main_title, 'Available'))--}}
+{{--                                            <div class="buttons-content">--}}
+{{--                                                <button class="pushable">--}}
+{{--                                                  <span class="front">--}}
+{{--                                                    Buy Now--}}
+{{--                                                  </span>--}}
+{{--                                                </button>--}}
+{{--                                            </div>--}}
+{{--                                        @endif--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    @endforeach--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+
+{{--            <button class="carousel__button carousel__button--right">--}}
+{{--                <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
+{{--            </button>--}}
+
+{{--            <div class="carousel__nav">--}}
+{{--                <button class="carousel__indicator current-slide"></button>--}}
+{{--                <button class="carousel__indicator"></button>--}}
+{{--                <button class="carousel__indicator"></button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         {{--        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>--}}
         {{--        <div class="content-section-style style-content-box">--}}
@@ -160,10 +164,9 @@
         }
 
         .style-content-box {
-            /*min-width: 100% !important;*/
-            /*max-width: 100% !important;*/
             display: flex;
             flex-direction: column;
+            /*max-width: 60%;*/
         }
 
         .header-image {
@@ -171,8 +174,8 @@
         }
 
         .header-image-container {
-            max-width: 99.7%;
-            transform: translate(-7.6%, 30%);
+            max-width: 99.4%;
+            transform: translate(-2.8%, 30%);
             position: relative;
             text-align: center;
             color: #0137ca;
@@ -202,6 +205,7 @@
             flex-direction: row;
             justify-content: space-between;
             height: 500px;
+            width: 100%;
         }
 
         .inner-heading {
@@ -265,12 +269,7 @@
             }
 
             .image-content {
-                margin: 1em;
-            }
-
-            .carousel__slide--content {
-                margin-left: 3em;
-                margin-top: -4em;
+                margin: 0 1em 1em 1em;
             }
         }
 
@@ -287,6 +286,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            min-width: 25%;
         }
 
         .buttons-content {
@@ -331,7 +331,5 @@
                 -webkit-text-fill-color: white;
             }
         }
-
-
     </style>
 @endsection

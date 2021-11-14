@@ -209,10 +209,9 @@ body::after {
 // Carousel Styling
 .carousel {
     position: relative;
-    height: 600px;
-    width: 50%;
-    //margin: 0 auto;
-    margin-bottom: 5em;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .carousel__slide {
@@ -240,24 +239,24 @@ body::after {
 .carousel__button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     height: 4em;
 }
 
 .carousel__button--left {
     left: -44px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -140%);
 }
 
 .carousel__button--right {
     right: -30px;
-    transform: translateX(50%);
+    transform: translate(50%, -140%);
 }
 
 .carousel__slide--content {
-    width: 100%;
     height: 100%;
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .carousel__nav {
@@ -278,5 +277,5 @@ body::after {
 }
 
 i {
-    font-size: 4em !important;
+    font-size: 3em !important;
 }
