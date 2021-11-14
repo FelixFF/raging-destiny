@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { Power1 } from "gsap";
 const $ = require('jquery');
 
+$('.bg-white').remove();
+
 const LEFT = "left";
 const CENTRE = "centre";
 

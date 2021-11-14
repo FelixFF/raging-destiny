@@ -1851,6 +1851,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
+$('.bg-white').remove();
 var LEFT = "left";
 var CENTRE = "centre";
 var menu = document.querySelector(".menu");
