@@ -3,8 +3,24 @@
 @section('content')
     <div class="history-browser">
 {{--        <span class="chevron left"><</span>--}}
-        @livewire('content-box', ['title' => $contentBoxTitle, 'content' => $contentBoxContent], key($user->id))
-        @livewire('content-box', ['title' => $contentBoxTitle1, 'content' => $contentBoxContent1], key($user->id))
+{{--        @foreach()--}}
+
+{{--        @endforeach--}}
+        <div id="history" class="content-section-style style-content-box">
+            <div class="header-image-container">
+                <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
+                <div class="header-image-text">
+                    History
+                </div>
+            </div>
+            <div class="contact-content">
+                @foreach($histories as $history)
+                    {{ File::glob(public_path('img/menu') . '/folder-icon.png') }}
+                @endforeach
+            </div>
+        </div>
+{{--        @livewire('content-box', ['title' => $contentBoxTitle, 'content' => $contentBoxContent], key($user->id))--}}
+{{--        @livewire('content-box', ['title' => $contentBoxTitle1, 'content' => $contentBoxContent1], key($user->id))--}}
 {{--        @livewire('content-box', ['title' => $contentBoxTitle2, 'content' => $contentBoxContent2], key($user->id))--}}
 {{--        <span class="chevron right">></span>--}}
     </div>

@@ -1,3 +1,3 @@
 <div>
-    <img src="{{ str_replace(public_path(), '', File::glob(public_path('img/characters').'/*')[0]) }}" alt="" style="transform: translatey(-2%)">
+    <img src="{{ str_replace(public_path(), '', File::glob(public_path('img/characters') ."{$modalContent}")) }}" alt="" style="transform: translatey(-2%)">
 </div>

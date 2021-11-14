@@ -59,6 +59,62 @@
                 <button class="carousel__indicator"></button>
             </div>
         </div>
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    @foreach($allNews as $key => $news)
+                        <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
+                            <div class="carousel__slide--content">
+                                <div class="header-image-container">
+                                    <img class="header-image" src="\img/content/box-banner.png"
+                                         alt="Content Box Banner">
+                                    <div class="header-image-text">
+                                        {{ $news->main_title }}
+                                    </div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="image-content">
+                                        <img src="\img/content/book-cover-1.jpg">
+                                    </div>
+                                    <div class="text-content">
+                                        <div
+                                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                                            {{ $news->sub_title }}
+                                        </div>
+                                        <p class="scrollable-content">
+                                            {{ $news->content }}
+                                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
+                                        </p>
+                                        @if (str_contains($news->main_title, 'Available'))
+                                            <div class="buttons-content">
+                                                <button class="pushable">
+                                                  <span class="front">
+                                                    Buy Now
+                                                  </span>
+                                                </button>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            <button class="carousel__button carousel__button--right">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
 
         {{--        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>--}}
         {{--        <div class="content-section-style style-content-box">--}}
@@ -97,6 +153,12 @@
         {{--        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>--}}
     </div>
     <style>
+        .news {
+            display: flex;
+            flex-direction: column;
+            /*justify-content: space-between;*/
+        }
+
         .style-content-box {
             /*min-width: 100% !important;*/
             /*max-width: 100% !important;*/

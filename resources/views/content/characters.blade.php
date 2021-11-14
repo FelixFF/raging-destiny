@@ -3,7 +3,8 @@
 @section('content')
     <div id="characters" class="content-section-style character-container">
         @foreach (File::glob(public_path('img/characters').'/*') as $path)
-            <div class="character" onclick='Livewire.emit("openModal", "character-bio-modal")'>
+            {{ $path }}
+            <div class="character" onclick='Livewire.emit("openModal", "character-bio-modal", @json(['pathToModalContent' => $path]))'>
                 @if (strpos($path, 'bio') === false)
                     <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Image">
                 @endif

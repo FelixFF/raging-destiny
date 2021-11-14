@@ -15,9 +15,11 @@ class HistoryController extends Controller
 
         $contentArray = [
             'subHeading' => self::SUB_HEADING,
-            'contentBoxTitle' => $histories[0]->title, 'contentBoxContent' => $histories[0]->content,
-            'contentBoxTitle1' => $histories[1]->title, 'contentBoxContent1' => $histories[1]->content,
-            'contentBoxTitle2' => $histories[2]->title, 'contentBoxContent2' => $histories[2]->content,
+            'histories' => [
+                $histories[0]->title,
+                $histories[1]->title,
+                $histories[2]->title,
+            ]
         ];
         return view('content.history')->with($contentArray);
     }

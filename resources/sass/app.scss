@@ -211,7 +211,8 @@ body::after {
     position: relative;
     height: 600px;
     width: 50%;
-    margin: 0 auto;
+    //margin: 0 auto;
+    margin-bottom: 5em;
 }
 
 .carousel__slide {
