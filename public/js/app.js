@@ -1861,17 +1861,21 @@ var nextButton = document.querySelector('.carousel__button--right');
 var previousButton = document.querySelector('.carousel__button--left');
 var dotsNav = document.querySelector('.carousel__nav');
 var dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
-var slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+var slideWidth = document.querySelector('.carousel__slide').getBoundingClientRect().width;
+
+var hideSlides = function hideSlides(slides) {};
 
 var setSlidePosition = function setSlidePosition(slide, index) {
+  console.log(slideWidth);
   slide.style.left = slideWidth * index + 'px';
 };
 
 var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
   if (targetSlide !== null) {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.add('is-hidden');
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
+    targetSlide.classList.remove('is-hidden');
   }
 };
 
@@ -1894,8 +1898,6 @@ var hideShowNavigation = function hideShowNavigation(target, currentIndex) {
     previousButton.classList.remove('is-hidden');
   }
 };
-
-slides.forEach(setSlidePosition);
 
 if (nextButton !== null && previousButton !== null) {
   nextButton.addEventListener('click', function (e) {

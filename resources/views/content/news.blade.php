@@ -17,9 +17,9 @@
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div class="carousel__track-container">
-                        <ul class="carousel__track">
+                        <div class="carousel__track">
                             @foreach($allNews as $key => $news)
-                                <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
+                                <div class="carousel__slide {{$key == 0 ? 'current-slide' : 'is-hidden' }}">
                                     <div class="carousel__slide--content">
                                         <div class="image-content">
                                             <img src="\img/content/book-cover-1.jpg">
@@ -45,9 +45,9 @@
                                             @endif
                                         </div>
                                     </div>
-                                </li>
+                                </div>
                             @endforeach
-                        </ul>
+                        </div>
                     </div>
 
                     <button class="carousel__button carousel__button--right">
@@ -204,7 +204,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 500px;
+            height: 600px;
             width: 100%;
         }
 

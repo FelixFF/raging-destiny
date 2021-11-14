@@ -20,17 +20,24 @@ const previousButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
 
-const slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+const slideWidth = document.querySelector('.carousel__slide').getBoundingClientRect().width;
+
+const hideSlides = (slides) => {
+
+}
 
 const setSlidePosition = (slide, index) => {
+    console.log(slideWidth)
     slide.style.left = slideWidth * index + 'px';
 }
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     if (targetSlide !== null) {
-        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.add('is-hidden')
         currentSlide.classList.remove('current-slide');
         targetSlide.classList.add('current-slide');
+        targetSlide.classList.remove('is-hidden');
+
     }
 }
 
@@ -53,8 +60,6 @@ const hideShowNavigation = (target, currentIndex) => {
         previousButton.classList.remove('is-hidden');
     }
 }
-
-slides.forEach(setSlidePosition)
 
 if (nextButton !== null && previousButton !== null) {
     nextButton.addEventListener('click', e => {
