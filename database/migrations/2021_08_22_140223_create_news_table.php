@@ -13,9 +13,12 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('news');
+
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('main_title');
+            $table->string('sub_title');
             $table->text('content');
             $table->timestamps();
         });

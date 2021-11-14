@@ -3,42 +3,96 @@
 @section('content')
     <div id="news" class="content-section-style news">
         {{--        @livewire('content-box', ['title' => $contentBoxTitle, 'content' => $contentBoxContent], key($user->id))--}}
-        <div class="content-section-style style-content-box">
-            <div class="header-image-container">
-                <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
-                <div class="header-image-text">
-                    Billy Twigg
-                </div>
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    @foreach($allNews as $key => $news)
+                        <li class="carousel__slide {{$key == 0 ? 'current-slide' : '' }}">
+                            <div class="carousel__slide--content">
+                                <div class="header-image-container">
+                                    <img class="header-image" src="\img/content/box-banner.png"
+                                         alt="Content Box Banner">
+                                    <div class="header-image-text">
+                                        {{ $news->main_title }}
+                                    </div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="image-content">
+                                        <img src="\img/content/book-cover-1.jpg">
+                                    </div>
+                                    <div class="text-content">
+                                        <div
+                                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                                            {{ $news->sub_title }}
+                                        </div>
+                                        <p class="scrollable-content">
+                                            {{ $news->content }}
+                                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
+                                        </p>
+                                        <div class="buttons-content">
+                                            <button class="pushable">
+                                              <span class="front">
+                                                Buy Now
+                                              </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
-            <div class="news-content">
-                <div class="image-content">
-                    <img src="\img/content/book-cover-1.jpg">
-                </div>
-                <div class="text-content">
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
-                        <p class="inner-heading">
-                            EVERYONE HAS A STYLE OF FIGHTING,
-                        </p>
-                        <p class="inner-heading" style="margin-top: -1em">
-                            BUT NOT EVERYONE CAN FIGHT WITH STYLE!
-                        </p>
-                    </div>
-                    <p>
-                        The first novel in the Raging Destiny novel series is now on sale!
-                        Read the adventures of Slider, Gwendolyn, Raygan and Crystal as they travel the world of Gaia
-                        and defend the people of Sanctuary City.
-                        <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
-                    </p>
-                    <div class="buttons-content">
-                        <button class="pushable">
-                              <span class="front">
-                                Buy Now
-                              </span>
-                        </button>
-                    </div>
-                </div>
+
+            <button class="carousel__button carousel__button--right">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
             </div>
         </div>
+
+        {{--        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>--}}
+        {{--        <div class="content-section-style style-content-box">--}}
+        {{--            @foreach($allNews as $news)--}}
+        {{--                <div class="header-image-container">--}}
+        {{--                    <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">--}}
+        {{--                    <div class="header-image-text">--}}
+        {{--                        {{ $news->main_title }}--}}
+        {{--                    </div>--}}
+        {{--                </div>--}}
+        {{--                <div class="news-content">--}}
+        {{--                    <div class="image-content">--}}
+        {{--                        <img src="\img/content/book-cover-1.jpg">--}}
+        {{--                    </div>--}}
+        {{--                    <div class="text-content">--}}
+        {{--                        <div--}}
+        {{--                            style="display: flex; justify-content: center; align-items: center; flex-direction: column">--}}
+        {{--                            {{ $news->sub_title }}--}}
+        {{--                        </div>--}}
+        {{--                        <p>--}}
+        {{--                            {{ $news->content }}--}}
+        {{--                            <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>--}}
+        {{--                        </p>--}}
+        {{--                        <div class="buttons-content">--}}
+        {{--                            <button class="pushable">--}}
+        {{--                                      <span class="front">--}}
+        {{--                                        Buy Now--}}
+        {{--                                      </span>--}}
+        {{--                            </button>--}}
+        {{--                        </div>--}}
+        {{--                    </div>--}}
+        {{--                </div>--}}
+        {{--            @endforeach--}}
+        {{--        </div>--}}
+
+        {{--        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>--}}
     </div>
     <style>
         .style-content-box {
@@ -53,9 +107,8 @@
         }
 
         .header-image-container {
-            max-width: 88.6%;
-            /* transform: translate(-37.8%, 28%); */
-            transform: translate(-2.9%, 30%);
+            max-width: 99.7%;
+            transform: translate(-7.6%, 30%);
             position: relative;
             text-align: center;
             color: #0137ca;
@@ -76,7 +129,6 @@
             padding: 10px;
             background: #cbdbef;
             font-size: 3vw;
-            max-width: 80%;
             color: #0137ca;
             font-weight: bold;
             text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.4),
@@ -85,6 +137,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            height: 500px;
         }
 
         .inner-heading {
@@ -94,13 +147,18 @@
             font-family: "EXCELSIOR SANS", serif;
         }
 
-        @media only screen and (min-width: 58em){
+        .scrollable-content {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        @media only screen and (min-width: 58em) {
             .news-content {
                 border: 2px #050966 solid;
                 padding: 10px;
                 background: #cbdbef;
                 font-size: 1vw;
-                max-width: 80%;
+                max-width: 90%;
                 color: #0137ca;
                 font-weight: bold;
                 text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.4),
@@ -145,10 +203,15 @@
             .image-content {
                 margin: 1em;
             }
+
+            .carousel__slide--content {
+                margin-left: 3em;
+                margin-top: -4em;
+            }
         }
 
         .text-content {
-            max-width: 60%;
+            /*max-width: 60%;*/
             margin: 1em;
             display: flex;
             flex-direction: column;
@@ -163,7 +226,7 @@
         }
 
         .buttons-content {
-            margin-top: 1.2em;
+            margin-top: 0.6em;
         }
 
         .pushable {
@@ -204,5 +267,7 @@
                 -webkit-text-fill-color: white;
             }
         }
+
+
     </style>
 @endsection

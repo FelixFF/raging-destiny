@@ -10,131 +10,93 @@ const menu = document.querySelector(".menu");
 const sectionTitle = document.querySelector(".title");
 const sections = document.querySelectorAll(".content-section-style");
 
-let previousEntry = null;
 
-const sectionOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.001
-};
+// Carousel logic
 
-const observer = new IntersectionObserver((entries, sectionTitleObserver) => {
-    entries.forEach(entry => {
-        // console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.remove("out-view");
+const track = document.querySelector('.carousel__track');
+const slides = track !== null ? Array.from(track.children) : [];
+const nextButton = document.querySelector('.carousel__button--right');
+const previousButton = document.querySelector('.carousel__button--left');
+const dotsNav = document.querySelector('.carousel__nav');
+const dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
 
-            if (previousEntry !== null) {
-                previousEntry.target.classList.add("out-view");
-            }
+const slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
 
-            $(window).on('scroll',function() {
-                // After Stuff
-                $(window).off('scroll');
-             });
-
-            setTimeout (() => {
-                entry.target.classList.add("in-view");
-                entry.target.style.opacity = 1;
-            }, 100);
-
-            previousEntry = entry;
-        } else {
-            $(window).on('scroll',function() {
-                // After Stuff
-                $(window).off('scroll');
-             });
-
-            entry.target.classList.remove("in-view");
-            entry.target.classList.add("out-view");
-            entry.target.style.opacity = 0;
-        }
-    })
-}, sectionOptions);
-
-sections.forEach(section => {
-    observer.observe(section);
-})
-// sectionTitleObserver.observe(sectionTitle);
-
-var isOutOfViewport = function (menu) {
-
-	// Get element's bounding
-	var bounding = menu.getBoundingClientRect();
-
-	// Check if it's out of the viewport on each side
-	var out = {};
-	out.top = bounding.top < 0;
-	out.left = bounding.left < 0;
-	out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
-	out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
-	out.any = out.top || out.left || out.bottom || out.right;
-	out.all = out.top && out.left && out.bottom && out.right;
-
-	return out;
-
-};
-
-// Flex Animation
-
-var group = document.querySelector(".menu");
-var nodes = document.querySelectorAll("button");
-var total = nodes.length;
-var ease  = Power1.easeInOut;
-var boxes = [];
-
-for (var i = 0; i < total; i++) {
-
-  var node = nodes[i];
-
-  // Initialize transforms on node
-  gsap.set(node, { x: 0 });
-
-  boxes[i] = {
-    transform: node._gsTransform,
-    x: node.offsetLeft,
-    y: node.offsetTop,
-    node
-  };
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
 }
 
-//jQuery
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    if (targetSlide !== null) {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+    }
+}
 
-// $('button a').on('click', function (event) {
-//     // Avoid the link click from loading a new page
-//     event.preventDefault();
+const updateDots = (currentDot, targetDot) => {
+    if (targetDot !== null) {
+        currentDot.classList.remove('current-slide');
+        targetDot.classList.add('current-slide');
+    }
+}
 
-//     console.log($(this).attr('href'))
-//     // Load the content from the link's href attribute
-//     $('.content').load($(this).attr('href'));
-// });
+const hideShowNavigation = (target, currentIndex) => {
+    if (currentIndex === 0) {
+        previousButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    } else if (currentIndex === target.children.length - 1) {
+        nextButton.classList.add('is-hidden');
+        previousButton.classList.remove('is-hidden');
+    } else {
+        nextButton.classList.remove('is-hidden');
+        previousButton.classList.remove('is-hidden');
+    }
+}
 
-// $.fn.moveIt = function(){
-//     var $window = $(window);
-//     var instances = [];
+slides.forEach(setSlidePosition)
 
-//     $(this).each(function(){
-//       instances.push(new moveItItem($(this)));
-//     });
+if (nextButton !== null && previousButton !== null) {
+    nextButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.current-slide');
+        const nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const nextDot = currentDot.nextElementSibling;
+        const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
-//     window.addEventListener('scroll', function(){
-//       var scrollTop = $window.scrollTop();
-//       instances.forEach(function(inst){
-//         inst.update(scrollTop);
-//       });
-//     }, {passive: true});
-//   }
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+        hideShowNavigation(track, nextIndex)
+    })
 
-//   var moveItItem = function(el){
-//     this.el = $(el);
-//     this.speed = parseInt(this.el.attr('data-scroll-speed'));
-//   };
+    previousButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.current-slide');
+        const previousSlide = currentSlide.previousElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const previousDot = currentDot.previousElementSibling;
+        const previousIndex = slides.findIndex(slide => slide === previousSlide);
 
-//   moveItItem.prototype.update = function(scrollTop){
-//     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-//   };
+        moveToSlide(track, currentSlide, previousSlide);
+        updateDots(currentDot, previousDot);
+        hideShowNavigation(track, previousIndex);
+    })
 
-//   // Initialization
-//   $(function(){
-//     $('[data-scroll-speed]').moveIt();
-//   });
+    dotsNav.addEventListener('click', e => {
+        const targetDot = e.target.closest('button');
+
+        if (!targetDot) {
+            return;
+        }
+
+        const currentSlide = track.querySelector('.current-slide');
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const targetIndex = dotsChildren.findIndex(dot => dot === targetDot);
+        const targetSlide = slides[targetIndex];
+
+        moveToSlide(track, currentSlide, targetSlide);
+        updateDots(currentDot, targetDot);
+        hideShowNavigation(dotsNav, targetIndex);
+    })
+}
+
+// End of Carousel logic

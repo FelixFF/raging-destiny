@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     private const SUB_HEADING = 'WELCOME TO THE DRIFT';
+    private $allNews = [];
 
     public function create()
     {
-        return view('content.news')->with(['subHeading' => self::SUB_HEADING, 'contentBoxTitle' => News::first()->title, 'contentBoxContent' => News::first()->content]);
+        return view('content.news')->with(['subHeading' => self::SUB_HEADING, 'allNews' => News::all()]);
     }
 }
