@@ -13,9 +13,9 @@
                 <div class="image-content">
                     <img src="\img/content/contact-picture.jpg">
                     <div class="social-media">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-youtube-play"></a>
+                        <a href="https://www.facebook.com/" class="fa fa-facebook" target=”_blank”></a>
+                        <a href="https://www.twitter.com/" class="fa fa-twitter" target=”_blank”></a>
+                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play" target=”_blank”></a>
                     </div>
                 </div>
                 <div class="text-content">
@@ -99,9 +99,11 @@
         }
 
         .inner-heading {
-            font-size: 2vw;
+            font-size: 2.4vw;
             font-weight: bolder;
             margin-bottom: 2em;
+            font-family: "EXCELSIOR SANS", serif;
+            font-style: italic;
         }
 
         @supports (-webkit-text-stroke: 0.2px black) {

@@ -18,7 +18,6 @@ class HistoryController extends Controller
             'histories' => [
                 $histories[0]->title,
                 $histories[1]->title,
-                $histories[2]->title,
             ]
         ];
         return view('content.history')->with($contentArray);

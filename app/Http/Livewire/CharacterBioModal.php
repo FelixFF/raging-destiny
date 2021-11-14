@@ -18,6 +18,4 @@ class CharacterBioModal extends ModalComponent
     {
         return view('livewire.character-bio-modal')->with(['modalContent' => $this->modalContent]);
     }
-
-
 }

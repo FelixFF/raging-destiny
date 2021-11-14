@@ -10,7 +10,7 @@
         </div>
         <div class="history-content">
             @foreach($histories as $history)
-                <div class="history-folder">
+                <div class="history-folder" onclick='Livewire.emit("openModal", "history-modal", @json(['titleOfHistory' => $history]))'>
                     <img src="\img/folder-icon.png" alt="Folder image"/>
                     <span>{{ $history }}</span>
                 </div>

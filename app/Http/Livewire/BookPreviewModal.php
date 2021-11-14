@@ -18,6 +18,4 @@ class BookPreviewModal extends ModalComponent
     {
         return view('livewire.book-preview-modal')->with(['modalContent' => $this->modalContent]);
     }
-
-
 }

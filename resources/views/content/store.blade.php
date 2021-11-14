@@ -6,7 +6,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Art
+                    Art-Cards
                 </div>
             </div>
             <div class="store-content">
@@ -42,7 +42,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Other
+                    Bookmark
                 </div>
             </div>
             <div class="store-content">
