@@ -17,13 +17,14 @@
     </div>
     <style>
         .books {
+            /*justify-content: space-evenly;*/
             display: flex;
             flex-direction: row;
-            /*justify-content: space-evenly;*/
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            margin: 5%;
+            max-width: 80%;
+            transition: box-shadow 0.4s ease-out;
         }
 
         .books-image {
@@ -31,6 +32,7 @@
             z-index: 0;
             /* max-width: 35%; */
             max-width: 25%;
+            min-width: 25em;
             border-radius: 50% !important;
             position: relative;
         }
