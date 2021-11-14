@@ -32,13 +32,15 @@
                                             {{ $news->content }}
                                             <span id="book-preview" style="font-weight: bold" onclick="#">More...</span>
                                         </p>
-                                        <div class="buttons-content">
-                                            <button class="pushable">
-                                              <span class="front">
-                                                Buy Now
-                                              </span>
-                                            </button>
-                                        </div>
+                                        @if (str_contains($news->main_title, 'Available'))
+                                            <div class="buttons-content">
+                                                <button class="pushable">
+                                                  <span class="front">
+                                                    Buy Now
+                                                  </span>
+                                                </button>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
