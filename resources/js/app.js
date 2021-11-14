@@ -20,14 +20,13 @@ const previousButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
 
-const slideWidth = document.querySelector('.carousel__slide').getBoundingClientRect().width;
+const slideWidth = document.querySelector('.carousel__slide')?.getBoundingClientRect().width;
 
 const hideSlides = (slides) => {
 
 }
 
 const setSlidePosition = (slide, index) => {
-    console.log(slideWidth)
     slide.style.left = slideWidth * index + 'px';
 }
 

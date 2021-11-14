@@ -11,7 +11,7 @@ class CharacterBioModal extends ModalComponent
 
     public function mount(string $pathToModalContent)
     {
-        $this->modalContent = str_replace([public_path('img/characters'), '.jpg'], '', $pathToModalContent) . '-bio.png';
+        $this->modalContent = str_replace([public_path(), '.jpg'], '', $pathToModalContent) . '-bio.png';
     }
 
     public function render()

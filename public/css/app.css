@@ -32270,6 +32270,14 @@ body::after {
   transform: translateY(-140%);
 }
 
+.carousel__button--left {
+  left: -45px;
+}
+
+.carousel__button--right {
+  right: -45px;
+}
+
 .carousel__slide--content {
   width: 100%;
   height: 100%;
@@ -32296,7 +32304,7 @@ body::after {
 }
 
 i {
-  font-size: 3em !important;
+  font-size: 2em !important;
 }
 
 @media (min-width: 640px){

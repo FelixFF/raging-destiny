@@ -1842,6 +1842,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var _document$querySelect;
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -1861,12 +1863,11 @@ var nextButton = document.querySelector('.carousel__button--right');
 var previousButton = document.querySelector('.carousel__button--left');
 var dotsNav = document.querySelector('.carousel__nav');
 var dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
-var slideWidth = document.querySelector('.carousel__slide').getBoundingClientRect().width;
+var slideWidth = (_document$querySelect = document.querySelector('.carousel__slide')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.getBoundingClientRect().width;
 
 var hideSlides = function hideSlides(slides) {};
 
 var setSlidePosition = function setSlidePosition(slide, index) {
-  console.log(slideWidth);
   slide.style.left = slideWidth * index + 'px';
 };
 
