@@ -66,6 +66,13 @@
         font-weight: bold;
     }
 
+    @media only screen and (min-width: 58em) {
+        .style-content-box {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+
     @supports (-webkit-text-stroke: 1px black) {
         .inner-heading {
             -webkit-text-stroke: 1px #0137ca;

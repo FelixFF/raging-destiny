@@ -78,11 +78,15 @@
     @media only screen and (max-width: 58em)
     {
         .button-container {
-            max-width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
             bottom: 20px;
+            transform: translateY(100%);
         }
 
         .menu {
+            width: 100%;
             padding-top: 2em;
             padding-bottom: 3em;
         }
@@ -107,6 +111,13 @@
         button {
             margin: -0.3em 0.2em 0.2em 0.2em;
             width: 20%;
+        }
+    }
+
+    @media only screen and (min-width: 54em) {
+        .border-image {
+            visibility: visible;
+            max-width: 3rem;
         }
     }
 

@@ -83,6 +83,7 @@ body::after {
     position: fixed;
     height: 100vh;
     max-width: 2rem;
+    visibility: collapse;
 }
 
 /* Style all font awesome icons */
@@ -120,8 +121,9 @@ body::after {
     color: white;
 }
 
-@media only screen and (min-width: 54em) {
+@media only screen and (min-width: 58em) {
     .border-image {
+        visibility: visible;
         max-width: 3rem;
     }
 }
