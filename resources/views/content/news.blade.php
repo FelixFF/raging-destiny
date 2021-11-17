@@ -28,19 +28,19 @@
                                             </div>
                                             <div class="text-content">
                                                 <div class="inner-heading"
-                                                     style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                                                     style="margin: 0.5em 0 1em 0;">
                                                     {{ $news->sub_title }}
                                                 </div>
                                                 <div class="scrollable-content-sub-heading">The first novel in the
                                                     Raging Destiny series is now on sale!
                                                 </div>
-                                                <p class="scrollable-content">
+                                                <p class="scrollable-content dynamic-container">
                                                     {{ $news->content }}
                                                     <span id="book-preview" style="font-weight: bold"
                                                           onclick="#">More...</span>
                                                 </p>
                                             </div>
-                                            <div class="buttons-content" style="position: absolute; bottom: 0">
+                                            <div class="buttons-content">
                                                 <button class="pushable">
                                                   <span class="front">
                                                     Buy Now
@@ -155,7 +155,7 @@
         .header-image-text {
             font-size: 16px;
             position: absolute;
-            top: 25%;
+            top: 24%;
             left: 14%;
         }
 
@@ -168,8 +168,7 @@
         .header-image-text-mid {
             position: absolute;
             right: 42%;
-            /*transform: translateY(-106%);*/
-            top: 3px;
+            top: 2px;
             text-align: center;
             font-size: 20px;
             font-family: "EXCELSIOR SANS", serif;
@@ -199,8 +198,7 @@
         }
 
         .inner-heading {
-            font-size: 20px;
-            /*font-weight: bolder;*/
+            font-size: 18px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
         }
@@ -208,8 +206,7 @@
         .scrollable-content {
             height: 100%;
             overflow-y: auto;
-            font-size: 14px;
-            /*border: 1px #050966 solid;;*/
+            font-size: 9px;
         }
 
         .scrollable-content-sub-heading {
@@ -218,31 +215,31 @@
             font-size: 10px;
         }
 
-
         .text-content {
             max-width: 90%;
             margin: 1em;
             display: flex;
             flex-direction: column;
             align-content: center;
-            justify-content: center;
+        }
+
+        .dynamic-container {
+            max-height: 32%;
         }
 
         .image-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-width: 30%;
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
+            margin-top: 1.5em;
+            display: none;
         }
 
         .inner-heading-mid {
             font-size: 24px;
             font-style: italic;
-            margin: 0 auto 2em auto;
+            margin: 1em auto 2em auto;
             display: flex;
             flex-direction: row;
             /*max-width: 80%;*/
@@ -258,7 +255,10 @@
         }
 
         .buttons-content {
+            position: absolute;
             margin-top: 0.6em;
+            left: 0;
+            bottom: 0;
         }
 
         .pushable {
@@ -268,15 +268,14 @@
             padding: 0;
             cursor: pointer;
             outline-offset: 4px;
-            min-width: 220px;
+            min-width: 180px;
         }
 
         .front {
             display: block;
             min-width: 140px;
             border-radius: 4px;
-            font-size: 1.25rem;
-            /*text-align: left;*/
+            font-size: 0.8rem;
             background: #0e4068;
             color: white;
             transform: translateY(-6px);
@@ -355,7 +354,6 @@
             width: 20px;
             height: 20px;
             background: white;
-            /*transform: translateY(4em);*/
         }
 
         .carousel__indicator.current-slide {
@@ -366,11 +364,12 @@
             font-size: 2em !important;
         }
 
-        @media only screen and  (min-width: 600px) and (max-width: 1531px){
+        @media only screen and  (min-width: 600px) and (max-width: 1531px) {
             .news {
                 margin-top: -3em;
             }
         }
+
         @media only screen and (min-width: 600px) {
             .news-content {
                 font-size: 1vw;
@@ -423,8 +422,36 @@
             }
 
             .inner-heading {
-                font-size: 2.1vw;
+                font-size: 36px;
                 margin-bottom: 1em;
+            }
+
+            .inner-heading-mid {
+                font-size: 40px;
+                margin-top: 1.5em;
+            }
+
+            .dynamic-container {
+                max-height: 100%;
+            }
+
+            .scrollable-content {
+                height: 100%;
+                overflow-y: auto;
+                font-size: 16px;
+            }
+
+            .scrollable-content-sub-heading {
+                margin-bottom: 1em;
+                margin-top: -1em;
+                font-size: 18px;
+            }
+
+            .buttons-content {
+                position: absolute;
+                margin-top: 0.6em;
+                left: 0;
+                bottom: 20px;
             }
 
             .pushable {
@@ -442,7 +469,6 @@
                 min-width: 140px;
                 border-radius: 4px;
                 font-size: 1.25rem;
-                /*text-align: left;*/
                 background: #0e4068;
                 color: white;
                 transform: translateY(-6px);
@@ -453,18 +479,12 @@
             }
 
             .image-content {
-                margin: 0 1em 1em 1em;
-                font-size: 32px;
-            }
-
-            .image-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                display: block;
                 min-width: 30%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
+                font-size: 32px;
+                margin-top: 2em;
             }
         }
 
