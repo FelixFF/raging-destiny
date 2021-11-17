@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="contact-content">
-                <div class="image-content" style="justify-content: center">
+                <div class="image-content">
                     <img src="\img/logos/logo-pcps.png">
                     <div class="social-media">
                         <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
@@ -142,7 +142,7 @@
             border-radius: 0 0 15px 15px;
             display: flex;
             flex-direction: column-reverse;
-            justify-content: space-evenly;
+            justify-content: space-between;
             height: 300px;
             width: 80%;
         }
@@ -155,7 +155,7 @@
             font-size: 18px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            margin: 0.5em 0 1em 0;
+            margin: 0 0 1em 0;
         }
 
         .scrollable-content {
@@ -213,9 +213,6 @@
             display: flex;
             justify-content: space-evenly;
             width: 100%;
-            position: absolute;
-            margin: 0.6em auto 0 auto;
-            bottom: 0;
             font-size: 20px;
         }
 
@@ -227,13 +224,12 @@
         }
 
         .social-media-big-logos {
-            width: 20%;
             height: 100%;
         }
 
         a.social-media-big-logos {
             text-align: center;
-            font-size: 12px;
+            font-size: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -342,7 +338,9 @@
             }
 
             .image-content {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 min-width: 30%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
