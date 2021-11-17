@@ -49,7 +49,7 @@
 
         top: 0;
         flex-direction: row;
-        width: 80%;
+        width: 1280px;
         align-content: center;
         justify-content: center;
         background-image: url('/img/top-border-with-title-v2.png');
@@ -64,10 +64,10 @@
 
     .button-container {
         position: absolute;
-        bottom: 36px;
+        bottom: 57px;
         display: flex;
         justify-content: center;
-        max-width: 90%;
+        max-width: 85%;
     }
 
     button {
@@ -75,35 +75,84 @@
         width: 14%;
     }
 
-    @media only screen and (max-width: 58em)
+    @media only screen and (max-width: 399px)
     {
         .button-container {
             display: flex;
             flex-wrap: wrap;
-            max-width: 100%;
             bottom: 20px;
             transform: translateY(100%);
+            width: 300px;
+            max-width: 100%;
         }
 
         .menu {
             width: 100%;
-            padding-top: 2em;
+            padding-top: 21px;
             padding-bottom: 3em;
         }
 
         button {
             margin: -0.3em 0.2em 0.2em 0.2em;
-            width: 25%;
+            width: 30%;
+            min-width: 30px;
         }
     }
 
-    @media  only screen and (min-width: 58em) and (max-width: 95em)
+    @media only screen and (min-width: 400px) and (max-width: 58em)
     {
         .button-container {
-            max-width: 70%;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            bottom: 20px;
+            transform: translateY(100%);
+        }
+
+        .menu {
+            padding-top: 2em;
+            padding-bottom: 3em;
+            width: 470px;
+        }
+
+        button {
+            margin: -0.3em 0.2em 0.2em 0.2em;
+            width: 25%;
+            min-width: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 58em)
+    {
+        .button-container {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            bottom: 20px;
+            transform: translateY(100%);
+        }
+
+        .menu {
+            padding-top: 4em;
+            padding-bottom: 3em;
+            width: 45em;
+            margin-bottom: 5em;
+        }
+
+        button {
+            margin: -0.3em 0.2em 0.2em 0.2em;
+            width: 25%;
+            min-width: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 58em) and (max-width: 95em)
+    {
+        .button-container {
             bottom: 25px;
         }
         .menu {
+            width: 970px;
             padding-top: 3em;
             padding-bottom: 4em;
         }
@@ -113,14 +162,6 @@
             width: 20%;
         }
     }
-
-    @media only screen and (min-width: 54em) {
-        .border-image {
-            visibility: visible;
-            max-width: 3rem;
-        }
-    }
-
 
     button:hover {
         opacity: 0.5;

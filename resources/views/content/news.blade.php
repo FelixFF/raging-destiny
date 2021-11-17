@@ -47,27 +47,26 @@
                                                   </span>
                                                 </button>
                                             </div>
-                                            </div>
                                         </div>
                                     </div>
-                                @endif
-                            @endforeach
                         </div>
+                        @endif
+                        @endforeach
                     </div>
-
-                    {{--                    <button class="carousel__button carousel__button--right">--}}
-                    {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
-                    {{--                    </button>--}}
-
-{{--                    <div class="carousel__nav">--}}
-{{--                        @foreach($allNews as $key => $news)--}}
-{{--                            @if (str_contains($news->main_title, 'Available'))--}}
-{{--                                <button--}}
-{{--                                    class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
-{{--                            @endif--}}
-{{--                        @endforeach--}}
-{{--                    </div>--}}
                 </div>
+
+                {{--                    <button class="carousel__button carousel__button--right">--}}
+                {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
+                {{--                    </button>--}}
+
+                {{--                    <div class="carousel__nav">--}}
+                {{--                        @foreach($allNews as $key => $news)--}}
+                {{--                            @if (str_contains($news->main_title, 'Available'))--}}
+                {{--                                <button--}}
+                {{--                                    class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
+                {{--                            @endif--}}
+                {{--                        @endforeach--}}
+                {{--                    </div>--}}
             </div>
         </div>
         <div class="content-section-style style-content-box">
@@ -89,7 +88,9 @@
                 <div class="carousel__slide--content" style="border: 1px solid #050966; border-radius: 15px;">
                     <div class="text-content">
                         <div class="inner-heading-mid">
-                            Raging Destiny Available Now!
+                            <p>
+                                Raging Destiny Available Now!
+                            </p>
                         </div>
                         <p class="scrollable-content">
                             A brand new adventure from writer Billy Twigg is now available to buy. Own your very own
@@ -118,7 +119,6 @@
             </div>
         </div>
     </div>
-    </div>
     <style>
         .news {
             display: flex;
@@ -132,6 +132,8 @@
         .style-content-box {
             display: flex;
             flex-direction: column;
+            width: 18em;
+            min-width: 270px;
         }
 
         .image-content img {
@@ -151,9 +153,9 @@
         }
 
         .header-image-text {
-            font-size: 22px;
+            font-size: 16px;
             position: absolute;
-            top: 23%;
+            top: 25%;
             left: 14%;
         }
 
@@ -167,13 +169,13 @@
             position: absolute;
             right: 42%;
             /*transform: translateY(-106%);*/
-            top: 4px;
+            top: 3px;
             text-align: center;
-            font-size: 24px;
+            font-size: 20px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             color: #0137ca;
-         }
+        }
 
         .news-content {
             border: 2px #050966 solid;
@@ -206,22 +208,24 @@
         .scrollable-content {
             height: 100%;
             overflow-y: auto;
+            font-size: 14px;
             /*border: 1px #050966 solid;;*/
         }
 
         .scrollable-content-sub-heading {
             margin-bottom: 1em;
             margin-top: -1em;
+            font-size: 10px;
         }
 
 
         .text-content {
-            /*max-width: 60%;*/
+            max-width: 90%;
             margin: 1em;
             display: flex;
             flex-direction: column;
             align-content: center;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .image-content {
@@ -236,15 +240,16 @@
         }
 
         .inner-heading-mid {
-            font-size: 6vh;
+            font-size: 24px;
             font-style: italic;
-            margin-bottom: 2em;
+            margin: 0 auto 2em auto;
             display: flex;
             flex-direction: row;
             /*max-width: 80%;*/
             max-height: 20%;
             font-family: 'EXCELSIOR SANS', serif;
             text-align: center;
+            max-width: 80%;
         }
 
         .inner-logo {
@@ -315,7 +320,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .carousel__button {
@@ -362,7 +366,21 @@
             font-size: 2em !important;
         }
 
-        @media only screen and (min-width: 58em) {
+        /*@media only screen and (min-width: 600px) and (max-width: 58em) {*/
+        /*    .news {*/
+        /*        flex-direction: column;*/
+        /*        justify-content: center;*/
+        /*        align-items: center;*/
+        /*        max-width: 94%;*/
+        /*    }*/
+        /*}*/
+
+        @media only screen and  (min-width: 600px) and (max-width: 1531px){
+            .news {
+                margin-top: -3em;
+            }
+        }
+        @media only screen and (min-width: 600px) {
             .news-content {
                 font-size: 1vw;
                 max-width: 90%;
