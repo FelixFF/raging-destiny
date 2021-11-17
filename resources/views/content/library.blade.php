@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div style="display:flex; justify-content: space-between; flex-direction: row;">
+    <div style="display:flex; justify-content: center; flex-direction: row;">
         <div id="books" class="content-section-style books">
             @foreach (File::glob(public_path('img/books').'/*') as $path)
                 @if (str_contains($path, 'modal') === false)

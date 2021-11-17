@@ -366,15 +366,6 @@
             font-size: 2em !important;
         }
 
-        /*@media only screen and (min-width: 600px) and (max-width: 58em) {*/
-        /*    .news {*/
-        /*        flex-direction: column;*/
-        /*        justify-content: center;*/
-        /*        align-items: center;*/
-        /*        max-width: 94%;*/
-        /*    }*/
-        /*}*/
-
         @media only screen and  (min-width: 600px) and (max-width: 1531px){
             .news {
                 margin-top: -3em;
