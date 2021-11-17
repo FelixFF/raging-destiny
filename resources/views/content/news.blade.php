@@ -27,8 +27,7 @@
                                                 <p>(P&P included)</p>
                                             </div>
                                             <div class="text-content">
-                                                <div class="inner-heading"
-                                                     style="margin: 0.5em 0 1em 0;">
+                                                <div class="inner-heading">
                                                     {{ $news->sub_title }}
                                                 </div>
                                                 <div class="scrollable-content-sub-heading">The first novel in the
@@ -201,6 +200,7 @@
             font-size: 18px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
+            margin: 0.5em 0 1em 0;
         }
 
         .scrollable-content {
@@ -224,7 +224,7 @@
         }
 
         .dynamic-container {
-            max-height: 32%;
+            height: 80px;
         }
 
         .image-content {
@@ -362,6 +362,16 @@
 
         i {
             font-size: 2em !important;
+        }
+
+        @media only screen and  (min-width: 400px) and (max-width: 599px) {
+            .dynamic-container {
+                height: 72px;
+            }
+
+            .inner-heading {
+                margin-top: -0.7em;
+            }
         }
 
         @media only screen and  (min-width: 600px) and (max-width: 1531px) {

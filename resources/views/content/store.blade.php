@@ -132,7 +132,7 @@
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             margin: auto;
-            max-height: 480px;
+            max-height: 410px;
             z-index: 1;
         }
 
