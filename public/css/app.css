@@ -32027,6 +32027,13 @@ body::after {
   color: white;
 }
 
+/* Instagram */
+
+.fa-instagram {
+  background: orange;
+  color: white;
+}
+
 @media only screen and (min-width: 65.5em) {
   .border-image {
     visibility: visible;

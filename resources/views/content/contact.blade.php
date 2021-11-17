@@ -15,15 +15,75 @@
                     <div class="social-media">
                         <a href="https://www.facebook.com/" class="fa fa-facebook" target=”_blank”></a>
                         <a href="https://www.twitter.com/" class="fa fa-twitter" target=”_blank”></a>
-                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play" target=”_blank”></a>
+                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
+                           target=”_blank”></a>
                     </div>
                 </div>
                 <div class="text-content">
                     <p class="inner-heading">
                         Writer, Illustrator and Creator of Raging Destiny.
                     </p>
-                    <p>
-                        Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story printed in book form and standing side by side on his book shelf. If others happen to enjoy the story along the way, then that is a delightful bonus.
+                    <p class="scrollable-content">
+                        Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
+                        printed in book form and standing side by side on his book shelf. If others happen to enjoy the
+                        story along the way, then that is a delightful bonus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="content-section-style style-content-box">
+            <div class="header-image-container">
+                <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
+                <div class="header-image-text">
+                    Social Media
+                </div>
+            </div>
+            <div class="contact-content social-media-content">
+                <div class="social-media-images">
+                    <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook social-media-big-logos" target=”_blank”></a>
+                    <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter social-media-big-logos" target=”_blank”></a>
+                    <a href="https://www.instagram.com/ragingdestiny/?hl=en-gb" class="fa fa-instagram social-media-big-logos" target=”_blank”></a>
+                </div>
+
+                <div class="text-content">
+                    <div class="title-w-logo">
+                        <img src="\img/logos/logo-social.png">
+                        <p class="inner-heading">
+                            Be a part of Raging Destiny!
+                        </p>
+                    </div>
+                    <p class="scrollable-content">
+                        If you would like to keep up to date with all the latest Raging Destiny news or share your opinions on the product, there is no better place than the links below.
+                        Look forward to hearing from you.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="content-section-style style-content-box">
+            <div class="header-image-container">
+                <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
+                <div class="header-image-text">
+                    Pop Culture Pause Screen
+                </div>
+            </div>
+            <div class="contact-content">
+                <div class="image-content" style="justify-content: center">
+                    <img src="\img/logos/logo-pcps.png">
+                    <div class="social-media">
+                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
+                           target=”_blank”></a>
+                        <a href="https://www.instagram.com/bill_popculturepausescreen/" class="fa fa-instagram"
+                           target=”_blank”></a>
+                    </div>
+                </div>
+                <div class="text-content" style="min-width: 60%">
+                    <p class="inner-heading">
+                        YouTube Content
+                    </p>
+                    <p class="scrollable-content">
+                        In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro Wrestling.
+                        If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
+                        reviews, talking points and more.
                     </p>
                 </div>
             </div>
@@ -47,6 +107,7 @@
         }
 
         .image-content img {
+            display: none;
             box-shadow: 1px 2px 2px rgba(16, 16, 16, 0.2);
         }
 
@@ -65,7 +126,7 @@
         .header-image-text {
             font-size: 16px;
             position: absolute;
-            top: 25%;
+            top: 24%;
             left: 14%;
         }
 
@@ -80,24 +141,27 @@
             1px 2px 2px rgba(16, 16, 16, 0.2);
             border-radius: 0 0 15px 15px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
             height: 300px;
             width: 80%;
         }
 
+        .social-media-content {
+            flex-direction: column-reverse !important;
+        }
+
         .inner-heading {
-            font-size: 20px;
-            /*font-weight: bolder;*/
+            font-size: 18px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
+            margin: 0.5em 0 1em 0;
         }
 
         .scrollable-content {
             height: 100%;
             overflow-y: auto;
-            font-size: 14px;
-            /*border: 1px #050966 solid;;*/
+            font-size: 9px;
         }
 
         .scrollable-content-sub-heading {
@@ -106,31 +170,31 @@
             font-size: 10px;
         }
 
-
         .text-content {
             max-width: 90%;
             margin: 1em;
             display: flex;
             flex-direction: column;
             align-content: center;
-            justify-content: center;
+        }
+
+        .dynamic-container {
+            height: 80px;
         }
 
         .image-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-width: 30%;
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
+            margin-top: 1.5em;
+            position: relative;
         }
 
         .inner-heading-mid {
             font-size: 24px;
             font-style: italic;
-            margin: 0 auto 2em auto;
+            margin: 1em auto 2em auto;
             display: flex;
             flex-direction: row;
             /*max-width: 80%;*/
@@ -145,120 +209,69 @@
             margin-right: -2em;
         }
 
-        .buttons-content {
-            margin-top: 0.6em;
-        }
-
-        .pushable {
-            background: #104977;
-            border-radius: 4px;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            outline-offset: 4px;
-            min-width: 220px;
-        }
-
-        .front {
-            display: block;
-            min-width: 140px;
-            border-radius: 4px;
-            font-size: 1.25rem;
-            /*text-align: left;*/
-            background: #0e4068;
-            color: white;
-            transform: translateY(-6px);
-        }
-
-        .pushable:active .front {
-            transform: translateY(-2px);
-        }
-
-        .carousel {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            border: 1px solid #050966;
-            border-top: none;
-            border-radius: 0 0 15px 15px;
-        }
-
-        .carousel__slide {
-            align-items: center;
-            position: absolute;
-            width: 90%;
-            top: 0;
-            bottom: 0;
-        }
-
-        .carousel__track-container {
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel__track {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            position: absolute;
-            height: 96.2%;
-            width: 100%;
-            transition: transform 250ms ease-in;
+        .social-media {
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel__button {
-            position: absolute;
-            top: 50%;
-            height: 4em;
-            transform: translateY(-140%);
-        }
-
-        .carousel__button--left {
-            left: -45px;
-        }
-
-        .carousel__button--right {
-            right: -45px;
-        }
-
-        .carousel__slide--content {
+            justify-content: space-evenly;
             width: 100%;
-            height: 100%;
+            position: absolute;
+            margin: 0.6em auto 0 auto;
+            bottom: 0;
+            font-size: 20px;
+        }
+
+        .social-media-images {
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .social-media-big-logos {
+            width: 20%;
+            height: 100%;
+        }
+
+        a.social-media-big-logos {
+            text-align: center;
+            font-size: 12px;
+            display: flex;
             justify-content: center;
+            align-items: center;
         }
 
-        .carousel__nav {
-            /*background: #cbdbef;*/
-        }
-
-        .carousel__indicator {
-            border: 0;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            background: white;
-            /*transform: translateY(4em);*/
-        }
-
-        .carousel__indicator.current-slide {
-            background: rgba(14, 64, 104, 1);
+        .title-w-logo img{
+            display: none;
         }
 
         i {
             font-size: 2em !important;
         }
 
-        @media only screen and  (min-width: 600px) and (max-width: 1531px){
+        @media only screen and (min-width: 400px) and (max-width: 599px) {
+            .dynamic-container {
+                height: 72px;
+            }
+
+            .inner-heading {
+                margin-top: -0.7em;
+            }
+
+            .social-media-big-logos {
+                width: 20%;
+                height: 90%;
+            }
+
+            a.social-media-big-logos {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and  (min-width: 600px) and (max-width: 1531px) {
             .contact {
                 margin-top: -3em;
             }
         }
+
         @media only screen and (min-width: 600px) {
             .contact-content {
                 font-size: 1vw;
@@ -287,27 +300,80 @@
             .style-content-box {
                 max-width: 40%;
                 min-width: 45em;
+                height: 500px;
             }
 
             .inner-heading {
-                font-size: 2.1vw;
+                font-size: 36px;
                 margin-bottom: 1em;
             }
 
-            .image-content {
-                margin: 0 1em 1em 1em;
-                font-size: 32px;
+            .social-media {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .image-content img{
+                display: block;
+            }
+
+            .dynamic-container {
+                max-height: 100%;
+            }
+
+            .scrollable-content {
+                height: 100%;
+                overflow-y: auto;
+                font-size: 16px;
+            }
+
+            .scrollable-content-sub-heading {
+                margin-bottom: 1em;
+                margin-top: -1em;
+                font-size: 18px;
+            }
+
+            .buttons-content {
+                position: absolute;
+                margin-top: 0.6em;
+                left: 0;
+                bottom: 20px;
             }
 
             .image-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                display: block;
                 min-width: 30%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
+                font-size: 32px;
+                margin-top: 2em;
             }
+
+            .title-w-logo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title-w-logo img{
+                max-width: 50%;
+                max-height: 60%;
+                display: block;
+            }
+
+            .social-media-big-logos {
+                width: 13%;
+            }
+
+            a.social-media-big-logos {
+                font-size: 38px;
+            }
+        }
+
+        .image-content img {
+            box-shadow: 1px 2px 2px rgba(16, 16, 16, 0.2);
         }
 
         @supports (-webkit-text-stroke: 0.2px black) {

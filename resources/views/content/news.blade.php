@@ -23,8 +23,8 @@
                                         <div class="carousel__slide--content">
                                             <div class="image-content">
                                                 <img src="\img/content/book-cover-1.jpg">
-                                                <p>£15</p>
-                                                <p>(P&P included)</p>
+                                                <p>£10</p>
+                                                <p>(£2.99 P&P)</p>
                                             </div>
                                             <div class="text-content">
                                                 <div class="inner-heading">
