@@ -6,7 +6,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    History
+                    Select a file...
                 </div>
             </div>
             <div class="history-content">

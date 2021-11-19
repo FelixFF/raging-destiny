@@ -10,24 +10,24 @@
                 </div>
             </div>
             <div class="contact-content">
-                <div class="image-content">
-                    <img src="\img/content/contact-picture.jpg">
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/" class="fa fa-facebook" target=”_blank”></a>
-                        <a href="https://www.twitter.com/" class="fa fa-twitter" target=”_blank”></a>
-                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
-                           target=”_blank”></a>
+                <p class="inner-heading">
+                    Writer, Illustrator and Creator of Raging Destiny.
+                </p>
+{{--                <div style="display: flex; flex-direction: row; max-height: 70%">--}}
+                    <div class="image-content">
+                        <img src="\img/content/contact-picture.jpg">
                     </div>
-                </div>
-                <div class="text-content">
-                    <p class="inner-heading">
-                        Writer, Illustrator and Creator of Raging Destiny.
-                    </p>
-                    <p class="scrollable-content">
-                        Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
-                        printed in book form and standing side by side on his book shelf. If others happen to enjoy the
-                        story along the way, then that is a delightful bonus.
-                    </p>
+                    <div class="text-content">
+                        <p class="scrollable-content">
+                            Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
+                            printed in book form and standing side by side on his book shelf. If others happen to enjoy
+                            the
+                            story along the way, then that is a delightful bonus.
+                        </p>
+                    </div>
+{{--                </div>--}}
+                <div class="social-media">
+                    <a href="mailto:billy.twigg@hotmail.co.uk" class="fa fa-envelope" target=”_blank”></a>
                 </div>
             </div>
         </div>
@@ -39,23 +39,28 @@
                 </div>
             </div>
             <div class="contact-content social-media-content">
-                <div class="social-media-images">
-                    <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook social-media-big-logos" target=”_blank”></a>
-                    <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter social-media-big-logos" target=”_blank”></a>
-                    <a href="https://www.instagram.com/ragingdestiny/?hl=en-gb" class="fa fa-instagram social-media-big-logos" target=”_blank”></a>
-                </div>
-
-                <div class="text-content">
-                    <div class="title-w-logo">
-                        <img src="\img/logos/logo-social.png">
-                        <p class="inner-heading">
-                            Be a part of Raging Destiny!
+                <p class="inner-heading">
+                    Be a part of Raging Destiny!
+                </p>
+                <div style="display: flex; flex-direction: row; max-height: 70%">
+                    <div class="text-content">
+                        <div class="title-w-logo">
+                            <img src="\img/logos/logo-social.png">
+                        </div>
+                        <p class="scrollable-content">
+                            If you would like to keep up to date with all the latest Raging Destiny news or share your
+                            opinions on the product, there is no better place than the links below.
+                            Look forward to hearing from you.
                         </p>
                     </div>
-                    <p class="scrollable-content">
-                        If you would like to keep up to date with all the latest Raging Destiny news or share your opinions on the product, there is no better place than the links below.
-                        Look forward to hearing from you.
-                    </p>
+                </div>
+                <div class="social-media-images">
+                    <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook social-media-big-logos"
+                       target=”_blank”></a>
+                    <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter social-media-big-logos"
+                       target=”_blank”></a>
+                    <a href="https://www.instagram.com/ragingdestiny/?hl=en-gb"
+                       class="fa fa-instagram social-media-big-logos" target=”_blank”></a>
                 </div>
             </div>
         </div>
@@ -67,24 +72,27 @@
                 </div>
             </div>
             <div class="contact-content">
-                <div class="image-content">
-                    <img src="\img/logos/logo-pcps.png">
-                    <div class="social-media">
-                        <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
-                           target=”_blank”></a>
-                        <a href="https://www.instagram.com/bill_popculturepausescreen/" class="fa fa-instagram"
-                           target=”_blank”></a>
+                <p class="inner-heading">
+                    YouTube Content
+                </p>
+                <div style="display: flex; flex-direction: row; max-height: 70%">
+                    <div class="image-content">
+                        <img src="\img/logos/logo-pcps.png">
+                    </div>
+                    <div class="text-content" style="min-width: 60%">
+                        <p class="scrollable-content">
+                            In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro
+                            Wrestling.
+                            If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
+                            reviews, talking points and more.
+                        </p>
                     </div>
                 </div>
-                <div class="text-content" style="min-width: 60%">
-                    <p class="inner-heading">
-                        YouTube Content
-                    </p>
-                    <p class="scrollable-content">
-                        In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro Wrestling.
-                        If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
-                        reviews, talking points and more.
-                    </p>
+                <div class="social-media">
+                    <a href="https://www.youtube.com/channel/UCBqSsc0az9c9l-hUei0C8VQ" class="fa fa-youtube-play"
+                       target=”_blank”></a>
+                    <a href="https://www.instagram.com/bill_popculturepausescreen/" class="fa fa-instagram"
+                       target=”_blank”></a>
                 </div>
             </div>
         </div>
@@ -148,7 +156,12 @@
         }
 
         .social-media-content {
-            flex-direction: column-reverse !important;
+            flex-direction: column;
+        }
+
+        .social-media-content .text-content {
+            display: flex;
+            flex-direction: row;
         }
 
         .inner-heading {
@@ -187,7 +200,6 @@
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            margin-top: 1.5em;
             position: relative;
         }
 
@@ -235,7 +247,7 @@
             align-items: center;
         }
 
-        .title-w-logo img{
+        .title-w-logo img {
             display: none;
         }
 
@@ -273,8 +285,8 @@
                 font-size: 1vw;
                 max-width: 90%;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: space-evenly;
                 height: 600px;
                 width: 85%;
             }
@@ -310,7 +322,7 @@
                 justify-content: space-evenly;
             }
 
-            .image-content img{
+            .image-content img {
                 display: block;
             }
 
@@ -340,24 +352,22 @@
             .image-content {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                min-width: 30%;
+                justify-content: space-evenly;
+                max-width: 30%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
                 font-size: 32px;
-                margin-top: 2em;
             }
 
             .title-w-logo {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                justify-content: flex-start;
+                min-width: 44%;
             }
 
-            .title-w-logo img{
-                max-width: 50%;
-                max-height: 60%;
+            .title-w-logo img {
+                max-height: 48%;
                 display: block;
             }
 

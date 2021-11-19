@@ -21,23 +21,23 @@
                                 @if (str_contains($news->main_title, 'Available'))
                                     <div class="carousel__slide {{$key == 0 ? 'current-slide' : 'is-hidden' }}">
                                         <div class="carousel__slide--content">
-                                            <div class="image-content">
-                                                <img src="\img/content/book-cover-1.jpg">
-                                                <p>£10</p>
-                                                <p>(£2.99 P&P)</p>
+                                            <div class="inner-heading">
+                                                {!! $news->sub_title !!}
                                             </div>
-                                            <div class="text-content">
-                                                <div class="inner-heading">
-                                                    {{ $news->sub_title }}
+                                            <div style="display: flex; flex-direction: row; max-height: 70%">
+                                                <div class="image-content">
+                                                    <img src="\img/content/book-cover-1.jpg">
+                                                    <p>£10.00</p>
+                                                    <p>(£2.99 P&P)</p>
                                                 </div>
-                                                <div class="scrollable-content-sub-heading">The first novel in the
-                                                    Raging Destiny series is now on sale!
+                                                <div class="text-content">
+                                                    <div class="scrollable-content-sub-heading">
+                                                        THE FIRST NOVEL IN THE RAGING DESTINY IS NOW ON SALE!
+                                                    </div>
+                                                    <p class="scrollable-content dynamic-container">
+                                                        {!! $news->content !!}
+                                                    </p>
                                                 </div>
-                                                <p class="scrollable-content dynamic-container">
-                                                    {{ $news->content }}
-                                                    <span id="book-preview" style="font-weight: bold"
-                                                          onclick="#">More...</span>
-                                                </p>
                                             </div>
                                             <div class="buttons-content">
                                                 <button class="pushable">
@@ -69,6 +69,76 @@
             </div>
         </div>
         <div class="content-section-style style-content-box">
+            <div class="header-image-container">
+                <img class="header-image" src="\img/content/box-banner.png"
+                     alt="Content Box Banner">
+                <div class="header-image-text">
+                    Available Now!
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="carousel">
+                    {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
+                    {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
+                    {{--                    </button>--}}
+                    <div class="carousel__track-container">
+                        <div class="carousel__track">
+                            <div class="carousel__slide">
+                                <div class="carousel__slide--content">
+                                    <div class="inner-heading" style="font-size: 54px; margin-top: 0.2em !important; margin-bottom: 0.2em !important;transform: translateY(-40%);">
+                                        GET THE SIGNATURE EDITION!
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; max-height: 70%">
+                                        <div class="image-content" style="max-width: 36%">
+                                            <img src="\img/content/book-cover-1-hardback.jpg">
+                                            <p>£22.00</p>
+                                            <p>(£2.99 P&P)</p>
+                                        </div>
+                                        <div class="text-content">
+                                            <div class="scrollable-content-sub-heading">
+                                                THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!
+                                            </div>
+                                            <div class="scrollable-content dynamic-container">
+                                                <ul>
+                                                    <li>- Hard Back cover.</li>
+                                                    <li>- Dust sheet.</li>
+                                                    <li>- Silver foil front cover.</li>
+                                                    <li>- Larger A5 Print.</li>
+                                                    <li>- Crisp White 80g pages.</li>
+                                                    <li>- Larger margin indent.</li>
+                                                    <li>- Signed by Author Billy Twigg</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="buttons-content">
+                                            <button class="pushable">
+                                                  <span class="front">
+                                                    Buy Now
+                                                  </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{--                    <button class="carousel__button carousel__button--right">--}}
+                {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
+                {{--                    </button>--}}
+
+                {{--                    <div class="carousel__nav">--}}
+                {{--                        @foreach($allNews as $key => $news)--}}
+                {{--                            @if (str_contains($news->main_title, 'Available'))--}}
+                {{--                                <button--}}
+                {{--                                    class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
+                {{--                            @endif--}}
+                {{--                        @endforeach--}}
+                {{--                    </div>--}}
+            </div>
+        </div>
+        <div class="content-section-style style-content-box">
             <div class="header-image-container-mid">
                 <img class="header-image" src="\img/mid-banner.png"
                      alt="Content Box Banner">
@@ -76,7 +146,7 @@
                     News
                 </div>
             </div>
-            <div class="news-content" style="border-radius: 15px">
+            <div class="news-content" style="border-radius: 15px; flex-direction:column">
                 {{--                <div class="carousel">--}}
                 {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
                 {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
@@ -85,19 +155,24 @@
                 {{--                        <div class="carousel__track">--}}
                 {{--                                    <div class="carousel__slide {{$key == 0 ? 'current-slide' : 'is-hidden' }}">--}}
                 <div class="carousel__slide--content" style="border: 1px solid #050966; border-radius: 15px;">
-                    <div class="text-content">
+                    <div class="text-content news-section">
                         <div class="inner-heading-mid">
                             <p>
-                                Raging Destiny Available Now!
+                                Expand your Raging Destiny experience today!
                             </p>
                         </div>
-                        <p class="scrollable-content">
-                            A brand new adventure from writer Billy Twigg is now available to buy. Own your very own
-                            copy of this new Martial Arts Fantasy Fiction and let RagingDestiny.com know what you
-                            thought!
-                            More exciting details to follow, so make your way over to RagingDestiny.com/Contact to join
-                            your choice of social media and check back with RD.com again soon.
+                        <p class="scrollable-content" style="font-size: 20px !important;">
+                            Make your way over to the Raging Destiny Store to find the latest merchandise available now! <br>
+                            T-shirts, hoodies, art, bookmarks, puzzles, posters, you can find it all and show your support for Raging Destiny!
                         </p>
+                    </div>
+                </div>
+                <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                    <div class="buttons-content-news" style="width: 100%">
+                        <button class="pushable">
+                        <span class="front">Merchandise
+                        </span>
+                        </button>
                     </div>
                 </div>
                 {{--                                    </div>--}}
@@ -225,6 +300,7 @@
 
         .dynamic-container {
             height: 80px;
+            text-align: left;
         }
 
         .image-content {
@@ -232,14 +308,13 @@
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            margin-top: 1.5em;
             display: none;
         }
 
         .inner-heading-mid {
-            font-size: 24px;
+            font-size: 50px !important;
             font-style: italic;
-            margin: 1em auto 2em auto;
+            margin: 0 auto 2em auto;
             display: flex;
             flex-direction: row;
             /*max-width: 80%;*/
@@ -247,6 +322,13 @@
             font-family: 'EXCELSIOR SANS', serif;
             text-align: center;
             max-width: 80%;
+        }
+
+        .news-section {
+            display: flex;
+            justify-content: space-between !important;
+            width: 100% !important;
+            max-width: 94% !important;
         }
 
         .inner-logo {
@@ -259,6 +341,13 @@
             margin-top: 0.6em;
             left: 0;
             bottom: 0;
+        }
+
+        .buttons-content-news {
+            position: absolute;
+            margin-top: 0.6em;
+            bottom: 0;
+            max-width: 93%;
         }
 
         .pushable {
@@ -340,7 +429,7 @@
             width: 100%;
             height: 100%;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
         }
 
@@ -362,6 +451,13 @@
 
         i {
             font-size: 2em !important;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 2em 0 0 1em;
+            width: 100%;
+            overflow-y: hidden;
         }
 
         @media only screen and  (min-width: 400px) and (max-width: 599px) {
@@ -389,6 +485,10 @@
                 justify-content: space-between;
                 height: 600px;
                 width: 85%;
+            }
+
+            .text-content {
+                max-width: 70%;
             }
 
             .header-image-container {
@@ -432,21 +532,22 @@
             }
 
             .inner-heading {
-                font-size: 36px;
+                font-size: 41px;
                 margin-bottom: 1em;
             }
 
             .inner-heading-mid {
                 font-size: 40px;
-                margin-top: 1.5em;
+                /*margin-top: 1.5em;*/
             }
 
             .dynamic-container {
                 max-height: 100%;
+                overflow: hidden;
             }
 
             .scrollable-content {
-                height: 100%;
+                height: 71%;
                 overflow-y: auto;
                 font-size: 16px;
             }
@@ -461,7 +562,8 @@
                 position: absolute;
                 margin-top: 0.6em;
                 left: 0;
-                bottom: 20px;
+                bottom: -17px;
+                width: 100%;
             }
 
             .pushable {
@@ -472,6 +574,7 @@
                 cursor: pointer;
                 outline-offset: 4px;
                 min-width: 140px;
+                width: 96%;
             }
 
             .front {
@@ -494,7 +597,6 @@
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
                 font-size: 32px;
-                margin-top: 2em;
             }
         }
 

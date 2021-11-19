@@ -13,7 +13,7 @@
     <title>Raging Destiny</title>
     @livewireStyles
 </head>
-<body class="bg-gray-900 bg-fixed">
+<body class="bg-gray-900 bg-fixed" style="position: relative">
     <img src="{{ asset('/img/left-border.png') }}" class="border-image" alt="Border Left" style="left: 0"/>
     <img src="{{ asset('/img/right-border.png') }}" class="border-image" alt="Border Right" style="right: 0"/>
 
@@ -22,6 +22,7 @@
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">
         @yield('content')
     </div>
+    <footer style="position:absolute; bottom: 0; width: 100%; min-width: 30px; margin-top:2em; background: rgba(0,0,0, .2)">Copyright @Raging Destiny</footer>
     @livewireScripts
     @livewire('livewire-ui-modal')
 </body>
