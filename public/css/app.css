@@ -31991,8 +31991,8 @@ body::after {
 
 .fa {
   padding: 10px;
-  font-size: 30px;
-  width: 50px;
+  font-size: 15px;
+  width: 38px;
   text-align: center;
   text-decoration: none;
   border-radius: 30%;
@@ -32057,6 +32057,11 @@ body::after {
 @media only screen and (min-width: 600px) {
   body {
     min-width: 45em;
+  }
+
+  .fa {
+    width: 60px;
+    font-size: 30px !important;
   }
 }
 

@@ -85,7 +85,7 @@
                         <div class="carousel__track">
                             <div class="carousel__slide">
                                 <div class="carousel__slide--content">
-                                    <div class="inner-heading" style="font-size: 54px; margin-top: 0.2em !important; margin-bottom: 0.2em !important;transform: translateY(-40%);">
+                                    <div class="inner-heading signature-edition">
                                         GET THE SIGNATURE EDITION!
                                     </div>
                                     <div style="display: flex; flex-direction: row; max-height: 70%">
@@ -146,7 +146,7 @@
                     News
                 </div>
             </div>
-            <div class="news-content" style="border-radius: 15px; flex-direction:column">
+            <div class="news-content content-mid-box" style="border-radius: 15px; flex-direction:column">
                 {{--                <div class="carousel">--}}
                 {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
                 {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
@@ -161,15 +161,18 @@
                                 Expand your Raging Destiny experience today!
                             </p>
                         </div>
-                        <p class="scrollable-content" style="font-size: 20px !important;">
-                            Make your way over to the Raging Destiny Store to find the latest merchandise available now! <br>
-                            T-shirts, hoodies, art, bookmarks, puzzles, posters, you can find it all and show your support for Raging Destiny!
+                        <p class="scrollable-content news-container">
+                            Make your way over to the Raging Destiny Store to find the latest merchandise available now!
+                            <br>
+                            T-shirts, hoodies, art, bookmarks, puzzles, posters, you can find it all and show your
+                            support for Raging Destiny!
                         </p>
                     </div>
                 </div>
-                <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
-                    <div class="buttons-content-news" style="width: 100%">
-                        <button class="pushable">
+                <div
+                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                    <div class="buttons-content-news" style="width: 100%; margin-bottom: 0.5em">
+                        <button onclick="location.href = location.href.replace('news', 'store');" class="pushable">
                         <span class="front">Merchandise
                         </span>
                         </button>
@@ -267,12 +270,32 @@
             width: 80%;
         }
 
+        .content-mid-box {
+            position: relative;
+        }
+
+        .content-mid-box::after {
+            content: "";
+            width: 94.6%;
+            height: 96%;
+            border: 1px solid black;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            position: absolute;
+            transform: translate(-2%, -2%);
+            z-index: 0;
+        }
+
+        .news-container {
+            font-size: 8px !important;
+        }
+
         .news-content.carousel__slide--content {
 
         }
 
         .inner-heading {
-            font-size: 18px;
+            font-size: 13px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             margin: 0.5em 0 1em 0;
@@ -281,13 +304,13 @@
         .scrollable-content {
             height: 100%;
             overflow-y: auto;
-            font-size: 9px;
+            font-size: 7px;
         }
 
         .scrollable-content-sub-heading {
             margin-bottom: 1em;
             margin-top: -1em;
-            font-size: 10px;
+            font-size: 8px;
         }
 
         .text-content {
@@ -299,7 +322,7 @@
         }
 
         .dynamic-container {
-            height: 80px;
+            height: 136px;
             text-align: left;
         }
 
@@ -312,23 +335,27 @@
         }
 
         .inner-heading-mid {
-            font-size: 50px !important;
+            font-size: 18px !important;
             font-style: italic;
-            margin: 0 auto 2em auto;
+            margin: 0 auto 3.5em auto;
             display: flex;
             flex-direction: row;
-            /*max-width: 80%;*/
             max-height: 20%;
             font-family: 'EXCELSIOR SANS', serif;
             text-align: center;
-            max-width: 80%;
+            z-index: 2;
+        }
+
+        .inner-heading.signature-edition {
+            font-size: 18px;
+            margin-top: 1em !important;
+            margin-bottom: 0.2em !important;
+            transform: translateY(-40%);
         }
 
         .news-section {
             display: flex;
             justify-content: space-between !important;
-            width: 100% !important;
-            max-width: 94% !important;
         }
 
         .inner-logo {
@@ -427,7 +454,6 @@
 
         .carousel__slide--content {
             width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -454,20 +480,14 @@
         }
 
         ul {
-            font-size: 18px;
+            font-size: 9px;
             margin: 2em 0 0 1em;
-            width: 100%;
-            overflow-y: hidden;
+            width: 90%;
+            overflow: hidden;
         }
 
         @media only screen and  (min-width: 400px) and (max-width: 599px) {
-            .dynamic-container {
-                height: 72px;
-            }
 
-            .inner-heading {
-                margin-top: -0.7em;
-            }
         }
 
         @media only screen and  (min-width: 600px) and (max-width: 1531px) {
@@ -477,6 +497,13 @@
         }
 
         @media only screen and (min-width: 600px) {
+            ul {
+                font-size: 18px;
+                margin: 2em 0 0 1em;
+                width: 100%;
+                overflow-y: hidden;
+            }
+
             .news-content {
                 font-size: 1vw;
                 max-width: 90%;
@@ -485,6 +512,10 @@
                 justify-content: space-between;
                 height: 600px;
                 width: 85%;
+            }
+
+            .news-container {
+                font-size: 20px !important;
             }
 
             .text-content {
@@ -532,12 +563,19 @@
             }
 
             .inner-heading {
-                font-size: 41px;
+                font-size: 39px;
                 margin-bottom: 1em;
             }
 
+            .inner-heading.signature-edition {
+                font-size: 54px;
+                margin-top: 0.2em !important;
+                margin-bottom: 0.2em !important;
+                transform: translateY(-40%);
+            }
+
             .inner-heading-mid {
-                font-size: 40px;
+                font-size: 47px !important;
                 /*margin-top: 1.5em;*/
             }
 
@@ -597,6 +635,10 @@
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
                 font-size: 32px;
+            }
+
+            .carousel__slide--content {
+                height: 100%;
             }
         }
 

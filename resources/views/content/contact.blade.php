@@ -13,19 +13,15 @@
                 <p class="inner-heading">
                     Writer, Illustrator and Creator of Raging Destiny.
                 </p>
-{{--                <div style="display: flex; flex-direction: row; max-height: 70%">--}}
-                    <div class="image-content">
-                        <img src="\img/content/contact-picture.jpg">
+                <div class="box-content">
+                    <img class="image-content" src="\img/content/contact-picture.jpg" alt="Billy's photo">
+                    <div class="scrollable-content">
+                        Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
+                        printed in book form and standing side by side on his book shelf. If others happen to enjoy
+                        the
+                        story along the way, then that is a delightful bonus.
                     </div>
-                    <div class="text-content">
-                        <p class="scrollable-content">
-                            Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
-                            printed in book form and standing side by side on his book shelf. If others happen to enjoy
-                            the
-                            story along the way, then that is a delightful bonus.
-                        </p>
-                    </div>
-{{--                </div>--}}
+                </div>
                 <div class="social-media">
                     <a href="mailto:billy.twigg@hotmail.co.uk" class="fa fa-envelope" target=”_blank”></a>
                 </div>
@@ -38,29 +34,25 @@
                     Social Media
                 </div>
             </div>
-            <div class="contact-content social-media-content">
+            <div class="contact-content">
                 <p class="inner-heading">
                     Be a part of Raging Destiny!
                 </p>
-                <div style="display: flex; flex-direction: row; max-height: 70%">
-                    <div class="text-content">
-                        <div class="title-w-logo">
-                            <img src="\img/logos/logo-social.png">
-                        </div>
-                        <p class="scrollable-content">
-                            If you would like to keep up to date with all the latest Raging Destiny news or share your
-                            opinions on the product, there is no better place than the links below.
-                            Look forward to hearing from you.
-                        </p>
+                <div class="box-content socials">
+                    <img class="image-content logo-socials" src="\img/logos/logo-social.png" alt="Raging Destiny Logo">
+                    <div class="scrollable-content">
+                        If you would like to keep up to date with all the latest Raging Destiny news or share your
+                        opinions on the product, there is no better place than the links below.
+                        Look forward to hearing from you.
                     </div>
                 </div>
-                <div class="social-media-images">
-                    <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook social-media-big-logos"
+                <div class="social-media">
+                    <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook"
                        target=”_blank”></a>
-                    <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter social-media-big-logos"
+                    <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter"
                        target=”_blank”></a>
                     <a href="https://www.instagram.com/ragingdestiny/?hl=en-gb"
-                       class="fa fa-instagram social-media-big-logos" target=”_blank”></a>
+                       class="fa fa-instagram" target=”_blank”></a>
                 </div>
             </div>
         </div>
@@ -75,17 +67,13 @@
                 <p class="inner-heading">
                     YouTube Content
                 </p>
-                <div style="display: flex; flex-direction: row; max-height: 70%">
-                    <div class="image-content">
-                        <img src="\img/logos/logo-pcps.png">
-                    </div>
-                    <div class="text-content" style="min-width: 60%">
-                        <p class="scrollable-content">
-                            In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro
-                            Wrestling.
-                            If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
-                            reviews, talking points and more.
-                        </p>
+                <div class="box-content">
+                    <img class="image-content" src="\img/logos/logo-pcps.png" alt="YouTube Logo">
+                    <div class="scrollable-content">
+                        In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro
+                        Wrestling.
+                        If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
+                        reviews, talking points and more.
                     </div>
                 </div>
                 <div class="social-media">
@@ -114,9 +102,23 @@
             min-width: 270px;
         }
 
-        .image-content img {
-            display: none;
-            box-shadow: 1px 2px 2px rgba(16, 16, 16, 0.2);
+        .box-content {
+        }
+
+        .image-content {
+            float: left;
+            max-width: 20%;
+            font-size: 16px;
+            font-family: "EXCELSIOR SANS", serif;
+            font-style: italic;
+            position: relative;
+            border-radius: 50%;
+            shape-outside: circle(50%);
+            /*margin-right: 2rem;*/
+        }
+
+        .logo-socials {
+            max-width: 30%;
         }
 
         .header-image-container {
@@ -129,6 +131,7 @@
             font-size: 3vw;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
+            z-index: 2;
         }
 
         .header-image-text {
@@ -149,129 +152,46 @@
             1px 2px 2px rgba(16, 16, 16, 0.2);
             border-radius: 0 0 15px 15px;
             display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            height: 300px;
-            width: 80%;
-        }
-
-        .social-media-content {
             flex-direction: column;
+            justify-content: space-between;
+            height: 255px;
+            width: 80%;
+            position: relative;
         }
 
-        .social-media-content .text-content {
-            display: flex;
-            flex-direction: row;
+        .contact-content::after {
+            content: "";
+            width: 94.6%;
+            height: 96%;
+            border: 1px solid black;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            position: absolute;
+            transform: translate(-2%, -2%);
+            z-index: 0;
         }
 
         .inner-heading {
             font-size: 18px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            margin: 0 0 1em 0;
+            margin: 1em 0 0.5em 0;
         }
 
         .scrollable-content {
             height: 100%;
-            overflow-y: auto;
             font-size: 9px;
-        }
-
-        .scrollable-content-sub-heading {
-            margin-bottom: 1em;
-            margin-top: -1em;
-            font-size: 10px;
-        }
-
-        .text-content {
-            max-width: 90%;
-            margin: 1em;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-        }
-
-        .dynamic-container {
-            height: 80px;
-        }
-
-        .image-content {
-            min-width: 30%;
-            font-size: 16px;
-            font-family: "EXCELSIOR SANS", serif;
-            font-style: italic;
-            position: relative;
-        }
-
-        .inner-heading-mid {
-            font-size: 24px;
-            font-style: italic;
-            margin: 1em auto 2em auto;
-            display: flex;
-            flex-direction: row;
-            /*max-width: 80%;*/
-            max-height: 20%;
-            font-family: 'EXCELSIOR SANS', serif;
-            text-align: center;
-            max-width: 80%;
-        }
-
-        .inner-logo {
-            margin-top: 2em;
-            margin-right: -2em;
         }
 
         .social-media {
             display: flex;
             justify-content: space-evenly;
             width: 100%;
-            font-size: 20px;
-        }
-
-        .social-media-images {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .social-media-big-logos {
-            height: 100%;
-        }
-
-        a.social-media-big-logos {
-            text-align: center;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .title-w-logo img {
-            display: none;
+            font-size: 13px;
         }
 
         i {
             font-size: 2em !important;
-        }
-
-        @media only screen and (min-width: 400px) and (max-width: 599px) {
-            .dynamic-container {
-                height: 72px;
-            }
-
-            .inner-heading {
-                margin-top: -0.7em;
-            }
-
-            .social-media-big-logos {
-                width: 20%;
-                height: 90%;
-            }
-
-            a.social-media-big-logos {
-                font-size: 20px;
-            }
         }
 
         @media only screen and  (min-width: 600px) and (max-width: 1531px) {
@@ -289,12 +209,26 @@
                 justify-content: space-evenly;
                 height: 600px;
                 width: 85%;
+                position: relative;
+                padding-bottom: 5px;
+            }
+
+            .contact-content::after {
+                content: "";
+                width: 96.6%;
+                height: 100%;
+                border: 1px solid black;
+                border-top: none;
+                border-radius: 0 0 15px 15px;
+                position: absolute;
+                transform: translateY(-2%);
             }
 
             .header-image-container {
                 max-width: 92.6%;
                 left: -2.2%;
                 transform: translateY(38%);
+                z-index: 2;
             }
 
             .header-image-text {
@@ -308,7 +242,16 @@
             .style-content-box {
                 max-width: 40%;
                 min-width: 45em;
-                height: 500px;
+                height: 600px;
+                margin-bottom: 1em;
+            }
+
+            .box-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60%;
+                margin-bottom: 1em;
             }
 
             .inner-heading {
@@ -320,68 +263,40 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+                margin-bottom: 0.7em;
             }
 
-            .image-content img {
-                display: block;
+            .socials {
+                margin-top: 3em;
             }
 
-            .dynamic-container {
-                max-height: 100%;
+            .logo-socials {
+                transform: translateY(-40%);
+                max-height: 4em;
             }
 
             .scrollable-content {
                 height: 100%;
                 overflow-y: auto;
                 font-size: 16px;
-            }
-
-            .scrollable-content-sub-heading {
-                margin-bottom: 1em;
-                margin-top: -1em;
-                font-size: 18px;
-            }
-
-            .buttons-content {
-                position: absolute;
-                margin-top: 0.6em;
-                left: 0;
-                bottom: 20px;
+                max-width: 60%;
+                margin-top: 0.8em;
             }
 
             .image-content {
+                float: left;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                max-width: 30%;
+                justify-content: flex-start;
+                align-items: center;
+                height: 90%;
+                max-width: 39%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
                 font-size: 32px;
+                border-radius: 0;
+                margin-right: 5px;
             }
-
-            .title-w-logo {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                min-width: 44%;
-            }
-
-            .title-w-logo img {
-                max-height: 48%;
-                display: block;
-            }
-
-            .social-media-big-logos {
-                width: 13%;
-            }
-
-            a.social-media-big-logos {
-                font-size: 38px;
-            }
-        }
-
-        .image-content img {
-            box-shadow: 1px 2px 2px rgba(16, 16, 16, 0.2);
         }
 
         @supports (-webkit-text-stroke: 0.2px black) {
