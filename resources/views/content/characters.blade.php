@@ -5,7 +5,10 @@
         @foreach (array_reverse(File::glob(public_path('img/characters').'/*')) as $path)
             <div class="character" onclick='Livewire.emit("openModal", "character-bio-modal", @json(['pathToModalContent' => $path]))'>
                 @if (strpos($path, 'bio') === false)
-                    <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Image">
+                    <div>
+                        <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Image">
+                        <div class="character-name">{{ ucfirst(str_replace([public_path(), '\img/characters/', '.jpg'], '', $path)) }}</div>
+                    </div>
                 @endif
             </div>
         @endforeach
@@ -37,6 +40,13 @@
 
         .character:before {
 
+        }
+
+        .character-name {
+            font-family: "EXCELSIOR SANS", serif;
+            font-style: italic;
+            font-size: 41px;
+            margin-bottom: 1em;
         }
     </style>
 @endsection

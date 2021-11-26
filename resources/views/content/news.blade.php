@@ -146,7 +146,7 @@
                     News
                 </div>
             </div>
-            <div class="news-content content-mid-box" style="border-radius: 15px; flex-direction:column">
+            <div class="news-content content-mid-box">
                 {{--                <div class="carousel">--}}
                 {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
                 {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
@@ -154,8 +154,8 @@
                 {{--                    <div class="carousel__track-container">--}}
                 {{--                        <div class="carousel__track">--}}
                 {{--                                    <div class="carousel__slide {{$key == 0 ? 'current-slide' : 'is-hidden' }}">--}}
-                <div class="carousel__slide--content" style="border: 1px solid #050966; border-radius: 15px;">
-                    <div class="text-content news-section">
+                <div class="carousel__slide--content news-carousel">
+                    <div class="text-content news-section text-content-news">
                         <div class="inner-heading-mid">
                             <p>
                                 Expand your Raging Destiny experience today!
@@ -240,6 +240,7 @@
             max-width: 55.2%;
             transform: translateY(76%);
             position: relative;
+            z-index: 1;
         }
 
         .header-image-text-mid {
@@ -271,7 +272,9 @@
         }
 
         .content-mid-box {
+            border-radius: 15px;
             position: relative;
+            flex-direction:column;
         }
 
         .content-mid-box::after {
@@ -279,8 +282,7 @@
             width: 94.6%;
             height: 96%;
             border: 1px solid black;
-            border-top: none;
-            border-radius: 0 0 15px 15px;
+            border-radius: 15px;
             position: absolute;
             transform: translate(-2%, -2%);
             z-index: 0;
@@ -522,6 +524,10 @@
                 max-width: 70%;
             }
 
+            .text-content-news {
+                max-width: 90% !important;
+            }
+
             .header-image-container {
                 max-width: 92.6%;
                 left: -2.2%;
@@ -577,6 +583,15 @@
             .inner-heading-mid {
                 font-size: 47px !important;
                 /*margin-top: 1.5em;*/
+            }
+
+            .content-mid-box {
+                flex-direction:column;
+                justify-content: center;
+            }
+
+            .content-mid-box::after {
+                display: none;
             }
 
             .dynamic-container {
@@ -639,6 +654,11 @@
 
             .carousel__slide--content {
                 height: 100%;
+            }
+
+            .news-carousel {
+                border: 1px solid #050966;
+                border-radius: 15px;
             }
         }
 

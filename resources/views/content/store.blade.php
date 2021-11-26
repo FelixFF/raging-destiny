@@ -10,7 +10,10 @@
                 </div>
             </div>
             <div class="store-content">
-                <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
+                <div class="merch-image">
+                    <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
+                </div>
+                <div class="merch-label">Art: £8.5 (set of 6)</div>
             </div>
         </div>
 
@@ -22,7 +25,10 @@
                 </div>
             </div>
             <div class="store-content">
-                <img class="store-image" src="\img/store/blue-t-no-text.jpg" alt="Content Box Banner">
+                <div class="merch-image">
+                    <img class="store-image" src="\img/store/blue-t-no-text.png" alt="Content Box Banner">
+                </div>
+                <div class="merch-label">T-Shirts: £20</div>
             </div>
         </div>
 
@@ -34,7 +40,10 @@
                 </div>
             </div>
             <div class="store-content">
-                <img class="store-image" src="\img/store/black-hoodie.jpg" alt="Content Box Banner">
+                <div class="merch-image">
+                    <img class="store-image" src="\img/store/black-hoodie.png" alt="Content Box Banner">
+                </div>
+                <div class="merch-label">Hoodies: £45</div>
             </div>
         </div>
 
@@ -46,8 +55,11 @@
                 </div>
             </div>
             <div class="store-content">
-                <img class="store-image" src="\img/store/bookmark-a-side.jpg" alt="Content Box Banner">
-                <img class="store-image" src="\img/store/bookmark-b-side.jpg" alt="Content Box Banner">
+                <div class="merch-image">
+                    <img class="store-image" src="\img/store/bookmark-a-side.jpg" alt="Content Box Banner">
+                    <img class="store-image" src="\img/store/bookmark-b-side.jpg" alt="Content Box Banner">
+                </div>
+                <div class="merch-label">Bookmark: £2.5</div>
             </div>
         </div>
     </div>
@@ -104,8 +116,8 @@
             1px 2px 2px rgba(16, 16, 16, 0.2);
             border-radius: 0 0 15px 15px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             height: 300px;
             width: 80%;
         }
@@ -132,8 +144,20 @@
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             margin: auto;
-            max-height: 410px;
+            max-height: 183px;
             z-index: 1;
+        }
+
+        .merch-label {
+            font-size: 16px;
+            font-family: "EXCELSIOR SANS", serif;
+            font-style: italic;
+        }
+
+        .merch-image {
+            display: flex;
+            flex-direction: row;
+            height: 70%;
         }
 
         @media only screen and (max-width: 599px) {
@@ -148,10 +172,6 @@
                 transform: translate(-1%, -5%);
                 z-index: 0;
             }
-
-            .store-image {
-                max-height: 250px;
-            }
         }
 
         @media only screen and  (min-width: 600px) and (max-width: 1531px) {
@@ -165,8 +185,8 @@
                 font-size: 1vw;
                 max-width: 90%;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: center;
                 height: 600px;
                 width: 85%;
             }
@@ -188,6 +208,15 @@
             .store-container {
                 max-width: 40%;
                 min-width: 45em;
+            }
+
+            .store-image {
+                max-height: 410px;
+            }
+
+            .merch-label {
+                font-size: 40px;
+                bottom: 10px;
             }
         }
     </style>
