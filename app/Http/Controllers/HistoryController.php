@@ -11,14 +11,17 @@ class HistoryController extends Controller
 
     public function create()
     {
-        $histories = History::all();
+        $histories = History::all()->toArray();
+
+        $historyTitles = [];
+
+        foreach ($histories as $history) {
+            $historyTitles[] = $history['title'];
+        }
 
         $contentArray = [
             'subHeading' => self::SUB_HEADING,
-            'histories' => [
-                $histories[0]->title,
-                $histories[1]->title,
-            ]
+            'histories' => $historyTitles
         ];
         return view('content.history')->with($contentArray);
     }

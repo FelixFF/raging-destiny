@@ -77,6 +77,7 @@
             flex-wrap: wrap;
             height: 300px;
             width: 80%;
+            overflow: auto;
         }
 
         i {
