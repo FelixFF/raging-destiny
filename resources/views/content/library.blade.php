@@ -37,6 +37,13 @@
                 align-items: center;
             }
         }
+
+        @media only screen and (max-width: 599px) {
+            .books-image {
+                min-width: 17em !important;
+            }
+        }
+
         .books {
             /*justify-content: space-evenly;*/
             display: flex;
