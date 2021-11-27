@@ -559,9 +559,9 @@
             }
 
             .header-image-container {
-                max-width: 92.6%;
+                max-width: 93.4%;
                 left: -2.2%;
-                transform: translateY(38%);
+                transform: translateY(36%);
             }
 
             .header-image-container-mid {
@@ -704,10 +704,12 @@
 
             .sub-label {
                 font-size: 18px;
+                display: block !important;
+                margin-top: -1em;
             }
 
             .image-label {
-                display: block;
+                display: block !important;
             }
 
             .carousel__slide--content {

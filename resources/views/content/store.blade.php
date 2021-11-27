@@ -200,9 +200,9 @@
             }
 
             .header-image-container {
-                max-width: 92.6%;
+                max-width: 93.4%;
                 left: -2.2%;
-                transform: translateY(38%);
+                transform: translateY(36%);
             }
 
             .header-image-text {
