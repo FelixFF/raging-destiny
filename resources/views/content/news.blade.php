@@ -39,7 +39,7 @@
                                                     </p>
                                                 </div>
                                                 <div class="buttons-content">
-                                                    <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                                                    <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                                                         <span class="optional-more-info-button">More Info</span>
                                                         <span class="optional-buy-now-button">Buy Now</span>
                                                     </button>
@@ -110,7 +110,7 @@
                                             </div>
                                         </div>
                                         <div class="buttons-content">
-                                            <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                                            <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                                                 <span class="optional-more-info-button">More Info</span>
                                                 <span class="optional-buy-now-button">Buy Now</span>
                                             </button>
@@ -168,8 +168,8 @@
                     </div>
                 </div>
                 <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
-                    <div class="buttons-content-news" style="">
-                        <button onclick="location.href = location.href.replace('news', 'store');" class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Merchandise</button>
+                    <div class="buttons-content-news">
+                        <button onclick="location.href = location.href.replace('news', 'store');" class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Merchandise</button>
                     </div>
                 </div>
                 {{--                                    </div>--}}
@@ -255,6 +255,11 @@
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             color: var(--title);
+        }
+
+        .button-override {
+            padding-top: 0.2rem !important;
+            padding-bottom: 0.2rem !important;
         }
 
         .news-content {
@@ -608,7 +613,8 @@
 
             .inner-heading-mid {
                 font-size: 47px !important;
-                /*margin-top: 1.5em;*/
+                margin-bottom: 2em;
+                margin-top: 1.5em;
             }
 
             .content-mid-box {
