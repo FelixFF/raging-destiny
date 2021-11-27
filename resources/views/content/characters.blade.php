@@ -7,7 +7,7 @@
                 @if (strpos($path, 'bio') === false)
                     <div>
                         <img src="{{ str_replace(public_path(), '', $path) }}" alt="Character Image">
-                        <div class="character-name">{{ ucfirst(str_replace([public_path(), '\img/characters/', '.jpg'], '', $path)) }}</div>
+                        <div class="character-name">{{ ucfirst(str_replace([public_path(), '\img/characters/', '/img/characters/', '.jpg'], '', $path)) }}</div>
                     </div>
                 @endif
             </div>

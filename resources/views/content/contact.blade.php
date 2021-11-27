@@ -14,8 +14,8 @@
                     Writer, Illustrator and Creator of Raging Destiny.
                 </p>
                 <div class="box-content">
-                    <img class="image-content" src="\img/content/contact-picture.jpg" alt="Billy's photo">
-                    <div class="scrollable-content">
+                    <img class="image-content bio-image" src="\img/content/contact-picture.jpg" alt="Billy's photo">
+                    <div class="scrollable-content bio-content">
                         Since the age of eleven, Billy has had a story to tell. The goal is to simply have his story
                         printed in book form and standing side by side on his book shelf. If others happen to enjoy
                         the
@@ -68,8 +68,8 @@
                     YouTube Content
                 </p>
                 <div class="box-content">
-                    <img class="image-content" src="\img/logos/logo-pcps.png" alt="YouTube Logo">
-                    <div class="scrollable-content">
+                    <img class="image-content bio-image" src="\img/logos/logo-pcps.png" alt="YouTube Logo">
+                    <div class="scrollable-content bio-content">
                         In Bill’s spare time, he likes to play games, watch Anime and Cartoons and enjoys Pro
                         Wrestling.
                         If you do too, come say hi on YouTube and enjoy highlight videos, top 12 videos, talk shows,
@@ -296,6 +296,15 @@
                 font-size: 32px;
                 border-radius: 0;
                 margin-right: 5px;
+            }
+
+            .bio-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .bio-content {
+                transform: translateY(7%);
             }
         }
 
