@@ -237,6 +237,7 @@
             position: absolute;
             top: 24%;
             left: 14%;
+            transform: translateY(-5%);
         }
 
         .header-image-container-mid {
@@ -255,6 +256,7 @@
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             color: var(--title);
+            transform: translateY(-5%);
         }
 
         .button-override {
@@ -583,6 +585,7 @@
                 top: 22%;
                 text-align: center;
                 font-size: 48px;
+                transform: translateY(0);
             }
 
             .header-image-text {

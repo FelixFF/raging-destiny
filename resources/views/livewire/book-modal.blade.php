@@ -1,4 +1,5 @@
 <div id="library" class="content-section-style library">
+    <div class="close-button" wire:click='$emit("closeModal")'>x</div>
     <div class="header-image-container">
         <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
         <div class="header-image-text">
@@ -38,6 +39,10 @@
         align-items: center;
     }
 
+    .close-button {
+        display: none;
+    }
+
     .book-container {
         display: flex;
         flex-direction: column;
@@ -68,6 +73,7 @@
         position: absolute;
         top: 25%;
         left: 14%;
+        transform: translateY(-11%);
     }
 
     .main-content {
@@ -143,6 +149,40 @@
         bottom: 25px;
     }
 
+    @media only screen and (max-width: 320px) {
+        .book-content {
+            max-height: 500px;
+        }
+
+        .inner-container:before {
+            height: 91% !important;
+        }
+
+        .button-container-override {
+            max-width: 223px !important;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .button-container-override {
+            max-width: 198px !important;
+        }
+    }
+
+    @media only screen and (min-width: 321px)  and (max-width: 399px) {
+        .book-content {
+            max-height: 500px;
+        }
+
+        .inner-container:before {
+            height: 89% !important;
+        }
+
+        .button-container-override {
+            max-width: 223px !important;
+        }
+    }
+
     @media only screen and (min-width: 400px) {
         .header-image-text {
             font-size: 30px;
@@ -154,6 +194,20 @@
         .bg-white {
             position: absolute;
             top: 0;
+        }
+
+        .close-button {
+            display: block;
+            font-size: 18px;
+            color: #0137ca;
+            font-weight: bolder;
+            position: absolute;
+            z-index: 9999;
+            background: white;
+            border-radius: 50%;
+            padding: 0 6px;
+            top: 0;
+            right: 0;
         }
 
         .library {
@@ -194,7 +248,7 @@
 
         .inner-header {
             margin: 0.5em 0 1em 0;
-            font-size: 20px;
+            font-size: 17px;
         }
 
         .book-text-content {

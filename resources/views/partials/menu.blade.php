@@ -1,5 +1,5 @@
 <div class="menu">
-    <div class="button-container">
+    <div id="menu-buttons" class="button-container">
         <button class="">
             <a href="/news">
                 <img src="{{ asset('/img/menu/menu-button-home.png') }}" alt="News Button">
@@ -41,7 +41,7 @@
     .menu {
         z-index: 9;
         position: -webkit-sticky;
-        position: sticky;
+        position: sticky !important;
 
         display: flex;
         flex-wrap: wrap;

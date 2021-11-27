@@ -114,7 +114,7 @@ body::after {
 }
 
 .is-hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Style all font awesome icons */

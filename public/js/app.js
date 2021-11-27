@@ -1854,9 +1854,37 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 $('.bg-white').remove();
 var LEFT = "left";
 var CENTRE = "centre";
-var menu = document.querySelector(".menu");
+var menu = document.querySelector("#menu-buttons");
 var sectionTitle = document.querySelector(".title");
-var sections = document.querySelectorAll(".content-section-style"); // Carousel logic
+var sections = document.querySelectorAll(".content-section-style"); // Menu hide
+
+var lastKnownScrollPosition = 0;
+var currentScrollPosition = 0;
+var ticking = false;
+
+function controlMenu(scrollPos) {
+  if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
+    menu.classList.add('is-hidden');
+  } else if (scrollPos < lastKnownScrollPosition) {
+    setTimeout(function () {
+      menu.classList.remove('is-hidden');
+    }, 500);
+  }
+
+  lastKnownScrollPosition = scrollPos;
+}
+
+document.addEventListener('scroll', function (e) {
+  currentScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+      controlMenu(currentScrollPosition);
+      ticking = false;
+    });
+    ticking = true;
+  }
+}); // Carousel logic
 
 var track = document.querySelector('.carousel__track');
 var slides = track !== null ? Array.from(track.children) : [];
