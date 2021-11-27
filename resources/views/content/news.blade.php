@@ -7,7 +7,7 @@
                 <img class="header-image" src="\img/content/box-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text">
-                    Available Now!
+                    Raging Destiny (Standard Edition)
                 </div>
             </div>
             <div class="news-content">
@@ -24,27 +24,26 @@
                                             <div class="inner-heading">
                                                 {!! $news->sub_title !!}
                                             </div>
-                                            <div style="display: flex; flex-direction: row; max-height: 70%">
+                                            <div class="box-container">
                                                 <div class="image-content">
                                                     <img src="\img/content/book-cover-1.jpg">
-                                                    <p>£10.00</p>
-                                                    <p>(£2.99 P&P)</p>
+                                                    <div class="image-label"><span class="pound-sign-m">£</span>10.00</div>
+                                                    <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)</div>
                                                 </div>
-                                                <div class="text-content">
+                                                <div class="text-content" style="margin-top: 2em">
                                                     <div class="scrollable-content-sub-heading">
                                                         THE FIRST NOVEL IN THE RAGING DESTINY IS NOW ON SALE!
                                                     </div>
-                                                    <p class="scrollable-content dynamic-container">
+                                                    <p class="scrollable-content dynamic-container" style="max-height: 286px;">
                                                         {!! $news->content !!}
                                                     </p>
                                                 </div>
-                                            </div>
-                                            <div class="buttons-content">
-                                                <button class="pushable">
-                                                  <span class="front">
-                                                    Buy Now
-                                                  </span>
-                                                </button>
+                                                <div class="buttons-content">
+                                                    <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                                                        <span class="optional-more-info-button">More Info</span>
+                                                        <span class="optional-buy-now-button">Buy Now</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +72,7 @@
                 <img class="header-image" src="\img/content/box-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text">
-                    Available Now!
+                    Raging Destiny (Signature Edition)
                 </div>
             </div>
             <div class="news-content">
@@ -88,11 +87,11 @@
                                     <div class="inner-heading signature-edition">
                                         GET THE SIGNATURE EDITION!
                                     </div>
-                                    <div style="display: flex; flex-direction: row; max-height: 70%">
-                                        <div class="image-content" style="max-width: 36%">
+                                    <div class="box-container">
+                                        <div class="image-content">
                                             <img src="\img/content/book-cover-1-hardback.jpg">
-                                            <p>£22.00</p>
-                                            <p>(£2.99 P&P)</p>
+                                            <div class="image-label"><span class="pound-sign-m">£</span>22.00</div>
+                                            <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)</div>
                                         </div>
                                         <div class="text-content">
                                             <div class="scrollable-content-sub-heading">
@@ -111,10 +110,9 @@
                                             </div>
                                         </div>
                                         <div class="buttons-content">
-                                            <button class="pushable">
-                                                  <span class="front">
-                                                    Buy Now
-                                                  </span>
+                                            <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                                                <span class="optional-more-info-button">More Info</span>
+                                                <span class="optional-buy-now-button">Buy Now</span>
                                             </button>
                                         </div>
                                     </div>
@@ -169,13 +167,9 @@
                         </p>
                     </div>
                 </div>
-                <div
-                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
-                    <div class="buttons-content-news" style="width: 100%; margin-bottom: 0.5em">
-                        <button onclick="location.href = location.href.replace('news', 'store');" class="pushable">
-                        <span class="front">Merchandise
-                        </span>
-                        </button>
+                <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                    <div class="buttons-content-news" style="">
+                        <button onclick="location.href = location.href.replace('news', 'store');" class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Merchandise</button>
                     </div>
                 </div>
                 {{--                                    </div>--}}
@@ -214,7 +208,16 @@
         }
 
         .image-content img {
+            height: 210px;
             box-shadow: 1px 2px 2px rgba(16, 16, 16, 0.2);
+        }
+
+        .image-label {
+            display: none !important;
+        }
+
+        .sub-label {
+            display: none !important;
         }
 
         .header-image-container {
@@ -223,7 +226,7 @@
             transform: translate(-2.8%, 49%);
             position: relative;
             text-align: center;
-            color: #0137ca;
+            color: var(--title);
             font-size: 3vw;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
@@ -251,11 +254,10 @@
             font-size: 20px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            color: #0137ca;
+            color: var(--title);
         }
 
         .news-content {
-            border: 2px #050966 solid;
             padding: 10px;
             background: #cbdbef;
             font-size: 3vw;
@@ -274,7 +276,7 @@
         .content-mid-box {
             border-radius: 15px;
             position: relative;
-            flex-direction:column;
+            flex-direction: column;
         }
 
         .content-mid-box::after {
@@ -301,6 +303,7 @@
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
             margin: 0.5em 0 1em 0;
+            display: none;
         }
 
         .scrollable-content {
@@ -318,9 +321,9 @@
         .text-content {
             max-width: 90%;
             margin: 1em;
-            display: flex;
             flex-direction: column;
             align-content: center;
+            display: none;
         }
 
         .dynamic-container {
@@ -333,7 +336,10 @@
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .inner-heading-mid {
@@ -368,8 +374,9 @@
         .buttons-content {
             position: absolute;
             margin-top: 0.6em;
-            left: 0;
             bottom: 0;
+            width: 92%;
+            transform: translateY(25%);
         }
 
         .buttons-content-news {
@@ -377,6 +384,8 @@
             margin-top: 0.6em;
             bottom: 0;
             max-width: 93%;
+            width: 100%;
+            margin-bottom: 0.5em;
         }
 
         .pushable {
@@ -399,6 +408,14 @@
             transform: translateY(-6px);
         }
 
+        .optional-buy-now-button {
+            display: none;
+        }
+
+        .optional-more-info-button {
+            display: block;
+        }
+
         .pushable:active .front {
             transform: translateY(-2px);
         }
@@ -414,8 +431,6 @@
 
         .carousel__slide {
             align-items: center;
-            position: absolute;
-            width: 90%;
             top: 0;
             bottom: 0;
         }
@@ -458,7 +473,8 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
+            max-height: 70%;
         }
 
         .carousel__nav {
@@ -471,6 +487,14 @@
             width: 20px;
             height: 20px;
             background: white;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            max-height: 80%;
         }
 
         .carousel__indicator.current-slide {
@@ -522,6 +546,7 @@
 
             .text-content {
                 max-width: 70%;
+                display: block;
             }
 
             .text-content-news {
@@ -538,7 +563,7 @@
                 transform: translateY(58%);
                 position: relative;
                 text-align: center;
-                color: #0137ca;
+                color: var(--title);
                 font-size: 48px;
                 font-weight: bold;
                 font-family: "EXCELSIOR SANS", serif;
@@ -557,10 +582,10 @@
 
             .header-image-text {
                 font-weight: bolder;
-                font-size: 48px;
+                font-size: 43px;
                 top: 25%;
                 left: 14%;
-                transform: translateY(-2%);
+                transform: translateY(2%);
             }
 
             .style-content-box {
@@ -571,13 +596,14 @@
             .inner-heading {
                 font-size: 39px;
                 margin-bottom: 1em;
+                display: block;
             }
 
             .inner-heading.signature-edition {
                 font-size: 54px;
                 margin-top: 0.2em !important;
-                margin-bottom: 0.2em !important;
-                transform: translateY(-40%);
+                margin-bottom: 1.5em !important;
+                transform: translateY(20%);
             }
 
             .inner-heading-mid {
@@ -586,7 +612,7 @@
             }
 
             .content-mid-box {
-                flex-direction:column;
+                flex-direction: column;
                 justify-content: center;
             }
 
@@ -600,7 +626,7 @@
             }
 
             .scrollable-content {
-                height: 71%;
+                height: 103%;
                 overflow-y: auto;
                 font-size: 16px;
             }
@@ -617,6 +643,10 @@
                 left: 0;
                 bottom: -17px;
                 width: 100%;
+                transform: translateY(0);
+            }
+
+            .buttons-content-news {
             }
 
             .pushable {
@@ -640,25 +670,52 @@
                 transform: translateY(-6px);
             }
 
+            .optional-buy-now-button {
+                display: block !important;
+            }
+
+            .optional-more-info-button {
+                display: none !important;
+            }
+
             .pushable:active .front {
                 transform: translateY(-2px);
             }
 
             .image-content {
-                display: block;
+                display: flex;
                 min-width: 30%;
                 font-family: "EXCELSIOR SANS", serif;
                 font-style: italic;
                 font-size: 32px;
+                max-width: 36%;
+                transform: translate(7%, 13%);
+            }
+
+            .image-content img {
+
+            }
+
+            .sub-label {
+                font-size: 18px;
+            }
+
+            .image-label {
+                display: block;
             }
 
             .carousel__slide--content {
                 height: 100%;
             }
 
+            .carousel__slide {
+                position: absolute;
+            }
+
             .news-carousel {
                 border: 1px solid #050966;
                 border-radius: 15px;
+                max-height: 100%;
             }
         }
 

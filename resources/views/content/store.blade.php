@@ -13,7 +13,8 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Art: £8.5 (set of 6)</div>
+                <div class="merch-label">Art: <span class="pound-sign">£</span>8.5 (set of 6)</div>
+                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -28,7 +29,8 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/store/blue-t-no-text.png" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">T-Shirts: £20</div>
+                <div class="merch-label">T-Shirts: <span class="pound-sign">£</span>20</div>
+                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -43,7 +45,8 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/store/black-hoodie.png" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Hoodies: £45</div>
+                <div class="merch-label">Hoodies: <span class="pound-sign">£</span>45</div>
+                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -59,7 +62,8 @@
                     <img class="store-image" src="\img/store/bookmark-a-side.jpg" alt="Content Box Banner">
                     <img class="store-image" src="\img/store/bookmark-b-side.jpg" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Bookmark: £2.5</div>
+                <div class="merch-label">Bookmark: <span class="pound-sign">£</span>2.5</div>
+                <button class="button text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
     </div>
@@ -91,7 +95,7 @@
             transform: translate(-2.8%, 49%);
             position: relative;
             text-align: center;
-            color: #0137ca;
+            color: var(--title);
             font-size: 3vw;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
@@ -106,7 +110,6 @@
         }
 
         .store-content {
-            border: 2px #050966 solid;
             padding: 10px;
             background: #cbdbef;
             font-size: 3vw;
@@ -124,7 +127,7 @@
 
         .store-content:before {
             content: "";
-            border: 1px #050966 solid;
+            border: 1px black solid;
             border-top: none;
             border-radius: 15px;
             height: 82%;
@@ -139,7 +142,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-width: 30%;
+            min-width: 24%;
             font-size: 16px;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;
@@ -163,7 +166,7 @@
         @media only screen and (max-width: 599px) {
             .store-content:before {
                 content: "";
-                border: 1px #050966 solid;
+                border: 1px black solid;
                 border-top: none;
                 border-radius: 15px;
                 height: 86%;
@@ -211,7 +214,7 @@
             }
 
             .store-image {
-                max-height: 410px;
+                max-height: 387px;
             }
 
             .merch-label {

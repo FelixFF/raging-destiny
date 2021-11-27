@@ -127,7 +127,7 @@
             transform: translate(-2.8%, 49%);
             position: relative;
             text-align: center;
-            color: #0137ca;
+            color: var(--title);
             font-size: 3vw;
             font-family: "EXCELSIOR SANS", serif;
             font-style: italic;

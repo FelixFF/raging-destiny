@@ -32,7 +32,7 @@
         transform: translate(-2.9%, 30%);
         position: relative;
         text-align: center;
-        color: #0137ca;
+        color: var(--title);
         font-size: 3vw;
         font-weight: bold;
         font-family: "EXCELSIOR SANS", serif;

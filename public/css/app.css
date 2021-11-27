@@ -1,5 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS);
 @import url(//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Mono);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@1,700&display=swap);
 /*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -31909,6 +31910,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:root {
+  --title: #0137ca;
+  --button: #0e4068;
+  --button-shadow: #104977;
+  --button-lighter: #0e4068;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -31941,6 +31950,27 @@ body::after {
   position: fixed;
   z-index: -9999;
   overflow: hidden;
+}
+
+.pound-sign {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 18px;
+}
+
+.button {
+  width: 100%;
+  z-index: 1;
+  background-color: var(--button) !important;
+  font-size: 8px;
+  border-color: var(--button-shadow);
+}
+
+.button:hover {
+  width: 90%;
+  z-index: 1;
+  background-color: var(--button-lighter) !important;
+  font-size: 8px;
+  border-color: var(--button-shadow);
 }
 
 .content-style {
@@ -32062,6 +32092,33 @@ body::after {
   .fa {
     width: 60px;
     font-size: 30px !important;
+  }
+
+  .button {
+    width: 90%;
+    z-index: 1;
+    background-color: var(--button) !important;
+    font-size: 16px;
+    border-color: var(--button-shadow);
+  }
+
+  .button:hover {
+    font-size: 16px;
+  }
+
+  .pound-sign {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 42px;
+  }
+
+  .pound-sign-m {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 36px;
+  }
+
+  .pound-sign-s {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 21px;
   }
 }
 
