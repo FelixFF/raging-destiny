@@ -14,7 +14,7 @@
                     <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Art: <span class="pound-sign">£</span>8.5 (set of 6)</div>
-                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
                     <img class="store-image" src="\img/store/blue-t-no-text.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">T-Shirts: <span class="pound-sign">£</span>20</div>
-                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
                     <img class="store-image" src="\img/store/black-hoodie.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Hoodies: <span class="pound-sign">£</span>45</div>
-                <button class="button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -63,11 +63,16 @@
                     <img class="store-image" src="\img/store/bookmark-b-side.jpg" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Bookmark: <span class="pound-sign">£</span>2.5</div>
-                <button class="button text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
     </div>
     <style>
+        .button-override {
+            max-width: 90%;
+            transform: translateX(-1%);
+        }
+
         .store {
             display: flex;
             flex-direction: row;

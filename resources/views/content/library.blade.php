@@ -6,8 +6,13 @@
             @foreach (File::glob(public_path('img/books').'/*') as $path)
                 @if (str_contains($path, 'modal') === false)
                     <div class="books-image" onclick="#">
-                        <img src="{{ str_replace(public_path(), '', $path) }}" alt=""
-                             onclick='Livewire.emit("openModal", "book-preview-modal", @json(['book' => $path]))'>
+                        @if (str_contains($path, 'book1') || str_contains($path, 'book2'))
+                            <img src="{{ str_replace(public_path(), '', $path) }}" alt=""
+                                 onclick='Livewire.emit("openModal", "book-modal", @json(['book' => $path]))'>
+                        @else
+                            <img src="{{ str_replace(public_path(), '', $path) }}" alt=""
+                                 onclick='Livewire.emit("openModal", "book-preview-modal", @json(['book' => $path]))'>
+                        @endif
                         {{-- @livewire('content-box', ['title' => 'Book Preview', 'content' => ' '], key($user->id)) --}}
                     </div>
                 @endif
@@ -16,6 +21,22 @@
         </div>
     </div>
     <style>
+        .bg-white {
+            background: none !important;
+            /*background: url('/img/modal-content-container.png') !important;*/
+            overflow: hidden;
+            box-shadow: none !important;
+        }
+
+        @media only screen and (max-width: 520px) {
+            .bg-white {
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
         .books {
             /*justify-content: space-evenly;*/
             display: flex;
