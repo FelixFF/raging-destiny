@@ -32,7 +32,7 @@
                                                 </div>
                                                 <div class="text-content" style="margin-top: 2em">
                                                     <div class="scrollable-content-sub-heading">
-                                                        THE FIRST NOVEL IN THE RAGING DESTINY IS NOW ON SALE!
+                                                        THE FIRST NOVEL IN THE RAGING DESTINY SERIES IS NOW ON SALE!
                                                     </div>
                                                     <p class="scrollable-content dynamic-container" style="max-height: 286px;">
                                                         {!! $news->content !!}
@@ -40,7 +40,7 @@
                                                 </div>
                                                 <div class="buttons-content">
                                                     <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
-                                                        <span class="optional-more-info-button">More Info</span>
+                                                        <span onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book1']))' class="optional-more-info-button">More Info</span>
                                                         <span class="optional-buy-now-button">Buy Now</span>
                                                     </button>
                                                 </div>
@@ -110,8 +110,8 @@
                                             </div>
                                         </div>
                                         <div class="buttons-content">
-                                            <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
-                                                <span class="optional-more-info-button">More Info</span>
+                                            <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto" onclick="window.open('http://ebay.com','_blank')">
+                                                <span onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book3']))' class="optional-more-info-button">More Info</span>
                                                 <span class="optional-buy-now-button">Buy Now</span>
                                             </button>
                                         </div>
@@ -159,6 +159,7 @@
                                 Expand your Raging Destiny experience today!
                             </p>
                         </div>
+                        <img src="\img/content/merch-collection.png" alt="" style="margin-top: -5em; max-height: 20em"/>
                         <p class="scrollable-content news-container">
                             Make your way over to the Raging Destiny Store to find the latest merchandise available now!
                             <br>

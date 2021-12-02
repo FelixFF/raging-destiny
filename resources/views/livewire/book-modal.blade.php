@@ -31,6 +31,13 @@
     </div>
 </div>
 <style>
+    .bg-white {
+        background: none !important;
+        /*background: url('/img/modal-content-container.png') !important;*/
+        overflow: hidden;
+        box-shadow: none !important;
+    }
+
     .library {
         display: flex;
         flex-direction: row;
@@ -107,6 +114,11 @@
 
     .book-text {
         font-size: 8px;
+        overflow-x: hidden;
+    }
+
+    .book-text ul {
+        overflow-x: hidden;
     }
 
     .inner-container {

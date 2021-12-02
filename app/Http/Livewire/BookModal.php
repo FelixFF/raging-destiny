@@ -36,7 +36,7 @@ In this action-packed martial arts fantasy fiction, discover if the sacrifices o
             $content->bookButtonText = '';
             $content->bookButtons[] = 'STANDARD';
             $content->bookButtons[] = 'SIGNATURE';
-        } else {
+        } else if (str_contains($book, 'book2')){
             $content->bookTitle = 'In Production...';
             $content->bookSubHeading = 'THERE ARE TWO SIDES TO EVERY STORY, <br> THEN THERE IS THE TRUTH';
             $content->bookImage = "\img/content/book-cover-2.jpg";
@@ -48,6 +48,22 @@ In this action-packed martial arts fantasy fiction, discover if the sacrifices o
             $content->bookButtonText = 'Check back often for progress updates right here at RagingDestiny.com. <br><br>
                                         Register your interest and secure your copy first day of release below.';
             $content->bookButtons[] = 'REGISTER INTEREST';
+        } else {
+            $content->bookTitle = 'GET THE SIGNATURE EDITION!';
+            $content->bookSubHeading = 'THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!';
+            $content->bookImage = "\img/content/book-cover-1-hardback.jpg";
+            $content->bookIntro = 'The second novel in the Raging Destiny series is now in development.';
+            $content->bookText = "<ul>
+                                                    <li>- Hard Back cover.</li>
+                                                    <li>- Dust sheet.</li>
+                                                    <li>- Silver foil front cover.</li>
+                                                    <li>- Larger A5 Print.</li>
+                                                    <li>- Crisp White 80g pages.</li>
+                                                    <li>- Larger margin indent.</li>
+                                                    <li>- Signed by Author Billy Twigg</li>
+                                                </ul>";
+            $content->bookButtonText = '';
+            $content->bookButtons[] = 'Buy Now';
         }
 
         return $content;
