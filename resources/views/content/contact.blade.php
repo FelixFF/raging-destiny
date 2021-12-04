@@ -188,6 +188,7 @@
             justify-content: space-evenly;
             width: 100%;
             font-size: 13px;
+            z-index: 2;
         }
 
         i {
@@ -242,7 +243,7 @@
             .style-content-box {
                 max-width: 40%;
                 min-width: 45em;
-                height: 600px;
+                height: 670px;
                 margin-bottom: 1em;
             }
 
@@ -255,7 +256,7 @@
             }
 
             .inner-heading {
-                font-size: 36px;
+                font-size: 48px;
                 margin-bottom: 1em;
             }
 

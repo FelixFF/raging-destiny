@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
-    private const SUB_HEADING = 'STORE';
+    private const SUB_HEADING = 'SHOP';
 
     public function create()
     {

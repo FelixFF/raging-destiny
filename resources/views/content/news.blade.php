@@ -12,9 +12,6 @@
             </div>
             <div class="news-content">
                 <div class="carousel">
-                    {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
-                    {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
-                    {{--                    </button>--}}
                     <div class="carousel__track-container">
                         <div class="carousel__track">
                             @foreach($allNews as $key => $news)
@@ -24,23 +21,29 @@
                                             <div class="inner-heading">
                                                 {!! $news->sub_title !!}
                                             </div>
+                                            <div class="scrollable-content-sub-heading">
+                                                THE FIRST NOVEL IN THE RAGING DESTINY SERIES IS NOW ON SALE!
+                                            </div>
                                             <div class="box-container">
                                                 <div class="image-content">
                                                     <img src="\img/content/book-cover-1.jpg">
-                                                    <div class="image-label"><span class="pound-sign-m">£</span>10.00</div>
-                                                    <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)</div>
-                                                </div>
-                                                <div class="text-content" style="margin-top: 2em">
-                                                    <div class="scrollable-content-sub-heading">
-                                                        THE FIRST NOVEL IN THE RAGING DESTINY SERIES IS NOW ON SALE!
+                                                    <div class="image-label"><span class="pound-sign-m">£</span>10.00
                                                     </div>
-                                                    <p class="scrollable-content dynamic-container" style="max-height: 286px;">
+                                                    <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)
+                                                    </div>
+                                                </div>
+                                                <div class="text-content">
+                                                    <p class="scrollable-content dynamic-container"
+                                                       style="max-height: 286px;">
                                                         {!! $news->content !!}
                                                     </p>
                                                 </div>
                                                 <div class="buttons-content">
-                                                    <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
-                                                        <span onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book1']))' class="optional-more-info-button">More Info</span>
+                                                    <button
+                                                        class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                                                        <span
+                                                            onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book1']))'
+                                                            class="optional-more-info-button">More Info</span>
                                                         <span class="optional-buy-now-button">Buy Now</span>
                                                     </button>
                                                 </div>
@@ -52,19 +55,6 @@
                         @endforeach
                     </div>
                 </div>
-
-                {{--                    <button class="carousel__button carousel__button--right">--}}
-                {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
-                {{--                    </button>--}}
-
-                {{--                    <div class="carousel__nav">--}}
-                {{--                        @foreach($allNews as $key => $news)--}}
-                {{--                            @if (str_contains($news->main_title, 'Available'))--}}
-                {{--                                <button--}}
-                {{--                                    class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
-                {{--                            @endif--}}
-                {{--                        @endforeach--}}
-                {{--                    </div>--}}
             </div>
         </div>
         <div class="content-section-style style-content-box">
@@ -77,9 +67,6 @@
             </div>
             <div class="news-content">
                 <div class="carousel">
-                    {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
-                    {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
-                    {{--                    </button>--}}
                     <div class="carousel__track-container">
                         <div class="carousel__track">
                             <div class="carousel__slide">
@@ -87,16 +74,17 @@
                                     <div class="inner-heading signature-edition">
                                         GET THE SIGNATURE EDITION!
                                     </div>
+                                    <div class="scrollable-content-sub-heading">
+                                        THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!
+                                    </div>
                                     <div class="box-container">
                                         <div class="image-content">
-                                            <img src="\img/content/book-cover-1-hardback.jpg">
+                                            <img src="\img/content/book-cover-1-hardback.jpg"
+                                                 class="image-signature-edition">
                                             <div class="image-label"><span class="pound-sign-m">£</span>22.00</div>
                                             <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)</div>
                                         </div>
                                         <div class="text-content">
-                                            <div class="scrollable-content-sub-heading">
-                                                THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!
-                                            </div>
                                             <div class="scrollable-content dynamic-container">
                                                 <ul>
                                                     <li>- Hard Back cover.</li>
@@ -110,8 +98,12 @@
                                             </div>
                                         </div>
                                         <div class="buttons-content">
-                                            <button class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto" onclick="window.open('http://ebay.com','_blank')">
-                                                <span onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book3']))' class="optional-more-info-button">More Info</span>
+                                            <button
+                                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto"
+                                                onclick="window.open('http://ebay.com','_blank')">
+                                                <span
+                                                    onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book3']))'
+                                                    class="optional-more-info-button">More Info</span>
                                                 <span class="optional-buy-now-button">Buy Now</span>
                                             </button>
                                         </div>
@@ -121,19 +113,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{--                    <button class="carousel__button carousel__button--right">--}}
-                {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
-                {{--                    </button>--}}
-
-                {{--                    <div class="carousel__nav">--}}
-                {{--                        @foreach($allNews as $key => $news)--}}
-                {{--                            @if (str_contains($news->main_title, 'Available'))--}}
-                {{--                                <button--}}
-                {{--                                    class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
-                {{--                            @endif--}}
-                {{--                        @endforeach--}}
-                {{--                    </div>--}}
             </div>
         </div>
         <div class="content-section-style style-content-box">
@@ -145,13 +124,6 @@
                 </div>
             </div>
             <div class="news-content content-mid-box">
-                {{--                <div class="carousel">--}}
-                {{--                    <button class="carousel__button carousel__button--left is-hidden">--}}
-                {{--                        <i class="fa fa-chevron-left" aria-hidden="true"></i>--}}
-                {{--                    </button>--}}
-                {{--                    <div class="carousel__track-container">--}}
-                {{--                        <div class="carousel__track">--}}
-                {{--                                    <div class="carousel__slide {{$key == 0 ? 'current-slide' : 'is-hidden' }}">--}}
                 <div class="carousel__slide--content news-carousel">
                     <div class="text-content news-section text-content-news">
                         <div class="inner-heading-mid">
@@ -168,26 +140,15 @@
                         </p>
                     </div>
                 </div>
-                <div style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                <div
+                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
                     <div class="buttons-content-news">
-                        <button onclick="location.href = location.href.replace('news', 'store');" class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Merchandise</button>
+                        <button onclick="location.href = location.href.replace('news', 'store');"
+                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                            Merchandise
+                        </button>
                     </div>
                 </div>
-                {{--                                    </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-
-                {{--                    <button class="carousel__button carousel__button--right">--}}
-                {{--                        <i class="fa fa-chevron-right" aria-hidden="true"></i>--}}
-                {{--                    </button>--}}
-
-                {{--                    <div class="carousel__nav">--}}
-                {{--                        @foreach($allNews as $key => $news)--}}
-                {{--                            @if (str_contains($news->main_title, 'Available') == false)--}}
-                {{--                                <button class="carousel__indicator current-slide {{$key == 0 ? 'current-slide' : '' }}"></button>--}}
-                {{--                            @endif--}}
-                {{--                        @endforeach--}}
-                {{--                    </div>--}}
             </div>
         </div>
     </div>
@@ -325,9 +286,7 @@
         }
 
         .scrollable-content-sub-heading {
-            margin-bottom: 1em;
-            margin-top: -1em;
-            font-size: 8px;
+            display: none;
         }
 
         .text-content {
@@ -527,7 +486,7 @@
         @media only screen and (min-width: 600px) {
             ul {
                 font-size: 18px;
-                margin: 2em 0 0 1em;
+                margin: 0 0 0 1em;
                 width: 100%;
                 overflow-y: hidden;
             }
@@ -643,9 +602,11 @@
             }
 
             .scrollable-content-sub-heading {
+                display: block;
                 margin-bottom: 1em;
                 margin-top: -1em;
                 font-size: 18px;
+                max-width: 70%;
             }
 
             .buttons-content {
@@ -655,30 +616,6 @@
                 bottom: -17px;
                 width: 100%;
                 transform: translateY(0);
-            }
-
-            .buttons-content-news {
-            }
-
-            .pushable {
-                background: #104977;
-                border-radius: 4px;
-                border: none;
-                padding: 0;
-                cursor: pointer;
-                outline-offset: 4px;
-                min-width: 140px;
-                width: 96%;
-            }
-
-            .front {
-                display: block;
-                min-width: 140px;
-                border-radius: 4px;
-                font-size: 1.25rem;
-                background: #0e4068;
-                color: white;
-                transform: translateY(-6px);
             }
 
             .optional-buy-now-button {
@@ -700,7 +637,6 @@
                 font-style: italic;
                 font-size: 32px;
                 max-width: 36%;
-                transform: translate(7%, 13%);
             }
 
             .image-content img {
@@ -714,11 +650,17 @@
             }
 
             .image-label {
+                font-size: 40px;
                 display: block !important;
+            }
+
+            .image-signature-edition {
+                margin-top: 0.5em;
             }
 
             .carousel__slide--content {
                 height: 100%;
+                align-items: center;
             }
 
             .carousel__slide {
