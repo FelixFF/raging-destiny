@@ -3,200 +3,138 @@ import { gsap } from "gsap";
 import { Power1 } from "gsap";
 const $ = require('jquery');
 
+$('.bg-white').remove();
+
 const LEFT = "left";
 const CENTRE = "centre";
 
-const menu = document.querySelector(".menu");
+const menu = document.querySelector("#menu-buttons");
 const sectionTitle = document.querySelector(".title");
 const sections = document.querySelectorAll(".content-section-style");
 
-let previousEntry = null;
+// Menu hide
 
-const sectionOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.001
-};
+let lastKnownScrollPosition = 0;
+let currentScrollPosition = 0;
+let ticking = false;
 
-const observer = new IntersectionObserver((entries, sectionTitleObserver) => {
-    entries.forEach(entry => {
-        // console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.remove("out-view");
-
-            if (previousEntry !== null) {
-                previousEntry.target.classList.add("out-view");
-            }
-
-            $(window).on('scroll',function() {
-                // After Stuff
-                $(window).off('scroll');
-             });
-
-            disableScroll();
-
-            scrollToNewElement(entry);
-
-            setTimeout (() => {
-                entry.target.classList.add("in-view");
-                entry.target.style.opacity = 1;
-            }, 100);
-
-            setTimeout (() => {
-                enableScroll();
-            }, 1000)
-
-            previousEntry = entry;
-        } else {
-            $(window).on('scroll',function() {
-                // After Stuff
-                $(window).off('scroll');
-             });
-
-            disableScroll();
-
-            entry.target.classList.remove("in-view");
-            entry.target.classList.add("out-view");
-            entry.target.style.opacity = 0;
-
-            setTimeout (() => {
-                enableScroll();
-            }, 10000)
+if (window.screen.width < 600) {
+    function controlMenu(scrollPos) {
+        if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
+            menu.classList.add('is-hidden');
+        } else if (scrollPos < lastKnownScrollPosition) {
+            setTimeout(() => {
+                menu.classList.remove('is-hidden');
+            }, 500);
         }
+
+        lastKnownScrollPosition = scrollPos;
+    }
+
+    document.addEventListener('scroll', function(e) {
+        currentScrollPosition = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                controlMenu(currentScrollPosition);
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
+}
+
+// Carousel logic
+
+const track = document.querySelector('.carousel__track');
+const slides = track !== null ? Array.from(track.children) : [];
+const nextButton = document.querySelector('.carousel__button--right');
+const previousButton = document.querySelector('.carousel__button--left');
+const dotsNav = document.querySelector('.carousel__nav');
+const dotsChildren = dotsNav !== null ? Array.from(dotsNav.children) : [];
+
+const slideWidth = document.querySelector('.carousel__slide')?.getBoundingClientRect().width;
+
+const hideSlides = (slides) => {
+
+}
+
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+}
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    if (targetSlide !== null) {
+        currentSlide.classList.add('is-hidden')
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+        targetSlide.classList.remove('is-hidden');
+
+    }
+}
+
+const updateDots = (currentDot, targetDot) => {
+    if (targetDot !== null) {
+        currentDot.classList.remove('current-slide');
+        targetDot.classList.add('current-slide');
+    }
+}
+
+const hideShowNavigation = (target, currentIndex) => {
+    if (currentIndex === 0) {
+        previousButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    } else if (currentIndex === target.children.length - 1) {
+        nextButton.classList.add('is-hidden');
+        previousButton.classList.remove('is-hidden');
+    } else {
+        nextButton.classList.remove('is-hidden');
+        previousButton.classList.remove('is-hidden');
+    }
+}
+
+if (nextButton !== null && previousButton !== null) {
+    nextButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.current-slide');
+        const nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const nextDot = currentDot.nextElementSibling;
+        const nextIndex = slides.findIndex(slide => slide === nextSlide);
+
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+        hideShowNavigation(track, nextIndex)
     })
-}, sectionOptions);
 
-sections.forEach(section => {
-    observer.observe(section);
-})
-// sectionTitleObserver.observe(sectionTitle);
+    previousButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector('.current-slide');
+        const previousSlide = currentSlide.previousElementSibling;
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const previousDot = currentDot.previousElementSibling;
+        const previousIndex = slides.findIndex(slide => slide === previousSlide);
 
-var isOutOfViewport = function (menu) {
+        moveToSlide(track, currentSlide, previousSlide);
+        updateDots(currentDot, previousDot);
+        hideShowNavigation(track, previousIndex);
+    })
 
-	// Get element's bounding
-	var bounding = menu.getBoundingClientRect();
+    dotsNav.addEventListener('click', e => {
+        const targetDot = e.target.closest('button');
 
-	// Check if it's out of the viewport on each side
-	var out = {};
-	out.top = bounding.top < 0;
-	out.left = bounding.left < 0;
-	out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
-	out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
-	out.any = out.top || out.left || out.bottom || out.right;
-	out.all = out.top && out.left && out.bottom && out.right;
+        if (!targetDot) {
+            return;
+        }
 
-	return out;
+        const currentSlide = track.querySelector('.current-slide');
+        const currentDot = dotsNav.querySelector('.current-slide');
+        const targetIndex = dotsChildren.findIndex(dot => dot === targetDot);
+        const targetSlide = slides[targetIndex];
 
-};
-
-// Flex Animation
-
-var group = document.querySelector(".menu");
-var nodes = document.querySelectorAll("button");
-var total = nodes.length;
-var ease  = Power1.easeInOut;
-var boxes = [];
-
-for (var i = 0; i < total; i++) {
-
-  var node = nodes[i];
-
-  // Initialize transforms on node
-  gsap.set(node, { x: 0 });
-
-  boxes[i] = {
-    transform: node._gsTransform,
-    x: node.offsetLeft,
-    y: node.offsetTop,
-    node
-  };
+        moveToSlide(track, currentSlide, targetSlide);
+        updateDots(currentDot, targetDot);
+        hideShowNavigation(dotsNav, targetIndex);
+    })
 }
 
-function scrollToNewElement(element) {
-    let elementToScroll = document.querySelector(`#${element.target.id}`);
-    elementToScroll.scrollIntoView({behavior: "instant", block: "center", inline: "center"});
-}
-
-// disable scroll
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; }
-  }));
-} catch(e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-// call this to Disable
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-// call this to Enable
-function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-
-
-//jQuery
-
-// $('button a').on('click', function (event) {
-//     // Avoid the link click from loading a new page
-//     event.preventDefault();
-
-//     console.log($(this).attr('href'))
-//     // Load the content from the link's href attribute
-//     $('.content').load($(this).attr('href'));
-// });
-
-// $.fn.moveIt = function(){
-//     var $window = $(window);
-//     var instances = [];
-
-//     $(this).each(function(){
-//       instances.push(new moveItItem($(this)));
-//     });
-
-//     window.addEventListener('scroll', function(){
-//       var scrollTop = $window.scrollTop();
-//       instances.forEach(function(inst){
-//         inst.update(scrollTop);
-//       });
-//     }, {passive: true});
-//   }
-
-//   var moveItItem = function(el){
-//     this.el = $(el);
-//     this.speed = parseInt(this.el.attr('data-scroll-speed'));
-//   };
-
-//   moveItItem.prototype.update = function(scrollTop){
-//     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-//   };
-
-//   // Initialization
-//   $(function(){
-//     $('[data-scroll-speed]').moveIt();
-//   });
+// End of Carousel logic

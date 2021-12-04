@@ -1,30 +1,30 @@
 <?php
 
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\CharactersController;
+use App\Http\Controllers\NewsController;
+use App\Models\History;
+use App\Models\SubHeading;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
 Route::get('{view}', function ($view) {
-
     if (view()->exists("content.{$view}") === false) {
-        redirect('/');
+        return (new NewsController())->create();
+    } else {
+        $controllerType = ucfirst($view);
+        $controllerClass = "App\\Http\\Controllers\\{$controllerType}Controller";
+
+        if (class_exists($controllerClass)) {
+            $controller = new $controllerClass();
+        } else {
+            throw new Exception("Page doesn't exist - {$view}", 404);
+        }
+
+        return $controller->create();
     }
-
-    return view("content.{$view}");
-
 })->where('view', '[A-z_\-]+');
 
 Route::get('/', function () {
-    return view('content.news');
+    return (new NewsController())->create();
 });
-
-// Route::get('news', News::class);
-
-// Route::get('history', History::class);
-
-// Route::get('store', Store::class);
-
-// Route::get('popCulturePauseScreen', PopCulturePauseScreen::class);
-
-// Route::get('library', Library::class);
-
-// Route::get('contact', Contact::class);

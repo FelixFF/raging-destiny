@@ -1,10 +1,36 @@
-// @import url('https://fonts.googleapis.com/css?family=Orbitron');
-// @import url('//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
-@import url('//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Sans');
+//@import url('https://db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
+//@import url('https://db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Mono');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is ba trademark of Bitstream, Inc.
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('fonts/DejaVuSansCondensed-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EXCELSIOR SANS';
+    font-style: normal;
+    font-weight: normal;
+    src: local('EXCELSIOR SANS'), url('fonts/ExcelsiorSans.woff') format('woff');
+}
+
+//
+
+:root {
+    --title: #0137ca;
+    --button: #0e4068;
+    --button-shadow: #104977;
+    --button-lighter: #0e4068;
+    //--secondary-title: #0137ca;
+    --white: #ffffff;
+}
 
 * {
     box-sizing: border-box;
@@ -12,32 +38,62 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 body {
-    color: blanchedalmond;
+    color: white;
     text-align: center;
-    font-family: "DejaVu Sans";
-    background-image: url('/img/main-background-border.png'), url('/img/main-background.jpg');
+    font-family: "DejaVu Sans", serif;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    min-width: 300px;
+}
 
-    background-position: right bottom, left top;
-    background-repeat: no-repeat;
-    height: 100vh;
+body::after {
+    content: '';
+    background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -9999;
+    overflow: hidden;
+}
+
+.pound-sign {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+}
+
+.button {
+    width: 100%;
+    z-index: 1;
+    background-color: var(--button) !important;
+    font-size: 8px;
+    border-color: var(--button-shadow);
+}
+
+.button:hover {
+    width: 90%;
+    z-index: 1;
+    background-color: var(--button-lighter) !important;
+    font-size: 8px;
+    border-color: var(--button-shadow);
 }
 
 .content-style {
-    max-height: 80vh;
     position: relative;
-    overflow-y: scroll;
     background-position: center;
-    display: block;
-    flex-direction: column;
-    justify-content: space-around;
     transition: all 0.8s;
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .content-section-style.in-view {
@@ -53,164 +109,196 @@ body {
 }
 
 .content-section-style {
-    min-height: 85vh;
     display: flex;
-    opacity: 0;
     justify-content: center;
     align-items: center;
     top: 0;
     transition-timing-function: linear;
-    overflow-y: auto;
+    z-index: 1;
 }
 
-.news {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-
-    .news-section {
-        width: 90%;
-    }
-
-    .container {
-        position: relative;
-        text-align: center;
-        color: white;
-        padding: 0 30px;
-        transform: translate(-70px, -68px);
-
-        .top-left-text {
-            position: fixed;
-            color: darkblue;
-            font-size: 2em;
-            font-weight: bold;
-            position: absolute;
-            top: 4px;
-            left: 6px;
-            padding:25px;
-        }
-
-        .top-left-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    }
-}
-
-.books {
-    max-height: 80vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .books-image {
-        max-width: 35%;
-        border-radius: 50% !important;
-        cursor: pointer;
-    }
-}
-
-.menu {
+.border-image {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    // flex-direction: row;
+    height: 100vh;
+    max-width: 2rem;
+    visibility: collapse;
+}
 
-    left: 0;
-    flex-direction: column;
-    margin-left: 1em;
-    opacity: 0.5;
-    width: 10%;
-    align-content: center;
-    background-image: url('/img/menu/side-menu-container.png');
-    background-size: 100% 99%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-top: 3em;
-    padding-bottom: 3em;
+.is-hidden {
+    display: none !important;
+}
 
-    &:hover {
-        opacity: 1;
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 38px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Youtube */
+.fa-youtube-play {
+    background: red;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: orange;
+    color: white;
+}
+
+/* Mail */
+.fa-envelope {
+    background: darkblue;
+    color: white;
+}
+
+@media only screen and (min-width: 65.5em) {
+    .border-image {
+        visibility: visible;
+        max-width: 3rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    body {
+        min-width: 470px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        min-width: 45em;
     }
 
-    button {
+    .fa {
+        width: 60px;
+        font-size: 30px !important;
+    }
+
+    .button {
         width: 90%;
-        opacity: 0.5;
-
-        &:hover {
-            opacity: 1;
-        }
+        z-index: 1;
+        background-color: var(--button) !important;
+        font-size: 16px;
+        border-color: var(--button-shadow);
+        transform: translate(0, 0) !important;
+        color: white;
     }
-}
 
-.menu-left {
-    // left: 0;
-    // flex-direction: column;
-    // margin-left: 1em;
-    // opacity: 0.5;
-    // width: 10%;
-    // align-content: center;
-    // background-image: url('/img/menu/side-menu-container.png');
-    // background-size: 100% 99%;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // padding-top: 3em;
-    // padding-bottom: 3em;
+    .button:hover {
+        font-size: 16px;
+    }
 
-    // &:hover {
-    //     opacity: 1;
-    // }
+    .pound-sign {
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 42px;
+    }
 
-    // button {
-    //     width: 90%;
-    //     opacity: 0.5;
+    .pound-sign-m {
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 36px;
+    }
 
-    //     &:hover {
-    //         opacity: 1;
-    //     }
-    // }
-}
-
-.menu-centre {
-//     position: relative;
-//     display: flex;
-//     z-index: 999;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     flex-direction: row;
+    .pound-sign-s {
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 21px;
+    }
 }
 
 @keyframes fadeInCustom {
-    0% { opacity: 0; }
-    20% { opacity: 0.1; }
-    20% { opacity: 0.2; }
-    20% { opacity: 0.3; }
-    20% { opacity: 0.4; }
-    20% { opacity: 0.5; }
-    20% { opacity: 0.2; }
-    20% { opacity: 0.2; }
-    40% { opacity: 0.4; }
-    60% { opacity: 0.6; }
-    80% { opacity: 0.8; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOutCustom {
-    0% { opacity: 1; }
-    10% { opacity: 0.9; }
-    20% { opacity: 0.8; }
-    30% { opacity: 0.7; }
-    40% { opacity: 0.6; }
-    50% { opacity: 0.5; }
-    60% { opacity: 0.4; }
-    70% { opacity: 0.3; }
-    80% { opacity: 0.2; }
-    90% { opacity: 0.1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
