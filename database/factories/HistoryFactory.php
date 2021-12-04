@@ -24,6 +24,7 @@ class HistoryFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'content' => $this->faker->sentence,
+            'active' => $this->faker->boolean,
             'published_at' => now(),
         ];
     }

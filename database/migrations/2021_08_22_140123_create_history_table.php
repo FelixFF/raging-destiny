@@ -17,6 +17,7 @@ class CreateHistoryTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
+            $table->boolean('active');
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });

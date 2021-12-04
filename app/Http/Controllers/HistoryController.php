@@ -16,7 +16,9 @@ class HistoryController extends Controller
         $historyTitles = [];
 
         foreach ($histories as $history) {
-            $historyTitles[] = $history['title'];
+            if ($history['active']) {
+                $historyTitles[] = $history['title'];
+            }
         }
 
         $contentArray = [

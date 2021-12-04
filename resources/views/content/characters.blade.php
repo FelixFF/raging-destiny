@@ -32,9 +32,6 @@
         .character:hover {
             cursor: pointer;
             transform: scale(1.1);
-            /*-webkit-box-shadow: 5px 5px 2.5px 0px rgba(66, 47, 66, 1);*/
-            /*-moz-box-shadow: 5px 5px 2.5px 0px rgba(66, 47, 66, 1);*/
-            /*box-shadow: 5px 5px 2.5px 0px rgba(66, 47, 66, 1);*/
             transition: transform 0.3s ease-in-out;
         }
 

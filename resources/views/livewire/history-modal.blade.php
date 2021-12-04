@@ -1,7 +1,7 @@
 <div class="modal-container">
     <div class="close-button" wire:click='$emit("closeModal")'>x</div>
     <div class="text-background">
-        <div class="content">{{ $modalContent->content }}</div>
+        <div class="content">{!! $modalContent->content !!} </div>
     </div>
 </div>
 <style>
