@@ -18,30 +18,32 @@ let lastKnownScrollPosition = 0;
 let currentScrollPosition = 0;
 let ticking = false;
 
-function controlMenu(scrollPos) {
-    if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
-        menu.classList.add('is-hidden');
-    } else if (scrollPos < lastKnownScrollPosition) {
-        setTimeout(() => {
-            menu.classList.remove('is-hidden');
-        }, 500);
+if (window.screen.width < 600) {
+    function controlMenu(scrollPos) {
+        if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
+            menu.classList.add('is-hidden');
+        } else if (scrollPos < lastKnownScrollPosition) {
+            setTimeout(() => {
+                menu.classList.remove('is-hidden');
+            }, 500);
+        }
+
+        lastKnownScrollPosition = scrollPos;
     }
 
-    lastKnownScrollPosition = scrollPos;
+    document.addEventListener('scroll', function(e) {
+        currentScrollPosition = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                controlMenu(currentScrollPosition);
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
 }
-
-document.addEventListener('scroll', function(e) {
-    currentScrollPosition = window.scrollY;
-
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-            controlMenu(currentScrollPosition);
-            ticking = false;
-        });
-
-        ticking = true;
-    }
-});
 
 // Carousel logic
 

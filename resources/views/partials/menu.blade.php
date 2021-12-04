@@ -99,7 +99,7 @@
         }
     }
 
-    @media only screen and (min-width: 400px) and (max-width: 58em)
+    @media only screen and (min-width: 400px) and (max-width: 600px)
     {
         .button-container {
             max-width: 100%;
@@ -122,7 +122,7 @@
         }
     }
 
-    @media only screen and (min-width: 600px) and (max-width: 58em)
+    @media only screen and (min-width: 600px) and (max-width: 926px)
     {
         .button-container {
             max-width: 100%;
@@ -146,7 +146,7 @@
         }
     }
 
-    @media only screen and (min-width: 58em) and (max-width: 95em)
+    @media only screen and (min-width: 927px) and (max-width: 1520px)
     {
         .button-container {
             bottom: 25px;

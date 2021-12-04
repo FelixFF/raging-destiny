@@ -159,7 +159,7 @@
                                 Expand your Raging Destiny experience today!
                             </p>
                         </div>
-                        <img src="\img/content/merch-collection.png" alt="" style="margin-top: -5em; max-height: 20em"/>
+                        <img src="\img/content/merch-collection.png" alt="" class="news-image"/>
                         <p class="scrollable-content news-container">
                             Make your way over to the Raging Destiny Store to find the latest merchandise available now!
                             <br>
@@ -277,8 +277,12 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 300px;
+            height: 310px;
             width: 80%;
+        }
+
+        .news-image {
+            max-height: 14em;
         }
 
         .content-mid-box {
@@ -353,7 +357,7 @@
         .inner-heading-mid {
             font-size: 18px !important;
             font-style: italic;
-            margin: 0 auto 3.5em auto;
+            margin: 0.5em auto 1.5em auto;
             display: flex;
             flex-direction: row;
             max-height: 20%;
@@ -520,16 +524,6 @@
             overflow: hidden;
         }
 
-        @media only screen and  (min-width: 400px) and (max-width: 599px) {
-
-        }
-
-        @media only screen and  (min-width: 600px) and (max-width: 1531px) {
-            .news {
-                margin-top: -3em;
-            }
-        }
-
         @media only screen and (min-width: 600px) {
             ul {
                 font-size: 18px;
@@ -552,13 +546,20 @@
                 font-size: 20px !important;
             }
 
+            .news-image {
+                max-height: 30%;
+            }
+
             .text-content {
                 max-width: 70%;
                 display: block;
             }
 
             .text-content-news {
-                max-width: 90% !important;
+                max-width: 100% !important;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
             }
 
             .header-image-container {
@@ -617,8 +618,8 @@
 
             .inner-heading-mid {
                 font-size: 47px !important;
-                margin-bottom: 2em;
-                margin-top: 1.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
             }
 
             .content-mid-box {

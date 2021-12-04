@@ -1,11 +1,27 @@
-// @import url('https://fonts.googleapis.com/css?family=Orbitron');
-@import url('//db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
-@import url('//db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Mono');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@1,700&display=swap');
+//@import url('https://db.onlinewebfonts.com/c/503650e3d5bb7266bdd49b49b9d96162?family=EXCELSIOR+SANS');
+//@import url('https://db.onlinewebfonts.com/c/eccb7a74720fc377b60d6b2110530fd9?family=DejaVu+Mono');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is ba trademark of Bitstream, Inc.
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('fonts/DejaVuSansCondensed-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EXCELSIOR SANS';
+    font-style: normal;
+    font-weight: normal;
+    src: local('EXCELSIOR SANS'), url('fonts/ExcelsiorSans.woff') format('woff');
+}
+
+//
 
 :root {
     --title: #0137ca;
@@ -22,18 +38,13 @@
 
 html {
     scroll-behavior: smooth;
-    // height: 100%;
 }
 
 body {
     color: white;
     text-align: center;
-    font-family: "DejaVu Mono", serif;
-    // font-family: "EXCELSIOR SANS";
-    // overflow-y: auto;
+    font-family: "DejaVu Sans", serif;
     display: block;
-    //background: linear-gradient(210deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(30deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), url('/img/perm-background.jpg');
-    // opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;

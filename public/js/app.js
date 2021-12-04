@@ -1862,29 +1862,32 @@ var lastKnownScrollPosition = 0;
 var currentScrollPosition = 0;
 var ticking = false;
 
-function controlMenu(scrollPos) {
-  if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
-    menu.classList.add('is-hidden');
-  } else if (scrollPos < lastKnownScrollPosition) {
-    setTimeout(function () {
-      menu.classList.remove('is-hidden');
-    }, 500);
-  }
+if (window.screen.width < 600) {
+  var controlMenu = function controlMenu(scrollPos) {
+    if (scrollPos > 100 && scrollPos > lastKnownScrollPosition) {
+      menu.classList.add('is-hidden');
+    } else if (scrollPos < lastKnownScrollPosition) {
+      setTimeout(function () {
+        menu.classList.remove('is-hidden');
+      }, 500);
+    }
 
-  lastKnownScrollPosition = scrollPos;
-}
+    lastKnownScrollPosition = scrollPos;
+  };
 
-document.addEventListener('scroll', function (e) {
-  currentScrollPosition = window.scrollY;
+  document.addEventListener('scroll', function (e) {
+    currentScrollPosition = window.scrollY;
 
-  if (!ticking) {
-    window.requestAnimationFrame(function () {
-      controlMenu(currentScrollPosition);
-      ticking = false;
-    });
-    ticking = true;
-  }
-}); // Carousel logic
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        controlMenu(currentScrollPosition);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+} // Carousel logic
+
 
 var track = document.querySelector('.carousel__track');
 var slides = track !== null ? Array.from(track.children) : [];
