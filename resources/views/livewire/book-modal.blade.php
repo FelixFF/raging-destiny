@@ -8,7 +8,7 @@
     </div>
     <div class="book-content">
         <div class="inner-container">
-            <div class="inner-header {{ $modalContent->showImage ? '' : 'increased-font-size' }}">
+            <div class="inner-header {{ !$modalContent->showImage && $modalContent->bookButtons[0]->type === 'signature' ? 'increased-font-size' : '' }}">
                 {!! $modalContent->bookSubHeading !!}
             </div>
             <div class="main-content">
