@@ -130,7 +130,7 @@
                                 Expand your Raging Destiny experience today!
                             </p>
                         </div>
-                        <img src="\img/content/merch-collection.png" alt="" class="news-image"/>
+                        <img src="\img/content/merch-collection.png" alt="" class="news-image" style="margin: 1em;"/>
                         <p class="scrollable-content news-container">
                             T-shirts, hoodies, art, bookmarks, puzzles, posters, you can find it all and show your
                             support for Raging Destiny!
