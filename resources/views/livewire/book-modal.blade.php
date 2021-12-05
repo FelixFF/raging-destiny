@@ -8,7 +8,7 @@
     </div>
     <div class="book-content">
         <div class="inner-container">
-            <div class="inner-header">
+            <div class="inner-header {{ $modalContent->showImage ? '' : 'increased-font-size' }}">
                 {!! $modalContent->bookSubHeading !!}
             </div>
             <div class="main-content">
@@ -368,6 +368,10 @@
         .inner-header {
             font-size: 33px;
             margin-top: 1em;
+        }
+
+        .inner-header .increased-font-size {
+            font-size: 22px !important;
         }
 
         .button-container-override {
