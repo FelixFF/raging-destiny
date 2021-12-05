@@ -42,9 +42,9 @@
                                                     <button
                                                         class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                                                         <span
-                                                            onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book1']))'
+                                                            onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book1', 'showImage' => false]))'
                                                             class="optional-more-info-button">More Info</span>
-                                                        <span class="optional-buy-now-button">Buy Now</span>
+                                                        <span onclick="window.open('https://www.ebay.co.uk/itm/304251724807', '_blank')" class="optional-buy-now-button">Buy Now</span>
                                                     </button>
                                                 </div>
                                             </div>
@@ -75,7 +75,7 @@
                                         GET THE SIGNATURE EDITION!
                                     </div>
                                     <div class="scrollable-content-sub-heading">
-                                        THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!
+                                        THE FIRST NOVEL IN THE RAGING DESTINY <br> SERIES JUST GOT BETTER!
                                     </div>
                                     <div class="box-container">
                                         <div class="image-content">
@@ -99,12 +99,11 @@
                                         </div>
                                         <div class="buttons-content">
                                             <button
-                                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto"
-                                                onclick="window.open('http://ebay.com','_blank')">
+                                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                                                 <span
-                                                    onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book3']))'
+                                                    onclick='Livewire.emit("openModal", "book-modal", @json(['book' => 'book3', 'showImage' => false]))'
                                                     class="optional-more-info-button">More Info</span>
-                                                <span class="optional-buy-now-button">Buy Now</span>
+                                                <span onclick="window.open('https://www.ebay.co.uk/itm/304251735338', '_blank')" class="optional-buy-now-button">Buy Now</span>
                                             </button>
                                         </div>
                                     </div>
@@ -146,6 +145,41 @@
                         <button onclick="location.href = location.href.replace('news', 'store');"
                                 class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                             Merchandise
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section-style style-content-box">
+            <div class="header-image-container-mid">
+                <img class="header-image" src="\img/mid-banner.png"
+                     alt="Content Box Banner">
+                <div class="header-image-text-mid social-mid">
+                    Social Media
+                </div>
+            </div>
+            <div class="news-content content-mid-box">
+                <div class="carousel__slide--content news-carousel">
+                    <div class="text-content news-section text-content-news">
+                        <div class="inner-heading-mid">
+                            <p>
+                                Be a part of Raging Destiny!
+                            </p>
+                        </div>
+                        <img src="\img/logos/logo-social.png" alt="" class="news-image"/>
+                        <p class="scrollable-content news-container">
+                            If you would like to keep up to date with all the latest Raging Destiny news or share your
+                            opinions on the product, there is no better place than the links below. <br>
+                            Look forward to hearing from you.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                    <div class="buttons-content-news">
+                        <button onclick="location.href = location.href.replace('news', 'contact');"
+                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                            Show me more
                         </button>
                     </div>
                 </div>
@@ -219,6 +253,10 @@
             font-style: italic;
             color: var(--title);
             transform: translateY(-5%);
+        }
+
+        .social-mid {
+            right: 27% !important;
         }
 
         .button-override {
@@ -357,6 +395,7 @@
             max-width: 93%;
             width: 100%;
             margin-bottom: 0.5em;
+            z-index: 2;
         }
 
         .pushable {
@@ -549,6 +588,10 @@
                 transform: translateY(0);
             }
 
+            .social-mid {
+                right: 27% !important;
+            }
+
             .header-image-text {
                 font-weight: bolder;
                 font-size: 43px;
@@ -606,7 +649,7 @@
                 margin-bottom: 1em;
                 margin-top: -1em;
                 font-size: 18px;
-                max-width: 70%;
+                max-width: 85%;
             }
 
             .buttons-content {

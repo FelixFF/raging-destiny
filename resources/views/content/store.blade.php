@@ -14,7 +14,7 @@
                     <img class="store-image" src="\img/content/book-cover-1.jpg" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Art: <span class="pound-sign">£</span>10.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251724807', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
                     <img class="store-image" src="\img/content/book-cover-1-hardback.jpg" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Art: <span class="pound-sign">£</span>22.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251735338', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
                     <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Art: <span class="pound-sign">£</span>8.50 (set of 6)</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251744730', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                     <img class="store-image" src="\img/store/blue-t-no-text.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">T-Shirts: <span class="pound-sign">£</span>20.00</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251743912', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
                     <img class="store-image" src="\img/store/black-hoodie.png" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Hoodies: <span class="pound-sign">£</span>45.00</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251740379', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
 
@@ -95,7 +95,7 @@
                     <img class="store-image" src="\img/store/bookmark-b-side.jpg" alt="Content Box Banner">
                 </div>
                 <div class="merch-label">Bookmark: <span class="pound-sign">£</span>2.50</div>
-                <button class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
+                <button onclick="window.open('https://www.ebay.co.uk/itm/304251741993', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
     </div>

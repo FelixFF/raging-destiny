@@ -51,11 +51,38 @@ body {
     right: 0;
     position: relative;
     min-width: 300px;
+    height: 100%;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.53) 50%, rgba(0, 0, 0, 0) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.53) 50%, rgba(0, 0, 0, 0) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.53) 50%, rgba(0, 0, 0, 0) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.53) 50%, rgba(0, 0, 0, 0) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.53) 50%, rgba(0, 0, 0, 0) 100%);
+    transform: translateY(10em);
 }
 
 body::after {
     content: '';
-    background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 50%, rgba(0,0,0,1) 100%), url('/img/perm-background.jpg');
+    background: linear-gradient(210deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), linear-gradient(30deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 0, 0, 1) 100%), url('/img/perm-background.jpg');
     opacity: 0.3;
     top: 0;
     left: 0;
@@ -94,6 +121,7 @@ body::after {
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    margin-bottom: 10em;
 }
 
 .content-section-style.in-view {

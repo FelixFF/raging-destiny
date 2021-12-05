@@ -12,19 +12,28 @@
                 {!! $modalContent->bookSubHeading !!}
             </div>
             <div class="main-content">
-                <div class="book-image-container">
-                    <img class="book-image" src="{{ $modalContent->bookImage }}" alt="Book Image">
-                </div>
-                <div class="book-text-content">
+                @if ($modalContent->showImage)
+                    <div class="book-image-container">
+                        <img class="book-image" src="{{ $modalContent->bookImage }}" alt="Book Image">
+                    </div>
+                @endif
+
+                <div class="book-text-content {{ $modalContent->showImage ? '' : 'book-text-content-resize' }}">
                     <div class="book-intro">{!! $modalContent->bookIntro !!}</div>
-                    <div class="book-text">{!! $modalContent->bookText !!}</div>
+                    <div
+                        class="book-text {{ $modalContent->showImage ? '' : 'book-text-resize' }}">{!! $modalContent->bookText !!}</div>
                 </div>
             </div>
             <div class="book-footer book-button-text">{!! $modalContent->bookButtonText !!}</div>
             <div class="button-container button-container-override">
                 @foreach($modalContent->bookButtons as $button)
-                    <button
-                        class="book-button button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">{{ $button }}</button>
+                    @if($button->type === 'standard')
+                        <button onclick="window.open('https://www.ebay.co.uk/itm/304251724807', '_blank')" class="book-button button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">{{ $button->text }}</button>
+                    @elseif($button->type === 'signature')
+                        <button onclick="window.open('https://www.ebay.co.uk/itm/304251735338', '_blank')" class="book-button button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">{{ $button->text }}</button>
+                    @elseif($button->type === 'book2')
+                        <button onclick="location.href='mailto:billy.twigg@hotmail.co.uk'" class="book-button button text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">{{ $button->text }}</button>
+                    @endif
                 @endforeach
             </div>
         </div>
@@ -33,7 +42,6 @@
 <style>
     .bg-white {
         background: none !important;
-        /*background: url('/img/modal-content-container.png') !important;*/
         overflow: hidden;
         box-shadow: none !important;
     }
@@ -48,14 +56,6 @@
 
     .close-button {
         display: none;
-    }
-
-    .book-container {
-        display: flex;
-        flex-direction: column;
-        width: 18em;
-        min-width: 270px;
-        position: relative;
     }
 
     .image-content img {
@@ -261,11 +261,24 @@
         .inner-header {
             margin: 0.5em 0 1em 0;
             font-size: 17px;
+            text-align: center;
         }
 
         .book-text-content {
             margin-left: -1.2em;
             margin-right: 0.5em;
+        }
+
+        .book-text-content-resize {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            height: 70%;
+            width: 86%;
+            text-align: center;
+        }
+
+        .book-text-resize {
+            height: 215px !important;
         }
 
         .book-text {

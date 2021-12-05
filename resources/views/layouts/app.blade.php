@@ -22,7 +22,7 @@
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">
         @yield('content')
     </div>
-    <footer style="position:absolute; bottom: 0; width: 100%; min-width: 30px; margin-top:2em; background: rgba(0,0,0, .2)">Copyright @Raging Destiny</footer>
+    <footer>Copyright @Raging Destiny</footer>
     @livewireScripts
     @livewire('livewire-ui-modal')
 </body>

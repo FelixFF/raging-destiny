@@ -9,9 +9,9 @@ class BookModal extends ModalComponent
 {
     protected \stdClass $modalContent;
 
-    public function mount(string $book)
+    public function mount(string $book, bool $showImage = true)
     {
-        $this->modalContent = $this->getContentForModal($book);
+        $this->modalContent = $this->getContentForModal($book, $showImage);
     }
 
     public function render()
@@ -19,9 +19,11 @@ class BookModal extends ModalComponent
         return view('livewire.book-modal')->with(['modalContent' => $this->modalContent]);
     }
 
-    private function getContentForModal(string $book)
+    private function getContentForModal(string $book, bool $showImage)
     {
         $content = new \stdClass();
+
+        $content->showImage = $showImage;
 
         if (str_contains($book, 'book1')) {
             $content->bookTitle = 'Available Now!';
@@ -34,8 +36,24 @@ SLIDER, a young martial artist with the ability to control lightning. CRYSTAL, a
 They travel the beautiful and dangerous world of Gaia with the hope of sealing the SHADE away for good. Yet a power struggle unfolds, as the world's enemies, old and new, look to complicate their quest and further their own malicious intent. <br><br>
 In this action-packed martial arts fantasy fiction, discover if the sacrifices of the past have been too long forgotten in this scramble for power and the truth.";
             $content->bookButtonText = '';
-            $content->bookButtons[] = 'STANDARD';
-            $content->bookButtons[] = 'SIGNATURE';
+
+            if ($content->showImage) {
+                $standardEditionButton = new \stdClass();
+                $standardEditionButton->text = 'STANDARD';
+                $standardEditionButton->type = "standard";
+                $content->bookButtons[] = $standardEditionButton;
+
+                $signatureEditionButton = new \stdClass();
+                $signatureEditionButton->text = 'SIGNATURE';
+                $signatureEditionButton->type = "signature";
+                $content->bookButtons[] = $signatureEditionButton;
+            } else {
+                $standardEditionButton = new \stdClass();
+                $standardEditionButton->text = 'Buy Now';
+                $standardEditionButton->type = "standard";
+                $content->bookButtons[] = $standardEditionButton;
+            }
+
         } else if (str_contains($book, 'book2')){
             $content->bookTitle = 'In Production...';
             $content->bookSubHeading = 'THERE ARE TWO SIDES TO EVERY STORY, <br> THEN THERE IS THE TRUTH';
@@ -47,10 +65,14 @@ In this action-packed martial arts fantasy fiction, discover if the sacrifices o
                                   the first novel and change what you believed to be the truth in the world of Gaia and the people of Sanctuary City.";
             $content->bookButtonText = 'Check back often for progress updates right here at RagingDestiny.com. <br><br>
                                         Register your interest and secure your copy first day of release below.';
-            $content->bookButtons[] = 'REGISTER INTEREST';
+
+            $signatureEditionButton = new \stdClass();
+            $signatureEditionButton->text = 'REGISTER INTEREST';
+            $signatureEditionButton->type = "book2";
+            $content->bookButtons[] = $signatureEditionButton;
         } else {
             $content->bookTitle = 'GET THE SIGNATURE EDITION!';
-            $content->bookSubHeading = 'THE FIRST NOVEL IN THE RAGING DESTINY SERIES JUST GOT BETTER!';
+            $content->bookSubHeading = 'THE FIRST NOVEL IN THE RAGING DESTINY <br> SERIES JUST GOT BETTER!';
             $content->bookImage = "\img/content/book-cover-1-hardback.jpg";
             $content->bookIntro = 'The second novel in the Raging Destiny series is now in development.';
             $content->bookText = "<ul>
@@ -63,7 +85,11 @@ In this action-packed martial arts fantasy fiction, discover if the sacrifices o
                                                     <li>- Signed by Author Billy Twigg</li>
                                                 </ul>";
             $content->bookButtonText = '';
-            $content->bookButtons[] = 'Buy Now';
+
+            $signatureEditionButton = new \stdClass();
+            $signatureEditionButton->text = 'Buy Now';
+            $signatureEditionButton->type = "signature";
+            $content->bookButtons[] = $signatureEditionButton;
         }
 
         return $content;
