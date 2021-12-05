@@ -24,7 +24,7 @@
                         class="book-text {{ $modalContent->showImage ? '' : 'book-text-resize' }}">{!! $modalContent->bookText !!}</div>
                 </div>
             </div>
-            <div class="book-footer book-button-text">{!! $modalContent->bookButtonText !!}</div>
+            <div class="book-footer book-button-text {{ isset($modalContent->bookButtons[1]) ? 'margin-increase' : '' }}">{!! $modalContent->bookButtonText !!}</div>
             <div class="button-container button-container-override">
                 @foreach($modalContent->bookButtons as $button)
                     @if($button->type === 'standard')
@@ -134,6 +134,10 @@
         margin: 0 1em;
         font-family: "EXCELSIOR SANS", serif;
         font-style: italic;
+    }
+
+    .increased-font-size {
+        font-size: 22px !important;
     }
 
     .book-image-container {
@@ -370,10 +374,6 @@
             margin-top: 1em;
         }
 
-        .inner-header .increased-font-size {
-            font-size: 22px !important;
-        }
-
         .button-container-override {
             width: 71%;
         }
@@ -389,6 +389,10 @@
         .book-intro {
             font-size: 16px;
             height: 30%;
+        }
+
+        .margin-increase {
+            transform: translateY(-10%);
         }
 
         .book-footer {
