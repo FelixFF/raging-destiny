@@ -3,7 +3,7 @@
     <div class="header-image-container">
         <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
         <div class="header-image-text">
-            {!! $modalContent->bookTitle !!}
+            {!! strtoupper($modalContent->bookTitle) !!}
         </div>
     </div>
     <div class="book-content">
@@ -110,6 +110,7 @@
 
     .book-intro {
         font-size: 10px;
+        text-align: center;
     }
 
     .book-text {
@@ -274,7 +275,10 @@
             margin-right: 0 !important;
             height: 70%;
             width: 86%;
-            text-align: center;
+        }
+
+        ul {
+            font-size: 13px !important;
         }
 
         .book-text-resize {

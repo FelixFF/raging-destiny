@@ -26,7 +26,7 @@ class BookModal extends ModalComponent
         $content->showImage = $showImage;
 
         if (str_contains($book, 'book1')) {
-            $content->bookTitle = 'Available Now!';
+            $content->bookTitle = 'STANDARD EDITION';
             $content->bookSubHeading = 'EVERYONE HAS A STYLE OF FIGHTING, BUT <br> NOT EVERYONE CAN FIGHT WITH STYLE!';
             $content->bookImage = "\img/content/book-cover-1.jpg";
             $content->bookIntro = 'THE FIRST NOVEL IN THE RAGING DESTINY SERIES IS NOW ON SALE!';
@@ -35,7 +35,7 @@ Two millennia later the shadows of the SHADE are stirring again and it is now th
 SLIDER, a young martial artist with the ability to control lightning. CRYSTAL, an advanced artificial intelligence hologram. GWENDOLYN, a powerful sorceress of light awakened from a deep sleep. RAYGAN, a foul-mouthed marksman, always ready for a fight and ever backed up by his partner KESTREL. <br><br>
 They travel the beautiful and dangerous world of Gaia with the hope of sealing the SHADE away for good. Yet a power struggle unfolds, as the world's enemies, old and new, look to complicate their quest and further their own malicious intent. <br><br>
 In this action-packed martial arts fantasy fiction, discover if the sacrifices of the past have been too long forgotten in this scramble for power and the truth.";
-            $content->bookButtonText = '';
+            $content->bookButtonText = $showImage ? 'Available in standard paperback or hardback signature editions. <br><br> Check the SHOP for more Raging Destiny Merchandise available now.' : '';
 
             if ($content->showImage) {
                 $standardEditionButton = new \stdClass();
@@ -71,10 +71,10 @@ In this action-packed martial arts fantasy fiction, discover if the sacrifices o
             $signatureEditionButton->type = "book2";
             $content->bookButtons[] = $signatureEditionButton;
         } else {
-            $content->bookTitle = 'GET THE SIGNATURE EDITION!';
-            $content->bookSubHeading = 'THE FIRST NOVEL IN THE RAGING DESTINY <br> SERIES JUST GOT BETTER!';
+            $content->bookTitle = 'SIGNATURE EDITION';
+            $content->bookSubHeading = 'GET THE SIGNATURE EDITION';
             $content->bookImage = "\img/content/book-cover-1-hardback.jpg";
-            $content->bookIntro = 'The second novel in the Raging Destiny series is now in development.';
+            $content->bookIntro = 'THE FIRST NOVEL IN THE <br> RAGING DESTINY <br> SERIES JUST GOT BETTER!';
             $content->bookText = "<ul>
                                                     <li>- Hard Back cover.</li>
                                                     <li>- Dust sheet.</li>

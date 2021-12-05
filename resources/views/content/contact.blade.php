@@ -6,7 +6,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Billy Twigg
+                    {{strtoupper('Billy Twigg')}}
                 </div>
             </div>
             <div class="contact-content">
@@ -31,7 +31,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Social Media
+                    {{strtoupper('Social Media')}}
                 </div>
             </div>
             <div class="contact-content">
@@ -51,7 +51,7 @@
                        target=”_blank”></a>
                     <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter"
                        target=”_blank”></a>
-                    <a href="https://www.instagram.com/ragingdestiny/?hl=en-gb"
+                    <a href="https://www.instagram.com/bill_popculturepausescreen/"
                        class="fa fa-instagram" target=”_blank”></a>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Pop Culture Pause Screen
+                    {{strtoupper('Pop Culture Pause Screen')}}
                 </div>
             </div>
             <div class="contact-content">

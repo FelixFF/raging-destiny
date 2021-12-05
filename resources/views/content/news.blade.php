@@ -7,7 +7,7 @@
                 <img class="header-image" src="\img/content/box-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text">
-                    Raging Destiny (Standard Edition)
+                    {{ strtoupper('Raging Destiny (Standard Edition)') }}
                 </div>
             </div>
             <div class="news-content">
@@ -62,7 +62,7 @@
                 <img class="header-image" src="\img/content/box-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text">
-                    Raging Destiny (Signature Edition)
+                    {{strtoupper('Raging Destiny (Signature Edition)')}}
                 </div>
             </div>
             <div class="news-content">
@@ -119,7 +119,7 @@
                 <img class="header-image" src="\img/mid-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text-mid">
-                    News
+                    {{strtoupper('News')}}
                 </div>
             </div>
             <div class="news-content content-mid-box">
@@ -132,8 +132,6 @@
                         </div>
                         <img src="\img/content/merch-collection.png" alt="" class="news-image"/>
                         <p class="scrollable-content news-container">
-                            Make your way over to the Raging Destiny Store to find the latest merchandise available now!
-                            <br>
                             T-shirts, hoodies, art, bookmarks, puzzles, posters, you can find it all and show your
                             support for Raging Destiny!
                         </p>
@@ -144,7 +142,7 @@
                     <div class="buttons-content-news">
                         <button onclick="location.href = location.href.replace('news', 'store');"
                                 class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
-                            Merchandise
+                            Go to Shop
                         </button>
                     </div>
                 </div>
@@ -155,7 +153,7 @@
                 <img class="header-image" src="\img/mid-banner.png"
                      alt="Content Box Banner">
                 <div class="header-image-text-mid social-mid">
-                    Social Media
+                    {{strtoupper('Social Media')}}
                 </div>
             </div>
             <div class="news-content content-mid-box">
@@ -172,6 +170,14 @@
                             opinions on the product, there is no better place than the links below. <br>
                             Look forward to hearing from you.
                         </p>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/RagingDestiny/" class="fa fa-facebook"
+                               target=”_blank”></a>
+                            <a href="https://twitter.com/ragingdestiny" class="fa fa-twitter"
+                               target=”_blank”></a>
+                            <a href="https://www.instagram.com/bill_popculturepausescreen/"
+                               class="fa fa-instagram" target=”_blank”></a>
+                        </div>
                     </div>
                 </div>
                 <div
@@ -398,26 +404,6 @@
             z-index: 2;
         }
 
-        .pushable {
-            background: #104977;
-            border-radius: 4px;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            outline-offset: 4px;
-            min-width: 180px;
-        }
-
-        .front {
-            display: block;
-            min-width: 140px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            background: #0e4068;
-            color: white;
-            transform: translateY(-6px);
-        }
-
         .optional-buy-now-button {
             display: none;
         }
@@ -487,28 +473,12 @@
             max-height: 70%;
         }
 
-        .carousel__nav {
-            /*background: #cbdbef;*/
-        }
-
-        .carousel__indicator {
-            border: 0;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            background: white;
-        }
-
         .box-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             max-height: 80%;
-        }
-
-        .carousel__indicator.current-slide {
-            background: rgba(14, 64, 104, 1);
         }
 
         i {
@@ -520,6 +490,19 @@
             margin: 2em 0 0 1em;
             width: 90%;
             overflow: hidden;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 7px;
+            z-index: 2;
+            transform: translateY(20%);
+        }
+
+        .social-media > a {
+            width: 32px !important;
         }
 
         @media only screen and (min-width: 600px) {
@@ -714,6 +697,18 @@
                 border: 1px solid #050966;
                 border-radius: 15px;
                 max-height: 100%;
+            }
+
+            .social-media {
+                transform: translateY(-150%);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-bottom: 0.7em;
+            }
+
+            .social-media > a {
+                width: 54px !important;
             }
         }
 

@@ -6,7 +6,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Raging Destiny: Standard Edition
+                    {{strtoupper('Raging Destiny: Standard Edition')}}
                 </div>
             </div>
             <div class="store-content">
@@ -22,7 +22,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Raging Destiny: Signature Edition
+                    {{strtoupper('Raging Destiny: Signature Edition')}}
                 </div>
             </div>
             <div class="store-content">
@@ -38,7 +38,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Art-Cards
+                    {{strtoupper('Art-Cards')}}
                 </div>
             </div>
             <div class="store-content">
@@ -54,7 +54,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    T-Shirts
+                    {{strtoupper('T-Shirts')}}
                 </div>
             </div>
             <div class="store-content">
@@ -70,7 +70,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Hoodies
+                    {{strtoupper('Hoodies')}}
                 </div>
             </div>
             <div class="store-content">
@@ -86,7 +86,7 @@
             <div class="header-image-container">
                 <img class="header-image" src="\img/content/box-banner.png" alt="Content Box Banner">
                 <div class="header-image-text">
-                    Bookmark
+                    {{strtoupper('Bookmark')}}
                 </div>
             </div>
             <div class="store-content">
