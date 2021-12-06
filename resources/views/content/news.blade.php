@@ -140,7 +140,7 @@
                 <div
                     style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
                     <div class="buttons-content-news">
-                        <button onclick="location.href = location.href.replace('news', 'store');"
+                        <button onclick="location.href = location.href.includes('news') ? location.href.replace('news', 'store') : location.href + 'store'"
                                 class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                             Go to Shop
                         </button>
@@ -181,9 +181,9 @@
                     </div>
                 </div>
                 <div
-                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center">
+                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; z-index: 3">
                     <div class="buttons-content-news">
-                        <button onclick="location.href = location.href.replace('news', 'contact');"
+                        <button onclick="location.href = location.href.includes('news') ? location.href.replace('news', 'contact') : location.href + 'contact'"
                                 class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
                             Show me more
                         </button>
@@ -401,7 +401,7 @@
             max-width: 93%;
             width: 100%;
             margin-bottom: 0.5em;
-            z-index: 2;
+            z-index: 1;
         }
 
         .optional-buy-now-button {
