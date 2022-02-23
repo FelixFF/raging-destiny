@@ -1,11 +1,11 @@
 <div class="banner-container">
     <div class="event">
-        <img src="\img/event/oll-event.jpg" class="event-img md:block" alt="Event Image">
+        <img src="\img/event/toy-fair-event.jpg" class="event-img md:block" alt="Event Image">
         <div class="label">Norwich Vintage & Modern Toy Fair</div>
         <div class="label">Sun 6th March 9:30am - 14:00pm</div>
     </div>
     <div class="event">
-        <img src="\img/event/toy-fair-event.jpg" class="event-img md:block" alt="Event Image">
+        <img src="\img/event/oll-event.jpg" class="event-img md:block" alt="Event Image">
         <div class="label">OLL 22 Video Game Convention</div>
         <div class="label">Sat/Sun 9th-10th April</div>
     </div>
