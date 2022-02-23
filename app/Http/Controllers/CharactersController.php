@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Characters;
-use Illuminate\Http\Request;
+use function view;
 
-class CharactersController extends Controller
+class haractersController extends Controller
 {
     private const SUB_HEADING = 'CHARACTER SELECT';
 

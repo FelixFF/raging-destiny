@@ -1,6 +1,6 @@
 <div class="menu">
     <div id="menu-buttons" class="button-container">
-        <button class="">
+        <button class="hover:scale-150">
             <a href="/news">
                 <img src="{{ asset('/img/menu/menu-button-home.png') }}" alt="News Button">
             </a>

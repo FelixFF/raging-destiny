@@ -13,7 +13,7 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/store/art.png" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Art: <span class="pound-sign">£</span>8.50 (set of 6)</div>
+                <div class="merch-label">Art: <span class="pound-sign">£</span>5.00(set of 6)</div>
                 <button onclick="window.open('https://www.ebay.co.uk/itm/304251744730', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
@@ -78,7 +78,7 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/content/book-cover-1.jpg" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Art: <span class="pound-sign">£</span>5.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
+                <div class="merch-label">Standard: <span class="pound-sign">£</span>10.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
                 <button onclick="window.open('https://www.ebay.co.uk/itm/304251724807', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>
@@ -94,7 +94,7 @@
                 <div class="merch-image">
                     <img class="store-image" src="\img/content/book-cover-1-hardback.jpg" alt="Content Box Banner">
                 </div>
-                <div class="merch-label">Art: <span class="pound-sign">£</span>22.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
+                <div class="merch-label">Signature: <span class="pound-sign">£</span>22.00 (<span class="pound-sign">£</span>2.99 P&P)</div>
                 <button onclick="window.open('https://www.ebay.co.uk/itm/304251735338', '_blank')" class="button button-override text-white font-bold py-1 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">Buy Now</button>
             </div>
         </div>

@@ -191,6 +191,39 @@
                 </div>
             </div>
         </div>
+        <div class="content-section-style style-content-box">
+            <div class="header-image-container-mid">
+                <img class="header-image" src="\img/mid-banner.png"
+                     alt="Content Box Banner">
+                <div class="header-image-text-mid social-mid">
+                    {{strtoupper('Video Series')}}
+                </div>
+            </div>
+            <div class="news-content content-mid-box">
+                <div class="carousel__slide--content news-carousel">
+                    <div class="text-content news-section text-content-news">
+                        <div class="inner-heading-mid">
+                            <p>
+                                Rise of Raging Destiny
+                            </p>
+                        </div>
+                        <img src="\img/content/rise-of-rd.jpg" alt="" class="news-image"/>
+                        <p class="scrollable-content news-container" style="margin-top: 3em">
+                            A behind-the-scenes look at The Martial Arts Fantasy Fiction Novel Raging Destiny and its creation.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; z-index: 3">
+                    <div class="buttons-content-news">
+                        <button onclick="window.open('https://youtube.com/playlist?list=PLplfc3B7hnOUeQ1D98KYk9N-LQwhz5y8V')"
+                                class="button button-override text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded m-auto">
+                            Youtube Playlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <style>
         .news {

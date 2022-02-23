@@ -19,12 +19,13 @@
 
     @include('partials.menu')
     @include('partials.sub-header', ['subHeading' => $subHeading])
+    @include('livewire.event-banner')
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">
         @yield('content')
     </div>
     <footer>
         <div>Copyright @Raging Destiny</div>
-        <div onclick="">Privacy Policy</div>
+{{--        <div onclick="">Privacy Policy</div>--}}
     </footer>
     @livewireScripts
     @livewire('livewire-ui-modal')

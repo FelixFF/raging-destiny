@@ -1,12 +1,8 @@
 <?php
 
-use App\Http\Controllers\HistoryController;
-use App\Http\Controllers\CharactersController;
 use App\Http\Controllers\NewsController;
-use App\Models\History;
 use App\Models\SubHeading;
 use Illuminate\Support\Facades\Route;
-use Illuminate\View\View;
 
 Route::get('{view}', function ($view) {
     if (view()->exists("content.{$view}") === false) {
