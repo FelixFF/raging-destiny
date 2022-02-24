@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use function view;
 
-class haractersController extends Controller
+class CharactersController extends Controller
 {
     private const SUB_HEADING = 'CHARACTER SELECT';
 

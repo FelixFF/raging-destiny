@@ -1,18 +1,18 @@
 <div class="banner-container">
-    <div class="event">
-        <img src="\img/event/toy-fair-event.jpg" class="event-img md:block" alt="Event Image">
-        <div class="label">Norwich Vintage & Modern Toy Fair</div>
-        <div class="label">Sun 6th March 9:30am - 14:00pm</div>
+    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">
+        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">
+{{--        <div class="label">Norwich Vintage & Modern Toy Fair</div>--}}
+        <div class="times">Sun 6th March 9:30am - 14:00pm</div>
     </div>
-    <div class="event">
-        <img src="\img/event/oll-event.jpg" class="event-img md:block" alt="Event Image">
-        <div class="label">OLL 22 Video Game Convention</div>
-        <div class="label">Sat/Sun 9th-10th April</div>
+    <div class="event" onclick="window.open('https://ollgames.co.uk/')">
+        <img src="\img/event/oll-event.jpg" class="event-img" alt="Event Image">
+{{--        <div class="label">OLL 22 Video Game Convention</div>--}}
+        <div class="times">Sat/Sun 9th-10th April</div>
     </div>
 </div>
 <style>
     .banner-container {
-        z-index: 1;
+        z-index: 0;
         background-color: rgb( 0, 0, 255, 0.2);
         width: 100%;
         height: 80%;
@@ -25,12 +25,13 @@
 
     .event {
         height: 90%;
-        max-width: 22%;
+        max-width: 20%;
         min-width: 140px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        z-index: 3;
     }
 
     .event:hover {
@@ -39,7 +40,7 @@
     }
 
     .event-img {
-        max-height: 225px;
+        max-height: 160px;
     }
 
     .event .label {
@@ -48,14 +49,24 @@
         display: none;
     }
 
+    .event.times {
+        color: whitesmoke;
+        font-size: 1vw;
+        display: block;
+    }
+
     @media only screen and (min-width: 600px) {
         .event-img {
         }
 
         .event .label {
             color: whitesmoke;
-            font-size: 1vw;
+            font-size: 14px;
             display: block;
+        }
+
+        .event .times {
+            font-size: 14px;
         }
     }
 </style>

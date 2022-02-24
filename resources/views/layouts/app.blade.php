@@ -14,12 +14,11 @@
     @livewireStyles
 </head>
 <body class="bg-gray-900 bg-fixed" style="position: relative">
-    <img src="{{ asset('/img/left-border.png') }}" class="border-image" alt="Border Left" style="left: 0"/>
-    <img src="{{ asset('/img/right-border.png') }}" class="border-image" alt="Border Right" style="right: 0"/>
+    <img src="{{ asset('/img/left-border.png') }}" class="border-image" alt="Border Left" style="left: 0; z-index: 99"/>
+    <img src="{{ asset('/img/right-border.png') }}" class="border-image" alt="Border Right" style="right: 0; z-index: 99"/>
 
     @include('partials.menu')
     @include('partials.sub-header', ['subHeading' => $subHeading])
-    @include('livewire.event-banner')
     <div class="flex flex-col justify-center items-center content-style" data-scroll-speed="9">
         @yield('content')
     </div>

@@ -80,11 +80,15 @@
         }
     }
 
-    @media only screen and (min-width: 400px) and (max-width: 599px) {
-        /*.content {*/
-        /*    max-width: 400px;*/
-        /*    max-height: 353px !important;*/
-        /*    transform: translateY(-7%);*/
-        /*}*/
+    @media only screen and (min-width: 600px) {
+        .text-background {
+            min-height: 800px;
+            width: 600px !important;
+            background-size: cover;
+        }
+
+        .content {
+            width: 450px;
+        }
     }
 </style>
