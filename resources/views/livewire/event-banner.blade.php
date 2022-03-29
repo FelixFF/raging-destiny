@@ -1,8 +1,8 @@
 <div class="banner-container">
-    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">
-        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">
-        <div class="times">Sun 6th March 9:30am - 14:00pm</div>
-    </div>
+{{--    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">--}}
+{{--        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">--}}
+{{--        <div class="times">Sun 6th March 9:30am - 14:00pm</div>--}}
+{{--    </div>--}}
     <div class="event" onclick="window.open('https://ollgames.co.uk/')">
         <img src="\img/event/oll-event.jpg" class="event-img" alt="Event Image">
         <div class="times">Sat-Sun 9th-10th April</div>
