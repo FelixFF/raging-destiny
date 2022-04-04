@@ -1,19 +1,19 @@
 <div class="banner-container">
-{{--    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">--}}
-{{--        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">--}}
-{{--        <div class="times">Sun 6th March 9:30am - 14:00pm</div>--}}
-{{--    </div>--}}
     <div class="event" onclick="window.open('https://ollgames.co.uk/')">
         <img src="\img/event/oll-event.jpg" class="event-img" alt="Event Image">
-        <div class="times">Sat-Sun 9th-10th April</div>
+        <div class="times">Sat-Sun 9th-10th of April</div>
     </div>
-    <div class="event" onclick="window.open('https://www.mcmcomiccon.com/')">
-        <img src="\img/event/mcm-comicon-london.jpg" class="event-img" alt="Event Image">
-        <div class="times">Fri-Sun 27th-29th May 9:00am - 16:00pm</div>
+    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">
+        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">
+        <div class="times">Sun 3rd of July 9:30am - 14:00pm</div>
     </div>
     <div class="event" onclick="window.open('https://summer.londonanimecon.com/')">
         <img src="\img/event/anime-league.jpg" class="event-img" alt="Event Image">
-        <div class="times">Sat-Sun 13th-14th Aug 10:00am - 16:00pm</div>
+        <div class="times">Sat-Sun 13th-14th of August 10:00am - 16:00pm</div>
+    </div>
+    <div class="event" onclick="window.open('https://www.mcmcomiccon.com/')">
+        <img src="\img/event/norwich-comicon-event.jpg" class="event-img" alt="Event Image">
+        <div class="times">Sat-Sun 24th-25th of September 09:30am - 16:00pm</div>
     </div>
 </div>
 <style>
