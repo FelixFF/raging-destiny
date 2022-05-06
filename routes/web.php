@@ -24,7 +24,3 @@ Route::get('{view}', function ($view) {
 Route::get('/', function () {
     return (new NewsController())->create();
 });
-
-Route::get('/sitemap.xml', function () {
-    return (new NewsController())->create();
-});
