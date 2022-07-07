@@ -1,3 +1,4 @@
 RewriteEngine on
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://ragingdestiny.com//$1 [R,L]
+ErrorDocument 404 default
