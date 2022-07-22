@@ -82,7 +82,7 @@
                                         <div class="image-content">
                                             <img src="\img/content/book-cover-1-hardback.jpg"
                                                  class="image-signature-edition">
-                                            <div class="image-label"><span class="pound-sign-m">£</span>22.00</div>
+                                            <div class="image-label"><span class="pound-sign-m">£</span>20.00</div>
                                             <div class="sub-label">(<span class="pound-sign-s">£</span>2.99 P&P)</div>
                                         </div>
                                         <div class="text-content">

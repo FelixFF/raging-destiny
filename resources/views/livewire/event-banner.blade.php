@@ -1,8 +1,4 @@
 <div class="banner-container">
-    <div class="event" onclick="window.open('http://norwichtoyfairs.co.uk/')">
-        <img src="\img/event/toy-fair-event.jpg" class="event-img" alt="Event Image">
-        <div class="times">Sun 3rd of July 9:30am - 14:00pm</div>
-    </div>
     <div class="event" onclick="window.open('https://www.portsmouthanimecon.com/')">
         <img src="\img/event/anime-league.jpg" class="event-img" alt="Event Image">
         <div class="times">Sat-Sun Aug 20th–21st 10:00am - 16:00pm</div>

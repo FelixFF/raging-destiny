@@ -46,6 +46,14 @@
         box-shadow: none !important;
     }
 
+    .sm\:block {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 50% !important;
+        margin-inline: auto;
+    }
+
     .library {
         display: flex;
         flex-direction: row;

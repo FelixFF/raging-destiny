@@ -16,6 +16,14 @@
         position: relative;
     }
 
+    .sm\:block {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40% !important;
+        margin-inline: auto;
+    }
+
     .text-background {
         background-image: url('/img/modal-content-container.png') !important;
         background-position: center;
@@ -26,6 +34,7 @@
         align-items: center;
         opacity: 1;
         height: 700px !important;
+        margin-inline: auto;
     }
 
     .content {

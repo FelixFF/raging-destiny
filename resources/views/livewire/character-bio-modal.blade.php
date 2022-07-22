@@ -11,6 +11,14 @@
         background: transparent !important;
     }
 
+    .sm\:block {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 30% !important;
+        margin-inline: auto;
+    }
+
     .close-button {
         display: none;
     }

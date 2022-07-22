@@ -203,6 +203,13 @@ body::after {
     color: white;
 }
 
+.sm\:block {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
 @media only screen and (min-width: 65.5em) {
     .border-image {
         visibility: visible;
