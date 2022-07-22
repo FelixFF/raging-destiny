@@ -20,8 +20,13 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        width: 40% !important;
         margin-inline: auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .sm\:block {
+            width: 900px !important;
+        }
     }
 
     .text-background {
